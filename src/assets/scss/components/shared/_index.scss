@@ -5,4 +5,17 @@ section {
     min-height: 100vh;
 }
 
+.parallax-img-1 {
+    background-image: url("../../../images/parallax1.jpg");
+}
+
+.parallax-divider {
+    height: 50vh;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 @import "./authWidget";

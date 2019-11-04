@@ -1,5 +1,6 @@
 import React from "react";
 import {Unique} from "../components";
+import * as Parallax from '../assets/images/parallax1.jpg'
 
 const {Landing, Suppliers, About, Contact} = Unique;
 
@@ -7,11 +8,11 @@ function Main() {
     return (
         <div id="main">
             <Landing />
-            <hr />
+            <div className="parallax-divider parallax-img-1" src={Parallax}/>
             <Suppliers />
-            <hr />
+            <div className="parallax-divider parallax-img-1" src={Parallax}/>
             <About />
-            <hr />
+            <div className="parallax-divider parallax-img-1" src={Parallax}/>
             <Contact />
         </div>
     );
