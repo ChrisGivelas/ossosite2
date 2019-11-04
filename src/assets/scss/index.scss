@@ -1,0 +1,19 @@
+@font-face {
+    font-family: "Jomolhari";
+    src: url("../fonts/Jomolhari/Jomolhari-Regular.ttf");
+}
+
+html {
+    font-size: 2vw;
+}
+
+body {
+    margin: 0;
+    font-family: "Jomolhari", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+        "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@import "./animations";
+@import "./components/index";
