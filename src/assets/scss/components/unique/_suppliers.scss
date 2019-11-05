@@ -1,3 +1,4 @@
+@import "../../variables";
 @import "../../mixins";
 
 #suppliers-section {
@@ -22,9 +23,15 @@
             padding: 15px;
             margin: 15px;
 
+            border-top-left-radius: 25%;
+            border-bottom-left-radius: $border-radius;
+            border-bottom-right-radius: 25%;
+            border-top-right-radius: $border-radius;
+
             .supplier-image {
                 width: 100%;
                 margin-top: 5%;
+                @include border-radius;
             }
 
             .supplier-name {

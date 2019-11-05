@@ -1,9 +1,8 @@
 import React from "react";
 import ScrollableAnchor from "react-scrollable-anchor";
-import {getImageURL} from '../../utils';
+import {getImageURL} from "../../utils";
 
 const suppliers = require("../../suppliers.json");
-console.log(suppliers)
 
 function Supplier({id, name, website, description, productTypes}) {
     return (
@@ -20,8 +19,8 @@ function Suppliers() {
     return (
         <ScrollableAnchor id="suppliers">
             <section id="suppliers-section">
-                <h3 id="suppliers-title">Our Suppliers</h3>
-                <p id="suppliers-description">Description goes here</p>
+                <h3 id="section-title">Our Suppliers</h3>
+                <p id="section-description">Description goes here</p>
                 <hr />
                 <div id="suppliers-container">
                     {suppliers && suppliers.map(supplierInfo => <Supplier {...supplierInfo} />)}
