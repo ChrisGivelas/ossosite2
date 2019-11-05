@@ -1,0 +1,234 @@
+[
+    {
+        "id": 1,
+        "name": "Artcraft",
+        "website": "http://www.artcraftlighting.com/",
+        "description": "Supplier Description here",
+        "productTypes": ["Bathroom", "Chandeliers", "Floor Lamps", "Flush Mounts", "Outdoors", "Pendants", "more..."]
+    },
+
+    {
+        "id": 2,
+        "name": "Avista",
+        "website": "http://www.avistalighting.com/",
+        "description": "Supplier Description here",
+        "productTypes": ["Bathroom", "Chandeliers", "Flush Mounts", "Pendants", "Wall Sconce", "more..."]
+    },
+
+    {
+        "id": 3,
+        "name": "Canarm",
+        "website": "http://www.canarm.com/Residential/Residential_Lighting/Families",
+        "description": "Supplier Description here",
+        "productTypes": [
+            "Bathroom",
+            "Chandeliers",
+            "Ceiling Fans",
+            "Flush Mounts",
+            "Outdoors",
+            "Pendants",
+            "Wall Sconce",
+            "more..."
+        ]
+    },
+
+    {
+        "id": 4,
+        "name": "Dals",
+        "website": "http://www.dalslighting.com/en",
+        "description": "Supplier Description here",
+        "productTypes": [
+            "LED Tape",
+            "Recessed Lighting",
+            "Drivers",
+            "Ceiling Mounts",
+            "Wall Sconce",
+            "Undercabinet",
+            "more..."
+        ]
+    },
+
+    {
+        "id": 5,
+        "name": "DVI",
+        "website": "http://www.dvcanada.com/",
+        "description": "Supplier Description here",
+        "productTypes": ["Bathroom", "Chandeliers", "Flush Mounts", "Outdoors", "Pendants", "Wall Sconce", "more..."]
+    },
+
+    {
+        "id": 6,
+        "name": "Eurofase",
+        "website": "http://www.eurofase.com/",
+        "description": "Supplier Description here",
+        "productTypes": [
+            "Bathroom",
+            "Chandeliers",
+            "Flush Mounts",
+            "Outdoors",
+            "Pendants",
+            "Wall Sconce",
+            "Recessed Lighting",
+            "Track Lighting",
+            "more..."
+        ]
+    },
+
+    {
+        "id": 7,
+        "name": "Feiss",
+        "website": "http://www.feiss.com/",
+        "description": "Supplier Description here",
+        "productTypes": [
+            "Bathroom",
+            "Chandeliers",
+            "Flush Mounts",
+            "Outdoors",
+            "Pendants",
+            "Wall Sconce",
+            "Mirrors",
+            "more..."
+        ]
+    },
+
+    {
+        "id": 8,
+        "name": "Fourbro",
+        "website": "http://www.fourbroframes.com/",
+        "description": "Supplier Description here",
+        "productTypes": ["Table Lamps", "Prints", "Mirrors", "more..."]
+    },
+
+    {
+        "id": 9,
+        "name": "FredrickRamond",
+        "website": "http://www.fredrickramond.com/",
+        "description": "Supplier Description here",
+        "productTypes": ["Chandeliers", "Flush Mounts", "Wall Sconces", "Pendants", "more..."]
+    },
+
+    {
+        "id": 10,
+        "name": "Galaxy",
+        "website": "http://www.galaxy-lighting.com/",
+        "description": "Supplier Description here",
+        "productTypes": [
+            "Bathroom",
+            "Chandeliers",
+            "Flush Mounts",
+            "Outdoors",
+            "Pendants",
+            "Wall Sconce",
+            "Recessed Lighting",
+            "Ceiling Fans",
+            "more..."
+        ]
+    },
+
+    {
+        "id": 11,
+        "name": "Hinkley",
+        "website": "http://www.hinkleylighting.com/",
+        "description": "Supplier Description here",
+        "productTypes": ["Bathroom", "Chandeliers", "Flush Mounts", "Pendants", "Wall Sconce", "Outdoors", "more..."]
+    },
+
+    {
+        "id": 12,
+        "name": "Kendal",
+        "website": "http://www.kendallighting.com/",
+        "description": "Supplier Description here",
+        "productTypes": [
+            "Bathroom",
+            "Chandeliers",
+            "Floor Lamps",
+            "Flush Mounts",
+            "Ceiling Fans",
+            "Pendants",
+            "Wall Sconce",
+            "more..."
+        ]
+    },
+
+    {
+        "id": 13,
+        "name": "Kichler",
+        "website": "http://www.kichler.com/",
+        "description": "Supplier Description here",
+        "productTypes": [
+            "Bathroom",
+            "Chandeliers",
+            "Floor Lamps",
+            "Flush Mounts",
+            "Wall Sconce",
+            "Ceiling Fans",
+            "Pendants",
+            "Outdoors",
+            "more..."
+        ]
+    },
+
+    {
+        "id": 14,
+        "name": "Korson",
+        "website": "http://www.korsonfurniture.com/",
+        "description": "Supplier Description here",
+        "productTypes": ["Chairs", "Accent Furniture", "Dining", "Mirrors", "more..."]
+    },
+
+    {
+        "id": 15,
+        "name": "Liteline",
+        "website": "http://liteline.ca/",
+        "description": "Supplier Description here",
+        "productTypes": ["LED", "Track Lighting", "Recessed", "Undercabinet", "more..."]
+    },
+
+    {
+        "id": 16,
+        "name": "MonteCarlo",
+        "website": "http://www.montecarlofans.com/",
+        "description": "Supplier Description here",
+        "productTypes": ["Ceiling Fans", "Fan Kits"]
+    },
+
+    {
+        "id": 17,
+        "name": "Snoc",
+        "website": "http://www.snocinc.com/?___store=english",
+        "description": "Supplier Description here",
+        "productTypes": ["Outdoors", "Post Lights", "Mail Boxes", "Spot Lighting", "Path Lighting", "more..."]
+    },
+
+    {
+        "id": 18,
+        "name": "Standard",
+        "website": "http://www.standardpro.com/",
+        "description": "Supplier Description here",
+        "productTypes": ["Light Bulbs", "LED", "Halogen", "more..."]
+    },
+
+    {
+        "id": 19,
+        "name": "Starfire",
+        "website": "http://starfirecrystal.com/",
+        "description": "Supplier Description here",
+        "productTypes": ["Linear", "Slot", "Pendant", "Surface Mounts", "more..."]
+    },
+
+    {
+        "id": 20,
+        "name": "Sunpan",
+        "website": "http://www.sunpan.com/",
+        "description": "Supplier Description here",
+        "productTypes": ["Bedroom", "Chairs", "Dining", "Home Office", "more..."]
+    },
+
+    {
+        "id": 21,
+        "name": "Worldwide",
+        "website": "http://www.whionline.com/",
+        "description": "Supplier Description here",
+        "productTypes": ["Bedroom", "Living room", "Dining", "Home Accents", "more..."]
+    }
+]

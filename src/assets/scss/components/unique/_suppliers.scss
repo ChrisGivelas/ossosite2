@@ -1,0 +1,57 @@
+@import "../../mixins";
+
+#suppliers-section {
+    #suppliers-container {
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-content: space-between;
+
+        .supplier {
+            position: relative;
+            overflow: hidden;
+
+            width: 25%;
+            min-height: 20vh;
+
+            text-align: center;
+
+            border: rgb(115, 115, 115) 1px solid;
+
+            padding: 15px;
+            margin: 15px;
+
+            .supplier-image {
+                width: 100%;
+                margin-top: 5%;
+            }
+
+            .supplier-name {
+                font-size: 1rem;
+            }
+
+            .supplier-description {
+                font-size: 1rem;
+            }
+
+            .view-supplier {
+                position: absolute;
+                bottom: -55px;
+                left: 0px;
+                transition-property: bottom;
+                transition-duration: 0.5s;
+                background-color: white;
+                width: calc(100% - 2px);
+                border: 1px solid rgb(115, 115, 115);
+                height: 50px;
+                font-size: 1rem;
+                @include top-border-radius;
+            }
+
+            &:hover .view-supplier {
+                bottom: 0px;
+            }
+        }
+    }
+}

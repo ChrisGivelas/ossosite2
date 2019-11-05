@@ -1,20 +1,22 @@
 import React from "react";
 import ScrollableAnchor from "react-scrollable-anchor";
+import {getImageURL} from '../../utils';
 
-function Supplier({id, name, description, image}) {
+const suppliers = require("../../suppliers.json");
+console.log(suppliers)
+
+function Supplier({id, name, website, description, productTypes}) {
     return (
         <div className="supplier">
-            <img className="supplier-image" src={image} alt={name} />
+            <img className="supplier-image" src={getImageURL(`${name}-logo.jpg`, "images/supplier_logos")} alt={name} />
             <p className="supplier-name">{name}</p>
             <p className="supplier-description">{description}</p>
-            <div className="snackbar">
-                <p>View</p>
-            </div>
+            <p className="view-supplier">View</p>
         </div>
     );
 }
 
-function Suppliers({suppliers}) {
+function Suppliers() {
     return (
         <ScrollableAnchor id="suppliers">
             <section id="suppliers-section">

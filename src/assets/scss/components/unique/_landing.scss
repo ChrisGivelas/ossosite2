@@ -1,14 +1,28 @@
+@import "../../mixins";
+
 #landing-section {
+    background: url("../../../images/landing1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     #landing-content-container {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
         position: relative;
-        height: 66.66666667vh;
+        height: 100vh;
 
-        #logo {
-            width: 30%;
+        #logo-container {
+            padding-top: 1px;
+            padding-bottom: 1px;
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(200, 200, 200), rgba(255, 255, 255, 0));
+
+            #logo {
+                width: 30%;
+            }
         }
 
         #nav-items {
@@ -16,6 +30,16 @@
             display: flex;
             justify-content: space-evenly;
             align-items: center;
+            background: linear-gradient(
+                90deg,
+                rgba(0, 0, 0, 0) 0%,
+                rgba(200, 200, 200, 0.6) 10%,
+                rgba(200, 200, 200, 0.8) 50%,
+                rgba(200, 200, 200, 0.6) 90%,
+                rgba(0, 0, 0, 0) 100%
+            );
+
+            @include border-radius;
 
             a {
                 font-size: 1rem;
