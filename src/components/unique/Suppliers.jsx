@@ -23,7 +23,10 @@ function Suppliers() {
                 <p id="section-description">Description goes here</p>
                 <hr />
                 <div id="suppliers-container">
-                    {suppliers && suppliers.map(supplierInfo => <Supplier {...supplierInfo} />)}
+                    {suppliers &&
+                        suppliers.map(supplierInfo => (
+                            <Supplier key={`${supplierInfo.id}_${supplierInfo.name}`} {...supplierInfo} />
+                        ))}
                 </div>
             </section>
         </ScrollableAnchor>

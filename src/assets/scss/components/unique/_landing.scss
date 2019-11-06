@@ -1,5 +1,3 @@
-@import "../../mixins";
-
 #landing-section {
     background: url("../../../images/landing1.jpg");
     background-position: center;
@@ -41,12 +39,14 @@
                 font-size: 1.25rem;
                 text-decoration: none !important;
 
+                color: rgb(55, 55, 55) !important;
+
                 &:visited {
                     color: inherit;
                 }
 
                 &.selected {
-                    color: red;
+                    color: inherit;
                 }
             }
         }
