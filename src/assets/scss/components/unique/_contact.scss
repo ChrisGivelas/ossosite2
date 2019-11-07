@@ -1,0 +1,24 @@
+#contact-section {
+    #contact-form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        input,
+        textarea {
+            margin: 7.5px;
+            padding: 7.5px;
+            // max-width: 100%;
+            &[type="submit"] {
+                width: 25%;
+            }
+
+            outline: none;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: fit-content;
+        }
+    }
+}
