@@ -10,7 +10,15 @@ section:not(#landing-section) {
 }
 
 .parallax-img-1 {
-    background-image: url("../../../images/parallax1.jpg");
+    background-image: url("../../../images/homepage_header_petra.jpg");
+}
+
+.parallax-img-2 {
+    background-image: url("../../../images/Jackson_51823BN_2.jpg");
+}
+
+.parallax-img-3 {
+    background-image: url("../../../images/Everett_4398BN_2.jpg");
 }
 
 .parallax-divider {
@@ -19,7 +27,7 @@ section:not(#landing-section) {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     margin: 10%;
 }
 

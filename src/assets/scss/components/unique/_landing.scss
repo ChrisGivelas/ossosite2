@@ -38,6 +38,8 @@
             a {
                 font-size: 3rem;
                 text-decoration: none !important;
+                transition-property: color;
+                transition-duration: 0.5s;
 
                 color: rgb(55, 55, 55) !important;
 
@@ -47,6 +49,10 @@
 
                 &.selected {
                     color: inherit;
+                }
+
+                &:hover {
+                    color: green !important;
                 }
             }
         }
