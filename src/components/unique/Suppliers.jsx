@@ -7,7 +7,11 @@ const suppliers = require("../../suppliers.json");
 function Supplier({id, name, website, description, productTypes}) {
     return (
         <div className="supplier">
-            <img className="supplier-image" src={getImageURL(`${name}-logo.jpg`, "images/supplier_logos")} alt={name} />
+            <img
+                className="supplier-image"
+                src={getImageURL(`${name}-logo.jpg`, "Supplier_Logos", "http://ossolighting.ca")}
+                alt={name}
+            />
             <p className="supplier-name">{name}</p>
             <p className="supplier-description">{description}</p>
             <p className="view-supplier">View</p>
