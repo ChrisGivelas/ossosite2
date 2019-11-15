@@ -10,8 +10,12 @@
             position: relative;
             overflow: hidden;
 
-            width: 25%;
-            min-height: fit-content;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            width: fit-content;
+            min-height: 250px;
 
             text-align: center;
 
@@ -26,35 +30,55 @@
             border-top-right-radius: $border-radius;
 
             .supplier-image {
-                width: 100%;
-                margin-top: 5%;
-                @include border-radius;
-            }
-
-            .supplier-name {
-                font-size: 1rem;
-            }
-
-            .supplier-description {
-                font-size: 1rem;
-            }
-
-            .view-supplier {
-                position: absolute;
-                bottom: -55px;
-                left: 0px;
+                position: relative;
                 transition-property: bottom;
                 transition-duration: 0.5s;
-                background-color: white;
-                width: calc(100% - 2px);
-                border: 1px solid rgb(115, 115, 115);
-                height: 50px;
-                font-size: 1rem;
-                @include top-border-radius;
+                bottom: 0px;
             }
 
-            &:hover .view-supplier {
-                bottom: 0px;
+            &:hover .supplier-image {
+                bottom: 75px;
+            }
+
+            .view-supplier-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                transition-property: opacity;
+                transition-duration: 0.5s;
+                width: 100%;
+                height: 100%;
+                font-size: 1rem;
+            }
+
+            &:hover .view-supplier-overlay {
+                opacity: 0.5;
+            }
+
+            .view-supplier-button-container {
+                cursor: pointer;
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                transition-property: opacity;
+                transition-duration: 0.5s;
+                width: 100%;
+                height: 100%;
+                font-size: 3rem;
+                font-weight: 700;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                background-color: rgba(115, 115, 115, 0.5);
+                color: white;
+            }
+
+            &:hover .view-supplier-button-container {
+                opacity: 1;
             }
         }
     }

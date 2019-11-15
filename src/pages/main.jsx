@@ -1,19 +1,21 @@
 import React from "react";
-import {Unique} from "../components";
-import * as Parallax from "../assets/images/parallax1.jpg";
+import {Unique, Shared} from "../components";
+import {getImageURL} from "../utils";
 
 const {Landing, Suppliers, About, Contact} = Unique;
+const {Divider} = Shared;
 
 function Main() {
     return (
         <div id="main">
             <Landing />
-            <div className="parallax-divider parallax-img-1" src={Parallax} />
-            <Suppliers />
-            <div className="parallax-divider parallax-img-2" src={Parallax} />
-            <About />
-            <div className="parallax-divider parallax-img-3" src={Parallax} />
-            <Contact />
+            <div id="main-content">
+                <Suppliers />
+                <Divider imgLocation={getImageURL(`homepage_header_petra.jpg`, "images/dividers")} />
+                <About />
+                <Divider imgLocation={getImageURL(`homepage_header_petra.jpg`, "images/dividers")} />
+                <Contact />
+            </div>
         </div>
     );
 }
