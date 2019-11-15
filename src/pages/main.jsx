@@ -1,6 +1,6 @@
 import React from "react";
 import {Unique, Shared} from "../components";
-import {getImageURL} from "../utils";
+import ParallaxDivider from "../assets/images/dividers/2.jpg";
 
 const {Landing, Suppliers, About, Contact} = Unique;
 const {Divider, Footer} = Shared;
@@ -10,11 +10,11 @@ function Main() {
         <div id="main">
             <Landing />
             <div id="main-content">
-                <Divider imgLocation={getImageURL(`homepage_header_petra.jpg`, "images/dividers")} />
+                <Divider src={ParallaxDivider} />
                 <Suppliers />
-                <Divider imgLocation={getImageURL(`homepage_header_petra.jpg`, "images/dividers")} />
+                <Divider src={ParallaxDivider} />
                 <About />
-                <Divider imgLocation={getImageURL(`homepage_header_petra.jpg`, "images/dividers")} />
+                <Divider src={ParallaxDivider} />
                 <Contact />
             </div>
             <Footer />
