@@ -1,18 +1,28 @@
 {
   "files": {
-    "main.css": "/ossosite2/static/css/main.31aae17b.chunk.css",
-    "main.js": "/ossosite2/static/js/main.b95d2385.chunk.js",
-    "main.js.map": "/ossosite2/static/js/main.b95d2385.chunk.js.map",
+    "main.css": "/ossosite2/static/css/main.b85ce34a.chunk.css",
+    "main.js": "/ossosite2/static/js/main.a6c0efc2.chunk.js",
+    "main.js.map": "/ossosite2/static/js/main.a6c0efc2.chunk.js.map",
     "runtime-main.js": "/ossosite2/static/js/runtime-main.30d815cb.js",
     "runtime-main.js.map": "/ossosite2/static/js/runtime-main.30d815cb.js.map",
-    "static/js/2.826b77a1.chunk.js": "/ossosite2/static/js/2.826b77a1.chunk.js",
-    "static/js/2.826b77a1.chunk.js.map": "/ossosite2/static/js/2.826b77a1.chunk.js.map",
+    "static/css/2.67d9ffe4.chunk.css": "/ossosite2/static/css/2.67d9ffe4.chunk.css",
+    "static/js/2.20683faa.chunk.js": "/ossosite2/static/js/2.20683faa.chunk.js",
+    "static/js/2.20683faa.chunk.js.map": "/ossosite2/static/js/2.20683faa.chunk.js.map",
     "index.html": "/ossosite2/index.html",
-    "precache-manifest.cc156bbe9943506ddf22062986f798b7.js": "/ossosite2/precache-manifest.cc156bbe9943506ddf22062986f798b7.js",
+    "precache-manifest.00cbb634fb388b5fc132b8184b25149d.js": "/ossosite2/precache-manifest.00cbb634fb388b5fc132b8184b25149d.js",
     "service-worker.js": "/ossosite2/service-worker.js",
-    "static/css/main.31aae17b.chunk.css.map": "/ossosite2/static/css/main.31aae17b.chunk.css.map",
+    "static/css/2.67d9ffe4.chunk.css.map": "/ossosite2/static/css/2.67d9ffe4.chunk.css.map",
+    "static/css/main.b85ce34a.chunk.css.map": "/ossosite2/static/css/main.b85ce34a.chunk.css.map",
+    "static/media/0.jpg": "/ossosite2/static/media/0.da64c499.jpg",
+    "static/media/1.jpg": "/ossosite2/static/media/1.7692c677.jpg",
+    "static/media/2.jpg": "/ossosite2/static/media/2.a5dc8223.jpg",
+    "static/media/3.jpg": "/ossosite2/static/media/3.eaad8bb1.jpg",
+    "static/media/4.jpg": "/ossosite2/static/media/4.307118d9.jpg",
+    "static/media/5.jpg": "/ossosite2/static/media/5.a49b361d.jpg",
+    "static/media/6.jpg": "/ossosite2/static/media/6.cd496fd5.jpg",
+    "static/media/7.jpg": "/ossosite2/static/media/7.1d57c66c.jpg",
     "static/media/index.scss": "/ossosite2/static/media/landing1.4762dbef.jpg",
     "static/media/[H] Osso Lighting Logo 2018 (blue).png": "/ossosite2/static/media/[H] Osso Lighting Logo 2018 (blue).0bc96bb8.png",
-    "static/media/parallax1.jpg": "/ossosite2/static/media/parallax1.a5751bd8.jpg"
+    "static/media/slick-theme.scss": "/ossosite2/static/media/slick.f97e3bbf.svg"
   }
 }
