@@ -43,18 +43,18 @@ var supplierProducts = [
 function Supplier({id, name, website, description, productTypes, items}) {
     const selfRef = useRef();
     const slickRef = React.createRef();
-    var pauseTimeout = undefined;
+    var pauseTimeout = useRef(undefined);
 
     useEffect(() => {
         slickRef.current && slickRef.current.slickPause();
         selfRef.current.onmouseover = function(e) {
-            clearTimeout(pauseTimeout);
+            clearTimeout(pauseTimeout.current);
             slickRef.current && slickRef.current.slickPlay();
             e.stopPropagation();
         };
 
         selfRef.current.onmouseout = function(e) {
-            pauseTimeout = setTimeout(() => {
+            pauseTimeout.current = setTimeout(() => {
                 slickRef.current && slickRef.current.slickPause();
             }, 1000);
             e.stopPropagation();
@@ -95,8 +95,8 @@ function Suppliers() {
     return (
         <ScrollableAnchor id="suppliers">
             <section id="suppliers-section">
-                <h3 id="section-title">Our Suppliers</h3>
-                <p id="section-description">Description goes here</p>
+                <h3 className="section-title">Our Suppliers</h3>
+                <p className="section-description">Description goes here</p>
                 <hr />
                 <div id="suppliers-container">
                     {suppliers &&

@@ -4,6 +4,10 @@
         display: flex;
         flex-direction: column;
 
+        & > * {
+            border: 1px solid rgb(115, 115, 115);
+        }
+
         input,
         textarea {
             margin: 7.5px;
@@ -11,6 +15,11 @@
 
             &[type="submit"] {
                 width: 25%;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: rgba(115, 115, 155, 0.7);
+                }
             }
 
             outline: none;
