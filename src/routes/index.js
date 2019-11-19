@@ -1,13 +1,15 @@
-import {Unique} from "../components";
+import Suppliers from "../components/unique/Suppliers";
+import About from "../components/unique/About";
+import Contact from "../components/unique/Contact";
 
 export const SUPPLIERS = "suppliers";
 export const ABOUT = "about";
 export const CONTACT = "contact";
 
-const {Suppliers, About, Contact} = Unique;
-
-export const mapping = {
+const mapping = {
     [SUPPLIERS]: Suppliers,
     [ABOUT]: About,
     [CONTACT]: Contact
 };
+
+export default mapping;

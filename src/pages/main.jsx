@@ -1,9 +1,13 @@
 import React from "react";
-import {Unique, Shared} from "../components";
 import ParallaxDivider from "../assets/images/dividers/2.jpg";
 
-const {Landing, Suppliers, About, Contact} = Unique;
-const {Divider, Footer} = Shared;
+import Landing from "../components/unique/Landing";
+import Suppliers from "../components/unique/Suppliers";
+import About from "../components/unique/About";
+import Contact from "../components/unique/Contact";
+
+import Divider from "../components/shared/Divider";
+import Footer from "../components/shared/Footer";
 
 function Main() {
     return (

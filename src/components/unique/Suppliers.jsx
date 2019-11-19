@@ -1,7 +1,9 @@
 import React, {useEffect, useRef, useState} from "react";
 import ScrollableAnchor from "react-scrollable-anchor";
 import {getImageURL} from "../../utils";
-import {Shared} from "../";
+import Carousel from "../shared/Carousel";
+import ProductImage from "../shared/ProductImage";
+import SupplierModal from "../shared/SupplierModal";
 
 import Artcraft0 from "../../assets/images/supplier_products/Artcraft/0.jpg";
 import Artcraft1 from "../../assets/images/supplier_products/Artcraft/1.jpg";
@@ -11,8 +13,6 @@ import Artcraft4 from "../../assets/images/supplier_products/Artcraft/4.jpg";
 import Artcraft5 from "../../assets/images/supplier_products/Artcraft/5.jpg";
 import Artcraft6 from "../../assets/images/supplier_products/Artcraft/6.jpg";
 import Artcraft7 from "../../assets/images/supplier_products/Artcraft/7.jpg";
-
-const {Carousel, ProductImage, SupplierModal} = Shared;
 
 const suppliers = require("../../suppliers.json");
 
