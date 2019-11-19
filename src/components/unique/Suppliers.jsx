@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import ScrollableAnchor from "react-scrollable-anchor";
 import {getImageURL} from "../../utils";
 import {Shared} from "../";
@@ -12,7 +12,7 @@ import Artcraft5 from "../../assets/images/supplier_products/Artcraft/5.jpg";
 import Artcraft6 from "../../assets/images/supplier_products/Artcraft/6.jpg";
 import Artcraft7 from "../../assets/images/supplier_products/Artcraft/7.jpg";
 
-const {Carousel, ProductImage} = Shared;
+const {Carousel, ProductImage, SupplierModal} = Shared;
 
 const suppliers = require("../../suppliers.json");
 
@@ -41,6 +41,8 @@ var supplierProducts = [
 ];
 
 function Supplier({id, name, website, description, productTypes, items}) {
+    const [showModal, setShowModal] = useState(false);
+
     const selfRef = useRef();
     const slickRef = React.createRef();
     var pauseTimeout = useRef(undefined);
@@ -61,33 +63,50 @@ function Supplier({id, name, website, description, productTypes, items}) {
         };
     });
 
+    const handleShowModal = () => setShowModal(true);
+    const handleHideModal = () => setShowModal(false);
+
     return (
-        <div className="supplier" ref={selfRef}>
-            <img
-                className="supplier-image"
-                src={getImageURL(`${name}-logo.jpg`, "Supplier_Logos", "http://ossolighting.ca")}
-                alt={name}
+        <React.Fragment>
+            <div className="supplier" ref={selfRef} onClick={handleShowModal}>
+                <img
+                    className="supplier-image"
+                    src={getImageURL(`${name}-logo.jpg`, "Supplier_Logos", "http://ossolighting.ca")}
+                    alt={name}
+                />
+                <div className="view-supplier-overlay">
+                    <Carousel
+                        settings={{
+                            dots: false,
+                            infinite: true,
+                            speed: 2000,
+                            autoplay: true,
+                            autoplaySpeed: 1000,
+                            pauseOnHover: false,
+                            draggable: false
+                        }}
+                        slickRef={slickRef}
+                    >
+                        {items}
+                    </Carousel>
+                </div>
+                <div className="view-supplier-button-container">
+                    <span>View</span>
+                </div>
+            </div>
+            <SupplierModal
+                show={showModal}
+                title={
+                    <img
+                        className="supplier-image"
+                        src={getImageURL(`${name}-logo.jpg`, "Supplier_Logos", "http://ossolighting.ca")}
+                        alt={name}
+                    />
+                }
+                handleHide={handleHideModal}
+                supplierInfo={{name, description: "Supplier Description Here", items}}
             />
-            <div className="view-supplier-overlay">
-                <Carousel
-                    settings={{
-                        dots: false,
-                        infinite: true,
-                        speed: 2000,
-                        autoplay: true,
-                        autoplaySpeed: 2000,
-                        pauseOnHover: false,
-                        draggable: false
-                    }}
-                    slickRef={slickRef}
-                >
-                    {items}
-                </Carousel>
-            </div>
-            <div className="view-supplier-button-container">
-                <span>View</span>
-            </div>
-        </div>
+        </React.Fragment>
     );
 }
 
