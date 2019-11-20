@@ -8,7 +8,7 @@ import "slick-carousel/slick/slick-theme.scss";
 
 import {configureAnchors} from "react-scrollable-anchor";
 
-configureAnchors({offset: -40, scrollDuration: 1000});
+configureAnchors({offset: -40, scrollDuration: 2000});
 
 ReactDOM.render(
     <HashRouter hashType="noslash">
