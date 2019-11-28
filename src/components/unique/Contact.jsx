@@ -8,7 +8,7 @@ const MESSAGE = "message";
 
 const fields = [NAME, EMAIL, SUBJECT, MESSAGE];
 
-const EMAIL_SERVER_ENDPOINT = "http://localhost:3210/email";
+const EMAIL_SERVER_ENDPOINT = "https://osso-email-service.herokuapp.com/email";
 
 const sendEmail = async formValues => {
     console.log(formValues);
