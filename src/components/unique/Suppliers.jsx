@@ -1,6 +1,6 @@
 import React, {useEffect, useRef, useState} from "react";
 import ScrollableAnchor from "react-scrollable-anchor";
-import {getImageURL} from "../../utils";
+import {getImageURL} from "../../utils/resourceUtils";
 import Carousel from "../shared/Carousel";
 import ProductImage from "../shared/ProductImage";
 import SupplierModal from "../shared/SupplierModal";
