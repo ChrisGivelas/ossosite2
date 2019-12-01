@@ -1,118 +1,124 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import ScrollableAnchor from "react-scrollable-anchor";
+import Spinner from "../shared/Spinner";
+import Checkmark from "../shared/Checkmark";
 
-const NAME = "name";
-const EMAIL = "email";
-const SUBJECT = "subject";
-const MESSAGE = "message";
+// const EMAIL_SERVER_ENDPOINT = "https://osso-email-service.herokuapp.com/email";
+const EMAIL_SERVER_ENDPOINT = "http://localhost:3210/email";
 
-const fields = [NAME, EMAIL, SUBJECT, MESSAGE];
+class Contact extends React.Component {
+    constructor(props) {
+        super(props);
 
-const EMAIL_SERVER_ENDPOINT = "https://osso-email-service.herokuapp.com/email";
+        this.defaultFormValues = {name: "", email: "", subject: "", message: ""};
+        this.defaultEmailStatus = {submitting: false, sent: false, error: false};
 
-const sendEmail = async formValues => {
-    console.log(formValues);
-    return fetch(EMAIL_SERVER_ENDPOINT, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(formValues)
-    });
-};
+        this.state = {
+            emailStatus: this.defaultEmailStatus,
+            formValues: this.defaultFormValues
+        };
+    }
 
-const testEmail = {
-    [NAME]: "John Doe",
-    [EMAIL]: "john_doe@hotmail.com",
-    [SUBJECT]: "Lights?",
-    [MESSAGE]: "Do you sell lights?"
-};
+    handleChange = e => this.setState({formValues: {...this.state.formValues, [e.target.name]: e.target.value}});
 
-function Contact() {
-    const [formValues, setFormValues] = useState(testEmail);
-    const [submitting, setSubmitting] = useState(false);
-    const [canSubmit, setCanSubmit] = useState(false);
+    canSubmit = () => Object.values(this.state.formValues).every(value => value && value.length > 0);
 
-    const setInputValue = e => {
-        let newFormValueState = {...formValues, [e.target.name]: e.target.value};
-        setFormValues(newFormValueState);
+    sendEmail = () => {
+        this.setState({emailStatus: {submitting: true, sent: false, error: false}}, () => {
+            fetch(EMAIL_SERVER_ENDPOINT, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(this.state.formValues)
+            })
+                .then(res => res.json())
+                .then(body => {
+                    this.setState({
+                        emailStatus: {submitting: false, sent: true, error: false, ...body},
+                        formValues: {
+                            name: this.state.formValues.name,
+                            email: this.state.formValues.email,
+                            subject: "",
+                            message: ""
+                        }
+                    });
+                })
+                .catch(e => {
+                    this.setState({emailStatus: {submitting: false, sent: false, error: true}});
+                });
+        });
     };
 
-    const submit = () => {
-        setSubmitting(true);
-        sendEmail(formValues)
-            .then(res => {
-                return res.body.json();
-            })
-            .then(json => {
-                console.log(json);
-                setSubmitting(false);
-                setFormValues({});
-            })
-            .catch(e => {
-                console.log(e);
-                setSubmitting(false);
-            });
-    };
+    render() {
+        const {emailStatus, formValues} = this.state;
 
-    useEffect(() => {
-        const canSubmit = fields.every(
-            fieldName => formValues[fieldName] !== undefined && formValues[fieldName].length > 0
+        const submitDisabled = emailStatus.submitting || !this.canSubmit();
+        return (
+            <ScrollableAnchor id="contact">
+                <section id="contact-section">
+                    <h3 className="section-title">Contact Us</h3>
+                    <p className="section-description">
+                        905-404-6776 | <a href="mailto:info@ossolighting.ca">info@ossolighting.ca</a>
+                    </p>
+                    <form
+                        id="contact-form"
+                        onSubmit={e => {
+                            e.preventDefault();
+                            this.sendEmail();
+                        }}
+                    >
+                        <input
+                            type="text"
+                            name="name"
+                            placeholder="Name"
+                            onChange={this.handleChange}
+                            value={formValues.name}
+                        />
+                        <input
+                            type="text"
+                            name="email"
+                            placeholder="Email"
+                            onChange={this.handleChange}
+                            value={formValues.email}
+                        />
+                        <input
+                            type="text"
+                            name="subject"
+                            placeholder="Subject"
+                            onChange={this.handleChange}
+                            value={formValues.subject}
+                        />
+                        <textarea
+                            name="message"
+                            placeholder="Message"
+                            onChange={this.handleChange}
+                            value={formValues.message}
+                        />
+                        <div>
+                            <input
+                                className={submitDisabled ? "disabled" : null}
+                                type="submit"
+                                value="submit"
+                                disabled={submitDisabled}
+                            />
+                            {emailStatus.submitting ? (
+                                <Spinner />
+                            ) : emailStatus.sent ? (
+                                <span>
+                                    <Checkmark /> Email sent!
+                                </span>
+                            ) : emailStatus.error ? (
+                                <span style={{color: "red"}}>
+                                    Error sending email. Please try again later or email us at info@ossolighting.ca.
+                                </span>
+                            ) : null}
+                        </div>
+                    </form>
+                </section>
+            </ScrollableAnchor>
         );
-        setCanSubmit(canSubmit);
-    }, [formValues, canSubmit]);
-
-    return (
-        <ScrollableAnchor id="contact">
-            <section id="contact-section">
-                <h3 className="section-title">Contact Us</h3>
-                <p className="section-description">
-                    905-404-6776 | <a href="mailto:info@ossolighting.ca">info@ossolighting.ca</a>
-                </p>
-                <form
-                    id="contact-form"
-                    onSubmit={e => {
-                        e.preventDefault();
-                        submit();
-                    }}
-                >
-                    <input
-                        type="text"
-                        name="name"
-                        placeholder="Name"
-                        onChange={setInputValue}
-                        defaultValue={formValues[NAME]}
-                    />
-                    <input
-                        type="text"
-                        name="email"
-                        placeholder="Email"
-                        onChange={setInputValue}
-                        defaultValue={formValues[EMAIL]}
-                    />
-                    <input
-                        type="text"
-                        name="subject"
-                        placeholder="Subject"
-                        onChange={setInputValue}
-                        defaultValue={formValues[SUBJECT]}
-                    />
-                    <textarea
-                        name="message"
-                        placeholder="Message"
-                        onChange={setInputValue}
-                        defaultValue={formValues[MESSAGE]}
-                    />
-                    <input
-                        className={submitting ? "submitting" : null}
-                        type="submit"
-                        value="submit"
-                        disabled={submitting || !canSubmit}
-                    />
-                </form>
-            </section>
-        </ScrollableAnchor>
-    );
+    }
 }
 
 export default Contact;
