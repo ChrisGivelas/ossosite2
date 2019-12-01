@@ -3,8 +3,7 @@ import ScrollableAnchor from "react-scrollable-anchor";
 import Spinner from "../shared/Spinner";
 import Checkmark from "../shared/Checkmark";
 
-// const EMAIL_SERVER_ENDPOINT = "https://osso-email-service.herokuapp.com/email";
-const EMAIL_SERVER_ENDPOINT = "http://localhost:3210/email";
+const EMAIL_SERVER_ENDPOINT = "https://osso-email-service.herokuapp.com/email";
 
 class Contact extends React.Component {
     constructor(props) {
