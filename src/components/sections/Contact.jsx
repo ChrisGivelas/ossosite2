@@ -57,8 +57,11 @@ class Contact extends React.Component {
             <ScrollableAnchor id="contact">
                 <section id="contact-section">
                     <h3 className="section-title">Contact Us</h3>
-                    <p className="section-description">
-                        905-404-6776 | <a href="mailto:info@ossolighting.ca">info@ossolighting.ca</a>
+                    <p id="contact-section-description" className="section-description">
+                        <p>905-404-6776</p>
+                        <p>
+                            <a href="mailto:info@ossolighting.ca">info@ossolighting.ca</a>
+                        </p>
                     </p>
                     <form
                         id="contact-form"

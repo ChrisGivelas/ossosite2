@@ -3,56 +3,56 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
 
-    #landing-content-background {
-        background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(200, 200, 200, 0.9), rgba(255, 255, 255, 0));
-    }
+#landing-content-background {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(200, 200, 200, 0.9), rgba(255, 255, 255, 0));
+}
 
-    #landing-content-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        position: relative;
-        height: 100vh;
+#landing-content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+}
 
-        #logo-container {
-            display: flex;
-            justify-content: center;
+#logo-container {
+    display: flex;
+    justify-content: center;
+}
 
-            #logo {
-                width: 30%;
-            }
+#logo {
+    width: 30%;
+}
+
+#nav-items {
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    @include border-radius;
+
+    a {
+        font-size: 3rem;
+        text-decoration: none !important;
+        transition-property: color;
+        transition-duration: 0.5s;
+
+        color: rgb(55, 55, 55) !important;
+
+        &:visited {
+            color: inherit;
         }
 
-        #nav-items {
-            width: 40%;
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
+        &.selected {
+            color: inherit;
+        }
 
-            @include border-radius;
-
-            a {
-                font-size: 3rem;
-                text-decoration: none !important;
-                transition-property: color;
-                transition-duration: 0.5s;
-
-                color: rgb(55, 55, 55) !important;
-
-                &:visited {
-                    color: inherit;
-                }
-
-                &.selected {
-                    color: inherit;
-                }
-
-                &:hover {
-                    color: green !important;
-                }
-            }
+        &:hover {
+            color: green !important;
         }
     }
 }

@@ -1,12 +1,25 @@
-import React from "react";
+import React, {useState} from "react";
 import ScrollableAnchor from "react-scrollable-anchor";
+import Modal from "react-bootstrap/Modal";
+import Carousel from "../shared/Carousel";
 
-function About() {
+import MarinoOsso from "../../assets/images/Marino Osso.jpg";
+
+var aboutImages = [
+    <img className="about-image" alt="about" src={MarinoOsso} />,
+    <img className="about-image" alt="about" src={MarinoOsso} />,
+    <img className="about-image" alt="about" src={MarinoOsso} />,
+    <img className="about-image" alt="about" src={MarinoOsso} />,
+    <img className="about-image" alt="about" src={MarinoOsso} />
+];
+
+function AboutModal({show, handleHide}) {
     return (
-        <ScrollableAnchor id="about">
-            <section id="about-section">
-                <h3 className="section-title">Our Story</h3>
-                <p className="section-description">Description goes here</p>
+        <Modal show={show} onHide={handleHide}>
+            <Modal.Header closeButton>
+                <Modal.Title>Our Story</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
                 <p id="about-content" className="section-content">
                     Since its inception in 1984, Osso City Lighting has proudly been one of the Durham Region’s largest
                     purveyors of fine lighting. Over a quarter of a century later, Osso City Lighting has expanded its
@@ -24,8 +37,31 @@ function About() {
                     excellence that we have shown since our beginning. Whether its traditional, contemporary, or
                     anything in between, Osso City Lighting has what you need.
                 </p>
-            </section>
-        </ScrollableAnchor>
+            </Modal.Body>
+        </Modal>
+    );
+}
+
+function About() {
+    const [showModal, setShowModal] = useState(false);
+
+    const handleShowModal = () => setShowModal(true);
+    const handleHideModal = () => setShowModal(false);
+
+    return (
+        <React.Fragment>
+            <ScrollableAnchor id="about">
+                <section id="about-section" onClick={handleShowModal}>
+                    <div id="view-about-overlay">
+                        <Carousel>{aboutImages}</Carousel>
+                    </div>
+                    <div id="view-about-button-container">
+                        <p>Our Story</p>
+                    </div>
+                </section>
+            </ScrollableAnchor>
+            <AboutModal show={showModal} handleHide={handleHideModal} />
+        </React.Fragment>
     );
 }
 

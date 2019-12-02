@@ -1,30 +1,33 @@
-#contact-section {
-    #contact-form {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
+#contact-section-description {
+    text-align: center;
+}
 
-        input,
-        textarea {
-            border: 1px solid rgb(115, 115, 115);
-            margin: 7.5px;
-            padding: 7.5px;
+#contact-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 
-            &[type="submit"] {
-                width: 25%;
+    input,
+    textarea {
+        border: 1px solid rgb(115, 115, 115);
+        margin: 7.5px;
+        padding: 7.5px;
+        font-size: 1.5rem;
 
-                &:hover:not(.disabled) {
-                    cursor: pointer;
-                    background-color: rgba(115, 115, 155, 0.7);
-                }
+        &[type="submit"] {
+            width: 25%;
+
+            &:hover:not(.disabled) {
+                cursor: pointer;
+                background-color: rgba(115, 115, 155, 0.7);
             }
-
-            outline: none;
         }
 
-        textarea {
-            resize: vertical;
-            min-height: fit-content;
-        }
+        outline: none;
+    }
+
+    textarea {
+        resize: vertical;
+        min-height: fit-content;
     }
 }

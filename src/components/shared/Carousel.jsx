@@ -11,7 +11,16 @@ export default class Carousel extends React.Component {
 
     static defaultProps = {
         children: [],
-        settings: {},
+        settings: {
+            dots: false,
+            arrows: false,
+            infinite: true,
+            speed: 2000,
+            autoplay: true,
+            autoplaySpeed: 1000,
+            pauseOnHover: false,
+            draggable: false
+        },
         slickRef: undefined
     };
 

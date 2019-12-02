@@ -1,0 +1,70 @@
+@media screen and (min-width: map-get($map: $screen-sizes, $key: "sm")) and (max-width: (map-get($map: $screen-sizes, $key: "md") - 1px)) {
+    /* ============================= SECTIONS ============================= */
+
+    // sections/_index.scss
+    section {
+        .section-title {
+            font-size: 6rem;
+        }
+
+        .section-description {
+            font-size: 4rem;
+        }
+    }
+
+    // sections/_landing.scss
+    #logo {
+        width: 70%;
+    }
+
+    #nav-items {
+        width: 70%;
+        height: 25%;
+        flex-direction: column;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+
+        @include border-radius;
+
+        a {
+            font-size: 5rem;
+        }
+    }
+
+    // sections/_suppliers.scss
+    #suppliers-section {
+        padding: 0px !important;
+        border: 0px !important;
+    }
+
+    #suppliers-container {
+        .supplier {
+            margin: 0px 0px 20px 0px;
+            .supplier-image {
+            }
+
+            &:hover .supplier-image {
+            }
+
+            .view-supplier-overlay {
+            }
+
+            &:hover .view-supplier-overlay {
+            }
+
+            .view-supplier-button-container {
+            }
+
+            &:hover .view-supplier-button-container {
+            }
+        }
+    }
+
+    /* ============================= SHARED ============================= */
+
+    // shared/_divider.scss
+    .divider-wrapper {
+        height: 25vh;
+    }
+}

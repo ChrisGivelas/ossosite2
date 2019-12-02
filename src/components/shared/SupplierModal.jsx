@@ -34,20 +34,7 @@ export default function SupplierModal({show, title, handleHide, supplierInfo}) {
                         )}
                     </div>
                     <div className="supplier-info-modal-right-panel">
-                        <Carousel
-                            settings={{
-                                dots: false,
-                                infinite: true,
-                                speed: 2000,
-                                autoplay: true,
-                                autoplaySpeed: 1000,
-                                pauseOnHover: false,
-                                draggable: false,
-                                arrows: false
-                            }}
-                        >
-                            {items}
-                        </Carousel>
+                        <Carousel>{items}</Carousel>
                     </div>
                 </div>
             </Modal.Body>

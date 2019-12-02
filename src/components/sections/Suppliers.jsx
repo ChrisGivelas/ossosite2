@@ -75,20 +75,7 @@ function Supplier({id, name, website, description, productTypes, items}) {
                     alt={name}
                 />
                 <div className="view-supplier-overlay">
-                    <Carousel
-                        settings={{
-                            dots: false,
-                            infinite: true,
-                            speed: 2000,
-                            autoplay: true,
-                            autoplaySpeed: 1000,
-                            pauseOnHover: false,
-                            draggable: false
-                        }}
-                        slickRef={slickRef}
-                    >
-                        {items}
-                    </Carousel>
+                    <Carousel slickRef={slickRef}>{items}</Carousel>
                 </div>
                 <div className="view-supplier-button-container">
                     <span>View</span>

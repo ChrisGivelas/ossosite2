@@ -1,3 +1,44 @@
 #about-content {
     text-align: justify;
 }
+
+#about-section {
+    position: relative;
+    #view-about-overlay {
+        top: 0;
+        left: 0;
+        transition-property: opacity;
+        transition-duration: 0.5s;
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    &:hover #view-about-overlay {
+        opacity: 0.5;
+    }
+
+    #view-about-button-container {
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition-property: opacity;
+        transition-duration: 0.5s;
+        width: 100%;
+        height: 100%;
+        font-size: 3rem;
+        font-weight: 700;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-color: rgba(200, 200, 200, 0.3);
+        color: white;
+    }
+
+    &:hover #view-about-button-container {
+        opacity: 1;
+    }
+}

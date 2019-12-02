@@ -21,8 +21,9 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-@import "./variables/index";
+@import "./variables";
 @import "./mixins";
 @import "./components";
 @import "./pages";
 @import "./libraries";
+@import "./layouts";
