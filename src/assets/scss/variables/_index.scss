@@ -1,0 +1,16 @@
+$screen-sizes: (
+    xs: 360px,
+    sm: 540px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
+);
+
+$border-radius: 4px;
+
+@import "./tn";
+@import "./xs";
+@import "./sm";
+@import "./md";
+@import "./lg";
+@import "./xl";

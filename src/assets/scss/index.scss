@@ -8,14 +8,6 @@
     src: url("../fonts/Quicksand/Quicksand-VariableFont:wght.ttf");
 }
 
-$grid-breakpoints: (
-    xs: 0,
-    sm: 360px,
-    md: 768px,
-    lg: 992px,
-    xl: 1200px
-);
-
 html {
     font-size: 1vw;
 }
@@ -29,10 +21,8 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-@import "./animations";
+@import "./variables/index";
 @import "./mixins";
-@import "./variables";
 @import "./components";
-@import "./pages/";
-
-@import "./react-slick";
+@import "./pages";
+@import "./libraries";

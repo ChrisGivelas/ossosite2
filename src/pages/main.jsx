@@ -1,10 +1,10 @@
 import React from "react";
 import ParallaxDivider from "../assets/images/dividers/2.jpg";
 
-import Landing from "../components/unique/Landing";
-import Suppliers from "../components/unique/Suppliers";
-import About from "../components/unique/About";
-import Contact from "../components/unique/Contact";
+import Landing from "../components/sections/Landing";
+import Suppliers from "../components/sections/Suppliers";
+import About from "../components/sections/About";
+import Contact from "../components/sections/Contact";
 
 import Divider from "../components/shared/Divider";
 import Footer from "../components/shared/Footer";

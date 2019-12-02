@@ -1,6 +1,6 @@
-import Suppliers from "../components/unique/Suppliers";
-import About from "../components/unique/About";
-import Contact from "../components/unique/Contact";
+import Suppliers from "../components/sections/Suppliers";
+import About from "../components/sections/About";
+import Contact from "../components/sections/Contact";
 
 export const SUPPLIERS = "suppliers";
 export const ABOUT = "about";
