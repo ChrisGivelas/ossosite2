@@ -11,7 +11,6 @@
     }
 
     #nav-items {
-        width: 80%;
         height: 25%;
         flex-direction: column;
         justify-content: space-between;
@@ -28,7 +27,7 @@
     #suppliers-container {
         grid-template-columns: 1fr 1fr;
         .supplier {
-            margin: 0px 0px 10% 0px;
+            margin: 0 0 10% 0;
             .supplier-image {
             }
 
@@ -51,8 +50,12 @@
 
     // sections/_about.scss
     #about-content {
-        // font-size: 5rem;
-        // line-height: 7rem;
+    }
+
+    #about-section {
+        width: 80%;
+        #view-about-overlay {
+        }
     }
 
     // sections/_contact.scss

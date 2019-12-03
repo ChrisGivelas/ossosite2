@@ -1,2 +1,77 @@
 @media screen and (min-width: map-get($map: $screen-sizes, $key: "xl")) {
+    html {
+        font-size: 1vw;
+    }
+
+    /* ============================= SECTIONS ============================= */
+
+    // sections/_landing.scss
+    #logo {
+        width: 35%;
+    }
+
+    #nav-items {
+        height: 25%;
+        flex-direction: column;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+    }
+
+    // sections/_suppliers.scss
+    #suppliers-section {
+        padding: 0px !important;
+        border: 0px !important;
+    }
+
+    #suppliers-container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        .supplier {
+            margin: 0 0 10% 0;
+            .supplier-image {
+            }
+
+            &:hover .supplier-image {
+            }
+
+            .view-supplier-overlay {
+            }
+
+            &:hover .view-supplier-overlay {
+            }
+
+            .view-supplier-button-container {
+            }
+
+            &:hover .view-supplier-button-container {
+            }
+        }
+    }
+
+    // sections/_about.scss
+    #about-content {
+    }
+
+    // sections/_contact.scss
+    #contact-form {
+        input,
+        textarea {
+            &[type="submit"] {
+                width: 50%;
+
+                &:hover:not(.disabled) {
+                }
+            }
+        }
+
+        textarea {
+        }
+    }
+
+    /* ============================= SHARED ============================= */
+
+    // shared/_divider.scss
+    .divider-wrapper {
+        height: 25vh;
+    }
 }

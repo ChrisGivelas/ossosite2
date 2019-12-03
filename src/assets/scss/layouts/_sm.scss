@@ -1,35 +1,21 @@
 @media screen and (min-width: map-get($map: $screen-sizes, $key: "sm")) and (max-width: (map-get($map: $screen-sizes, $key: "md") - 1px)) {
-    /* ============================= SECTIONS ============================= */
-
-    // sections/_index.scss
-    section {
-        .section-title {
-            font-size: 6rem;
-        }
-
-        .section-description {
-            font-size: 4rem;
-        }
+    html {
+        font-size: 1.5vw;
     }
+
+    /* ============================= SECTIONS ============================= */
 
     // sections/_landing.scss
     #logo {
-        width: 70%;
+        width: 60%;
     }
 
     #nav-items {
-        width: 70%;
         height: 25%;
         flex-direction: column;
         justify-content: space-between;
         align-content: center;
         align-items: center;
-
-        @include border-radius;
-
-        a {
-            font-size: 5rem;
-        }
     }
 
     // sections/_suppliers.scss
@@ -39,8 +25,9 @@
     }
 
     #suppliers-container {
+        grid-template-columns: 1fr 1fr;
         .supplier {
-            margin: 0px 0px 20px 0px;
+            margin: 0 0 10% 0;
             .supplier-image {
             }
 
@@ -58,6 +45,32 @@
 
             &:hover .view-supplier-button-container {
             }
+        }
+    }
+
+    // sections/_about.scss
+    #about-content {
+    }
+
+    #about-section {
+        #view-about-overlay {
+            width: 70%;
+        }
+    }
+
+    // sections/_contact.scss
+    #contact-form {
+        input,
+        textarea {
+            &[type="submit"] {
+                width: 50%;
+
+                &:hover:not(.disabled) {
+                }
+            }
+        }
+
+        textarea {
         }
     }
 
