@@ -7,7 +7,7 @@
 
     // sections/_landing.scss
     #logo {
-        width: 50%;
+        width: 40%;
     }
 
     #nav-items {
@@ -29,6 +29,7 @@
         .supplier {
             margin: 0 0 10% 0;
             .supplier-image {
+                top: 15%;
             }
 
             &:hover .supplier-image {

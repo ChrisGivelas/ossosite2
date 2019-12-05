@@ -10,29 +10,21 @@
         position: relative;
         overflow: hidden;
 
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
         border: rgb(115, 115, 115) 1px solid;
-
-        border-top-left-radius: 25%;
-        border-bottom-left-radius: $border-radius;
-        border-bottom-right-radius: 25%;
-        border-top-right-radius: $border-radius;
 
         padding: 5%;
 
         .supplier-image {
             position: relative;
-            transition-property: bottom;
+            transition-property: top;
             transition-duration: 0.5s;
-            bottom: 0px;
-            width: 100%;
+            max-height: 100%;
+            max-width: 100%;
+            top: 25%;
         }
 
         &:hover .supplier-image {
-            bottom: 50px;
+            top: 0;
         }
 
         .view-supplier-overlay {

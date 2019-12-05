@@ -7,7 +7,7 @@
 
     // sections/_landing.scss
     #logo {
-        width: 35%;
+        width: 30%;
     }
 
     #nav-items {
@@ -16,6 +16,10 @@
         justify-content: space-between;
         align-content: center;
         align-items: center;
+
+        a {
+            font-size: 2rem;
+        }
     }
 
     // sections/_suppliers.scss
@@ -29,6 +33,7 @@
         .supplier {
             margin: 0 0 10% 0;
             .supplier-image {
+                top: 15%;
             }
 
             &:hover .supplier-image {
