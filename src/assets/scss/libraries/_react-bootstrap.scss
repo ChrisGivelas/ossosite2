@@ -1,7 +1,10 @@
-.modal-content {
-    .modal-header {
-        * {
-            font-size: 3rem !important;
+.modal {
+    padding: 0px !important;
+    .modal-content {
+        .modal-header {
+            * {
+                font-size: 3rem !important;
+            }
         }
     }
 }

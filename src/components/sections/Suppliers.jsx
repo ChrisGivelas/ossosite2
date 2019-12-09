@@ -30,14 +30,14 @@ const suppliers = require("../../suppliers.json");
 
 //Temporarily do it this way just so that we can deploy to github pages
 var supplierProducts = [
+    <ProductImage src={Artcraft7} />,
     <ProductImage src={Artcraft0} />,
     <ProductImage src={Artcraft1} />,
     <ProductImage src={Artcraft2} />,
     <ProductImage src={Artcraft3} />,
     <ProductImage src={Artcraft4} />,
     <ProductImage src={Artcraft5} />,
-    <ProductImage src={Artcraft6} />,
-    <ProductImage src={Artcraft7} />
+    <ProductImage src={Artcraft6} />
 ];
 
 function Supplier({id, name, website, description, productTypes, items}) {

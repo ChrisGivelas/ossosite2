@@ -6,10 +6,12 @@
     height: 100% !important;
 }
 
-.slick-slide img {
-    margin: auto;
+.slick-slide > div {
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
-.slick-list {
-    border-radius: $border-radius;
+.slick-slide img {
+    margin: auto;
 }

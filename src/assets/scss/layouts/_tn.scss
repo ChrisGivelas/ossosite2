@@ -26,8 +26,13 @@
 
     #suppliers-container {
         grid-template-columns: 1fr;
+        grid-gap: 0px;
         .supplier {
-            margin: 0 0 10% 0;
+            margin-bottom: 15px;
+            &:last-child {
+                margin-bottom: 0px;
+            }
+
             .supplier-image {
             }
 
@@ -50,6 +55,16 @@
 
     // sections/_about.scss
     #about-content {
+    }
+
+    #about-section {
+        #view-about-overlay {
+            opacity: 0.5 !important;
+        }
+
+        #view-about-button-container {
+            opacity: 1;
+        }
     }
 
     // sections/_contact.scss

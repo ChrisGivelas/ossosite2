@@ -16,10 +16,11 @@
 
         &[type="submit"] {
             width: 25%;
+            background-color: rgb(255, 255, 255) !important;
 
             &:hover:not(.disabled) {
                 cursor: pointer;
-                background-color: rgba(115, 115, 155, 0.7);
+                background-color: rgba(115, 115, 155, 0.7) !important;
             }
         }
 

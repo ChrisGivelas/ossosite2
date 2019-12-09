@@ -18,8 +18,6 @@
             position: relative;
             transition-property: top;
             transition-duration: 0.5s;
-            max-height: 100%;
-            max-width: 100%;
             top: 25%;
         }
 
@@ -37,6 +35,7 @@
             width: 100%;
             height: 100%;
             font-size: 1rem;
+            z-index: -1;
         }
 
         &:hover .view-supplier-overlay {
@@ -54,14 +53,12 @@
             width: 100%;
             height: 100%;
             font-size: 3rem;
-            font-weight: 700;
 
             display: flex;
             justify-content: center;
             align-items: center;
 
             background-color: rgba(115, 115, 115, 0.5);
-            color: white;
         }
 
         &:hover .view-supplier-button-container {

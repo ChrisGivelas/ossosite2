@@ -6,7 +6,7 @@
 section {
     &:not(#landing-section) {
         min-height: fit-content;
-        border-radius: $border-radius;
+        margin: 5% !important;
 
         &:not(#about-section) {
             display: flex;
@@ -14,10 +14,6 @@ section {
             align-items: center;
             border: 1px solid rgb(115, 115, 115);
             padding: 5%;
-        }
-
-        &:not(#contact-section) {
-            margin-bottom: 10%;
         }
     }
 }

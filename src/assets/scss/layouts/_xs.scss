@@ -31,7 +31,8 @@
     #suppliers-container {
         grid-template-columns: 1fr 1fr;
         .supplier {
-            margin: 0 0 10% 0;
+            &:last-child {
+            }
             .supplier-image {
             }
 
