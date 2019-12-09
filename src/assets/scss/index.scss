@@ -1,14 +1,14 @@
 html {
     font-size: 1vw;
-    font-weight: 300;
 }
 
-@import "./variables";
-@import "./mixins";
-@import "./components";
-@import "./pages";
-@import "./libraries";
-@import "./layouts";
+body {
+    margin: 0;
+    font-family: "Quicksand", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+        "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 
 @font-face {
     font-family: "Jomolhari";
@@ -20,11 +20,13 @@ html {
     src: url("../fonts/Quicksand/Quicksand-VariableFont:wght.ttf");
 }
 
+@import "./variables";
+@import "./mixins";
+@import "./components";
+@import "./pages";
+@import "./libraries";
+@import "./layouts";
+
 body {
-    margin: 0;
-    font-family: "Quicksand", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
-        "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     color: $default-text-colour !important;
 }
