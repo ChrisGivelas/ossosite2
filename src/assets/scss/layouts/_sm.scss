@@ -7,7 +7,7 @@
 
     // sections/_landing.scss
     #logo {
-        width: 60%;
+        width: 70%;
     }
 
     #nav-items {
@@ -16,6 +16,10 @@
         justify-content: space-between;
         align-content: center;
         align-items: center;
+
+        a {
+            font-size: 3.5rem;
+        }
     }
 
     // sections/_suppliers.scss
@@ -55,7 +59,12 @@
 
     #about-section {
         #view-about-overlay {
-            width: 70%;
+            opacity: 0.5 !important;
+            width: 100%;
+        }
+
+        #view-about-button-container {
+            opacity: 1;
         }
     }
 
@@ -63,6 +72,7 @@
     #contact-form {
         input,
         textarea {
+            font-size: 2rem;
             &[type="submit"] {
                 width: 50%;
 
@@ -80,5 +90,22 @@
     // shared/_divider.scss
     .divider-wrapper {
         height: 25vh;
+    }
+
+    section {
+        .section-title {
+            font-size: 3.5rem;
+        }
+        .section-description {
+            font-size: 2.5rem;
+        }
+        &:not(#landing-section) {
+            min-height: fit-content;
+            margin: 10% !important;
+        }
+    }
+
+    #footer-content {
+        font-size: 2.5rem;
     }
 }

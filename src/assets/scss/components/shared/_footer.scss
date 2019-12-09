@@ -1,13 +1,14 @@
 #footer {
     width: 100%;
+    height: fit-content;
     display: flex;
     justify-content: center;
     align-content: center;
     height: fit-content;
     background-color: rgb(115, 115, 155);
+    padding: 5%;
 }
 
 #footer-content {
-    font-size: 2rem;
-    padding: 25px;
+    font-size: 1.5rem;
 }
