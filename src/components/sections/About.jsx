@@ -75,7 +75,7 @@ function About() {
             <ScrollableAnchor id="about">
                 <section id="about-section" onClick={handleShowModal}>
                     <div id="view-about-overlay" style={window.isTouchEnabled ? {opacity: 0.5} : {}}>
-                        <Carousel autoplaySpeed={4000}>{aboutImages}</Carousel>
+                        <Carousel autoplaySpeed={2000}>{aboutImages}</Carousel>
                     </div>
                     <div id="view-about-button-container" style={window.isTouchEnabled ? {opacity: 1} : {}}>
                         <p>Our Story</p>

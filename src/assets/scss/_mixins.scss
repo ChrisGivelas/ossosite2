@@ -15,3 +15,9 @@
     align-items: center;
     justify-content: center;
 }
+
+@mixin box-shadow {
+    -webkit-box-shadow: 10px 10px 28px -17px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 10px 10px 28px -17px rgba(0, 0, 0, 1);
+    box-shadow: 10px 10px 28px -17px rgba(0, 0, 0, 1);
+}

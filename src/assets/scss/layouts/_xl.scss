@@ -1,6 +1,6 @@
 @media screen and (min-width: map-get($map: $screen-sizes, $key: "xl")) {
     html {
-        font-size: 3vh;
+        font-size: 29px;
     }
 
     /* ============================= SECTIONS ============================= */
@@ -12,7 +12,6 @@
 
     #nav-items {
         a {
-            font-size: 2rem;
         }
     }
 

@@ -1,6 +1,6 @@
 @media screen and (min-width: map-get($map: $screen-sizes, $key: "xs")) and (max-width: (map-get($map: $screen-sizes, $key: "sm") - 1px)) {
     html {
-        font-size: 4vh;
+        font-size: 17px;
     }
 
     /* ============================= SECTIONS ============================= */
@@ -16,9 +16,6 @@
         justify-content: space-between;
         align-content: center;
         align-items: center;
-
-        a {
-        }
     }
 
     // sections/_suppliers.scss

@@ -14,6 +14,8 @@
 
         padding: 15px;
 
+        @include box-shadow;
+
         .supplier-image {
             position: relative;
             transition-property: top;

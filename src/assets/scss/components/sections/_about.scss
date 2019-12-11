@@ -20,8 +20,6 @@
         @include clickable-overlay;
         @include flex-centered;
 
-        font-size: 1.5rem;
-
         &:hover {
             opacity: 1;
         }
