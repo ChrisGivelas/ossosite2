@@ -18,23 +18,17 @@
     height: 100vh;
 }
 
-#logo-container {
-    display: flex;
-    justify-content: center;
-}
-
 #logo {
     width: 30%;
 }
 
 #nav-items {
-    width: 40%;
+    width: 80%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 
     a {
-        font-size: 3rem;
         text-decoration: none !important;
         transition-property: color;
         transition-duration: 0.5s;

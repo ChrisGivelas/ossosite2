@@ -78,7 +78,7 @@ function Supplier({id, name, website, description, productTypes, items}) {
                     <Carousel slickRef={slickRef}>{items}</Carousel>
                 </div>
                 <div className="view-supplier-button-container">
-                    <span>View</span>
+                    <h5>View</h5>
                 </div>
             </div>
             <SupplierModal
@@ -103,7 +103,6 @@ function Suppliers() {
             <section id="suppliers-section">
                 <h3 className="section-title">Our Suppliers</h3>
                 <p className="section-description">Description goes here</p>
-                <hr />
                 <div id="suppliers-container">
                     {suppliers &&
                         suppliers.map(supplierInfo => (

@@ -1,6 +1,10 @@
-html {
-    font-size: 1vw;
-}
+@import url("https://fonts.googleapis.com/css?family=Quicksand:300,400,500,600,700&display=swap");
+
+@import "./mixins";
+@import "./variables";
+@import "./components";
+@import "./libraries";
+@import "./layouts";
 
 body {
     margin: 0;
@@ -8,25 +12,5 @@ body {
         "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-}
-
-@font-face {
-    font-family: "Jomolhari";
-    src: url("../fonts/Jomolhari/Jomolhari-Regular.ttf");
-}
-
-@font-face {
-    font-family: "Quicksand";
-    src: url("../fonts/Quicksand/Quicksand-VariableFont:wght.ttf");
-}
-
-@import "./variables";
-@import "./mixins";
-@import "./components";
-@import "./pages";
-@import "./libraries";
-@import "./layouts";
-
-body {
-    color: $default-text-colour !important;
+    color: $default-colour !important;
 }

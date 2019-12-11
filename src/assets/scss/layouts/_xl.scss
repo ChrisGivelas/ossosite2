@@ -1,22 +1,16 @@
 @media screen and (min-width: map-get($map: $screen-sizes, $key: "xl")) {
     html {
-        font-size: 1vw;
+        font-size: 3vh;
     }
 
     /* ============================= SECTIONS ============================= */
 
     // sections/_landing.scss
     #logo {
-        width: 30%;
+        width: 40%;
     }
 
     #nav-items {
-        height: 25%;
-        flex-direction: column;
-        justify-content: space-between;
-        align-content: center;
-        align-items: center;
-
         a {
             font-size: 2rem;
         }
@@ -31,9 +25,7 @@
     #suppliers-container {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         .supplier {
-            margin: 0 0 10% 0;
             .supplier-image {
-                top: 15%;
             }
 
             &:hover .supplier-image {

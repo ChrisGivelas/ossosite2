@@ -1,6 +1,6 @@
 @media screen and (min-width: map-get($map: $screen-sizes, $key: "xs")) and (max-width: (map-get($map: $screen-sizes, $key: "sm") - 1px)) {
     html {
-        font-size: 3vw;
+        font-size: 4vh;
     }
 
     /* ============================= SECTIONS ============================= */
@@ -18,7 +18,6 @@
         align-items: center;
 
         a {
-            font-size: 2.5rem;
         }
     }
 
@@ -29,12 +28,11 @@
     }
 
     #suppliers-container {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         .supplier {
             &:last-child {
             }
             .supplier-image {
-                top: 35%;
             }
 
             &:hover .supplier-image {

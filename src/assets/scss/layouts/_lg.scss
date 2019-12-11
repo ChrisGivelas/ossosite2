@@ -1,6 +1,6 @@
 @media screen and (min-width: map-get($map: $screen-sizes, $key: "lg")) and (max-width: (map-get($map: $screen-sizes, $key: "xl") - 1px)) {
     html {
-        font-size: 1vw;
+        font-size: 3vh;
     }
 
     /* ============================= SECTIONS ============================= */
@@ -11,11 +11,6 @@
     }
 
     #nav-items {
-        height: 25%;
-        flex-direction: column;
-        justify-content: space-between;
-        align-content: center;
-        align-items: center;
     }
 
     // sections/_suppliers.scss
@@ -27,9 +22,7 @@
     #suppliers-container {
         grid-template-columns: 1fr 1fr 1fr;
         .supplier {
-            margin: 0 0 10% 0;
             .supplier-image {
-                top: 15%;
             }
 
             &:hover .supplier-image {

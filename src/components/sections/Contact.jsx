@@ -58,10 +58,15 @@ class Contact extends React.Component {
                 <section id="contact-section">
                     <h3 className="section-title">Contact Us</h3>
                     <p id="contact-section-description" className="section-description">
-                        <p>905-404-6776</p>
-                        <p>
-                            <a href="mailto:info@ossolighting.ca">info@ossolighting.ca</a>
-                        </p>
+                        209 Bloor Street East
+                        <br />
+                        Oshawa, Ontario
+                        <br />
+                        905-404-6776
+                        <br />
+                        <a className="section-description" href="mailto:info@ossolighting.ca">
+                            info@ossolighting.ca
+                        </a>
                     </p>
                     <form
                         id="contact-form"

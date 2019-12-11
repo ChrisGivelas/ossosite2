@@ -3,13 +3,40 @@
 .slick-track,
 .slick-slide,
 .slick-slide > div {
-    height: 100% !important;
+    height: 100%;
+}
+
+.slick-slider {
+    .slick-arrow {
+        z-index: 999;
+        color: black;
+
+        &.slick-prev {
+            left: 0.8rem;
+
+            &:before {
+                color: black;
+                font-size: 3rem;
+            }
+        }
+
+        &.slick-next {
+            right: 2.5rem;
+            &:before {
+                color: black;
+                font-size: 3rem;
+            }
+        }
+    }
 }
 
 .slick-slide > div {
     display: flex;
     align-items: center;
-    height: 100%;
+
+    & > * {
+        display: inline-block;
+    }
 }
 
 .slick-slide img {

@@ -1,14 +1,12 @@
 #footer {
     width: 100%;
     height: fit-content;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    height: fit-content;
     background-color: rgb(115, 115, 155);
-    padding: 5%;
+    padding: 15px;
+
+    @include flex-centered;
 }
 
 #footer-content {
-    font-size: 1.5rem;
+    margin: 0px;
 }

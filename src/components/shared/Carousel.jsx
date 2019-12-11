@@ -5,29 +5,28 @@ import Slider from "react-slick";
 
 export default class Carousel extends React.Component {
     static propTypes = {
-        children: P.array.isRequired,
-        settings: P.object
+        children: P.array.isRequired
     };
 
     static defaultProps = {
         children: [],
-        settings: {
-            dots: false,
-            arrows: false,
-            infinite: true,
-            speed: 2000,
-            autoplay: true,
-            autoplaySpeed: 1000,
-            pauseOnHover: false,
-            draggable: false
-        },
+        dots: false,
+        arrows: false,
+        infinite: true,
+        speed: 2000,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        pauseOnHover: false,
+        draggable: false,
         slickRef: undefined
     };
 
     render() {
+        const {slickRef, children, ...settings} = this.props;
+
         return (
-            <Slider ref={this.props.slickRef} {...this.props.settings}>
-                {this.props.children}
+            <Slider ref={slickRef} {...settings}>
+                {children}
             </Slider>
         );
     }
