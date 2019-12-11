@@ -31,15 +31,19 @@ var aboutImages = [
 ];
 
 function About() {
-    const [verticalMode, setVerticalMode] = useState();
+    const [verticalMode, setVerticalMode] = useState(null);
     const selfRef = useRef();
     const slickRef = React.createRef();
 
     const updateMode = _ => {
-        if (verticalMode && window.innerWidth >= 650) {
-            setVerticalMode(false);
-        } else if (!verticalMode && window.innerWidth < 650) {
-            setVerticalMode(true);
+        if (verticalMode === null) {
+            setVerticalMode(window.innerWidth < 650);
+        } else {
+            if (verticalMode && window.innerWidth >= 650) {
+                setVerticalMode(false);
+            } else if (!verticalMode && window.innerWidth < 650) {
+                setVerticalMode(true);
+            }
         }
     };
 
@@ -72,6 +76,7 @@ function About() {
         };
     }, [verticalMode]);
 
+    console.log(verticalMode);
     return (
         <React.Fragment>
             <ScrollableAnchor id="about">

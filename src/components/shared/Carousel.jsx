@@ -24,7 +24,6 @@ export default class Carousel extends React.Component {
 
     render() {
         const {slickRef, children, ...settings} = this.props;
-        console.log("rerender with props:", this.props);
 
         return (
             <Slider ref={slickRef} {...settings}>
