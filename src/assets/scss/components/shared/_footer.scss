@@ -1,7 +1,7 @@
 #footer {
     width: 100%;
     height: fit-content;
-    background-color: rgb(115, 115, 155);
+    background-color: $osso-logo-colour2;
     padding: 15px;
 
     @include flex-centered;

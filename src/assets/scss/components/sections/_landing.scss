@@ -29,11 +29,11 @@
     align-items: center;
 
     a {
-        text-decoration: none !important;
+        text-decoration: none;
         transition-property: color;
         transition-duration: 0.5s;
 
-        color: rgb(55, 55, 55) !important;
+        color: rgb(55, 55, 55);
 
         font-size: 2rem;
 
@@ -46,7 +46,7 @@
         }
 
         &:hover {
-            color: green !important;
+            color: $osso-logo-colour2;
         }
     }
 }

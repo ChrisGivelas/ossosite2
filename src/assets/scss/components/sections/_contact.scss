@@ -4,6 +4,12 @@
 
 #contact-section {
     @include box-shadow;
+
+    .section-description {
+        a {
+            color: $osso-logo-colour1;
+        }
+    }
 }
 
 #contact-form {
