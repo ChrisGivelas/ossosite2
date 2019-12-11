@@ -2,6 +2,10 @@
     text-align: center;
 }
 
+#contact-section {
+    @include box-shadow;
+}
+
 #contact-form {
     width: 100%;
     display: flex;

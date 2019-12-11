@@ -1,13 +1,12 @@
 @media screen and (min-width: map-get($map: $screen-sizes, $key: "xs")) and (max-width: (map-get($map: $screen-sizes, $key: "sm") - 1px)) {
     html {
-        font-size: 17px;
+        font-size: 16px;
     }
 
     /* ============================= SECTIONS ============================= */
 
     // sections/_landing.scss
     #logo {
-        width: 80%;
     }
 
     #nav-items {
@@ -20,8 +19,6 @@
 
     // sections/_suppliers.scss
     #suppliers-section {
-        padding: 0px !important;
-        border: 0px !important;
     }
 
     #suppliers-container {
@@ -30,6 +27,7 @@
             &:last-child {
             }
             .supplier-image {
+                top: 25%;
             }
 
             &:hover .supplier-image {
@@ -42,9 +40,15 @@
             }
 
             .view-supplier-button-container {
+                h5 {
+                    font-size: 2rem;
+                }
             }
 
             &:hover .view-supplier-button-container {
+                h5 {
+                    top: 40%;
+                }
             }
         }
     }
@@ -54,13 +58,6 @@
     }
 
     #about-section {
-        #view-about-overlay {
-            opacity: 0.5 !important;
-        }
-
-        #view-about-button-container {
-            opacity: 1;
-        }
     }
 
     // sections/_contact.scss

@@ -1,24 +1,19 @@
 @media screen and (min-width: map-get($map: $screen-sizes, $key: "xl")) {
     html {
-        font-size: 29px;
+        font-size: 24px;
     }
 
     /* ============================= SECTIONS ============================= */
 
     // sections/_landing.scss
     #logo {
-        width: 40%;
     }
 
     #nav-items {
-        a {
-        }
     }
 
     // sections/_suppliers.scss
     #suppliers-section {
-        padding: 0px !important;
-        border: 0px !important;
     }
 
     #suppliers-container {

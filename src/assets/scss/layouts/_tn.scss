@@ -1,13 +1,12 @@
 @media screen and (max-width: (map-get($map: $screen-sizes, $key: "xs") - 1px)) {
     html {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     /* ============================= SECTIONS ============================= */
 
     // sections/_landing.scss
     #logo {
-        width: 90%;
     }
 
     #nav-items {
@@ -20,8 +19,6 @@
 
     // sections/_suppliers.scss
     #suppliers-section {
-        padding: 0px !important;
-        border: 0px !important;
     }
 
     #suppliers-container {
@@ -46,9 +43,15 @@
             }
 
             .view-supplier-button-container {
+                h5 {
+                    font-size: 2.5rem;
+                }
             }
 
             &:hover .view-supplier-button-container {
+                h5 {
+                    top: 40%;
+                }
             }
         }
     }
@@ -58,13 +61,6 @@
     }
 
     #about-section {
-        #view-about-overlay {
-            opacity: 0.5 !important;
-        }
-
-        #view-about-button-container {
-            opacity: 1;
-        }
     }
 
     // sections/_contact.scss

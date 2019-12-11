@@ -1,13 +1,12 @@
 @media screen and (min-width: map-get($map: $screen-sizes, $key: "md")) and (max-width: (map-get($map: $screen-sizes, $key: "lg") - 1px)) {
     html {
-        font-size: 23px;
+        font-size: 20px;
     }
 
     /* ============================= SECTIONS ============================= */
 
     // sections/_landing.scss
     #logo {
-        width: 50%;
     }
 
     #nav-items {
@@ -15,8 +14,6 @@
 
     // sections/_suppliers.scss
     #suppliers-section {
-        padding: 0px !important;
-        border: 0px !important;
     }
 
     #suppliers-container {

@@ -3,6 +3,7 @@
     max-height: 300px;
     overflow: hidden;
     @include flex-centered;
+    @include box-shadow;
 
     #view-about-overlay {
         top: 0;
