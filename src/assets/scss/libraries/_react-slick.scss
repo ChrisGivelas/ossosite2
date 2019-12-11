@@ -9,22 +9,19 @@
 .slick-slider {
     .slick-arrow {
         z-index: 999;
-        color: black;
 
         &.slick-prev {
             left: 0.8rem;
 
             &:before {
-                color: black;
-                font-size: 3rem;
+                font-size: 2rem;
             }
         }
 
         &.slick-next {
             right: 2.5rem;
             &:before {
-                color: black;
-                font-size: 3rem;
+                font-size: 2rem;
             }
         }
     }

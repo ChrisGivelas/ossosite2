@@ -58,6 +58,19 @@
     }
 
     #about-section {
+        #about-content-container {
+            .slick-vertical {
+                .slick-arrow {
+                    &.slick-prev {
+                        left: 48%;
+                    }
+
+                    &.slick-next {
+                        left: 48%;
+                    }
+                }
+            }
+        }
     }
 
     // sections/_contact.scss
