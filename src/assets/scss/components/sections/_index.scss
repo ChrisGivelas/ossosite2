@@ -1,28 +1,19 @@
 @import "./landing";
 @import "./suppliers";
 @import "./about";
-@import "./contact";
 
 section {
     margin-bottom: 5vh !important;
-    &:not(#landing-section) {
-        min-height: fit-content;
-
-        width: 80%;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        &:not(#about-section) {
-            border: 1px solid rgb(115, 115, 115);
-            padding: 5vh;
-        }
-    }
 }
 
-.section-title {
+section:not(#landing-section) {
+    min-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.section-description {
+section:not(#landing-section):not(#about-section) {
+    border: 1px solid rgb(115, 115, 115);
+    padding: 5vh;
 }

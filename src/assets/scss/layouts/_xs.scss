@@ -50,6 +50,11 @@
                     top: 40%;
                 }
             }
+
+            &.expanded {
+                grid-column: span 1;
+                grid-row: span 2;
+            }
         }
     }
 

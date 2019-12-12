@@ -4,6 +4,7 @@
     "private": true,
     "homepage": "http://ChrisGivelas.github.io/ossosite2",
     "dependencies": {
+        "animate-css-grid": "^1.4.1",
         "node-sass": "^4.13.0",
         "prop-types": "^15.7.2",
         "react": "^16.9.0",
