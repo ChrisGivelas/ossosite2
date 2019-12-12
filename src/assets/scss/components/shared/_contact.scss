@@ -1,9 +1,4 @@
 #contact-container {
-    & > h3 {
-        text-align: center;
-        margin-bottom: 30px;
-    }
-
     #contact-header-content {
         margin: auto;
         width: 80%;
@@ -11,16 +6,22 @@
         justify-content: space-between;
 
         & > * {
-            width: 50%;
-        }
-
-        #info {
-            text-align: left;
+            width: auto;
         }
 
         #hours {
-            text-align: right;
+            .hours-entry {
+                margin: 0px;
+                display: flex;
+                justify-content: space-between;
+                span {
+                    margin-left: 10px;
+                    margin-right: 10px;
+                }
+            }
         }
+
+        margin-bottom: 30px;
     }
 
     #contact-content {

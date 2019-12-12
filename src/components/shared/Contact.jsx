@@ -56,8 +56,6 @@ class Contact extends React.Component {
         return (
             <ScrollableAnchor id="contact">
                 <div id="contact-container">
-                    <h3>Contact Us</h3>
-
                     <div id="contact-header-content">
                         <p id="info">
                             209 Bloor Street East
@@ -68,16 +66,36 @@ class Contact extends React.Component {
                             <br />
                             <a href="mailto:info@ossolighting.ca">info@ossolighting.ca</a>
                         </p>
-                        <p id="hours">
-                            Sunday &amp; Monday: Closed
-                            <br />
-                            Tuesday &amp; Wednesday: 9:30am-5:30pm
-                            <br />
-                            Thursday: 9:30am-8:00pm
-                            <br />
-                            Friday &amp; Saturday: 9:30am-5:30pm
-                            <br />
-                        </p>
+                        <div id="hours">
+                            <p className="hours-entry">
+                                <span>Monday:</span>
+                                <span>Closed</span>
+                            </p>
+                            <p className="hours-entry">
+                                <span>Tuesday:</span>
+                                <span>9:30am - 5:30pm</span>
+                            </p>
+                            <p className="hours-entry">
+                                <span>Wednesday:</span>
+                                <span>9:30am - 5:30pm</span>
+                            </p>
+                            <p className="hours-entry">
+                                <span>Thursday:</span>
+                                <span>9:30am - 8pm</span>
+                            </p>
+                            <p className="hours-entry">
+                                <span>Friday:</span>
+                                <span>9:30am - 5:30pm</span>
+                            </p>
+                            <p className="hours-entry">
+                                <span>Sunday:</span>
+                                <span>9:30am - 5:30pm</span>
+                            </p>
+                            <p className="hours-entry">
+                                <span>Sunday:</span>
+                                <span>Closed</span>
+                            </p>
+                        </div>
                     </div>
                     <div id="contact-content">
                         <form

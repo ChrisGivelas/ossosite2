@@ -99,8 +99,6 @@ function About() {
                             arrows
                             infinite={false}
                             vertical={verticalMode}
-                            verticalSwiping={verticalMode}
-                            draggable={verticalMode}
                         >
                             {aboutImages}
                         </Carousel>

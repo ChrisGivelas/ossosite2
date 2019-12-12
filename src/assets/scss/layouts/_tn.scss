@@ -82,18 +82,23 @@
     }
 
     // sections/_contact.scss
-    #contact-form {
-        input,
-        textarea {
-            &[type="submit"] {
-                width: 50%;
+    #contact-header-content,
+    #contact-content {
+        flex-direction: column;
+        padding: 0px !important;
 
-                &:hover:not(.disabled) {
-                }
-            }
+        #info,
+        #hours {
+            text-align: center !important;
         }
 
-        textarea {
+        #osso-map {
+            margin-top: 30px;
+            padding: 0px !important;
+        }
+
+        & > * {
+            width: 100% !important;
         }
     }
 
