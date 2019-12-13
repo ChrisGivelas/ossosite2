@@ -1,27 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ab5285acf7fc4021d503fe98a45f060e",
+    "revision": "5ac1e4f60894149776bb1079e67cf6ca",
     "url": "/ossosite2/index.html"
   },
   {
-    "revision": "68ff531cf53ec5c58605",
+    "revision": "cab18f7892a14049e40d",
     "url": "/ossosite2/static/css/2.67d9ffe4.chunk.css"
   },
   {
-    "revision": "4617807b9297ffb3d99b",
-    "url": "/ossosite2/static/css/main.899778b7.chunk.css"
+    "revision": "43ce126669eacfacf5c8",
+    "url": "/ossosite2/static/css/main.0f2f2ef7.chunk.css"
   },
   {
-    "revision": "68ff531cf53ec5c58605",
-    "url": "/ossosite2/static/js/2.432c9725.chunk.js"
+    "revision": "cab18f7892a14049e40d",
+    "url": "/ossosite2/static/js/2.366eacaa.chunk.js"
   },
   {
-    "revision": "4617807b9297ffb3d99b",
-    "url": "/ossosite2/static/js/main.a801b7ce.chunk.js"
+    "revision": "43ce126669eacfacf5c8",
+    "url": "/ossosite2/static/js/main.d55616c2.chunk.js"
   },
   {
     "revision": "97c5c1498de5a977e246",
     "url": "/ossosite2/static/js/runtime-main.30d815cb.js"
+  },
+  {
+    "revision": "d851c42e2b542e0739718f6f8c2fa57a",
+    "url": "/ossosite2/static/media/1.d851c42e.jpg"
   },
   {
     "revision": "972e46ebba2ac76370b1bf0471dc6c69",
