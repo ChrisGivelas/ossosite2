@@ -1,10 +1,8 @@
-import React, {useState} from "react";
+import React from "react";
 import {getImageURL} from "../../../utils/resourceUtils";
 
-function Supplier({id, name, website, description, productTypes, items}) {
-    const [expanded, setExpanded] = useState(false);
-
-    const toggleExpanded = () => setExpanded(!expanded);
+function Supplier({id, name, website, description, productTypes, items, onClick, expanded}) {
+    const toggleExpanded = () => onClick(id);
 
     return (
         <div className={`supplier ${expanded ? "expanded" : ""}`} onClick={toggleExpanded}>

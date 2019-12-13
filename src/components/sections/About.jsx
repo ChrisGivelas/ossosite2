@@ -86,8 +86,7 @@ function About() {
         <React.Fragment>
             <ScrollableAnchor id="about">
                 <section id="about-section">
-                    <h3 className="section-title">Our Story</h3>
-                    <hr />
+                    <h1 className="section-title">Our Story</h1>
                     <div id="about-content-container" ref={selfRef}>
                         <Carousel
                             slickRef={slickRef}
@@ -103,7 +102,6 @@ function About() {
                             {aboutImages}
                         </Carousel>
                     </div>
-                    <hr />
                 </section>
             </ScrollableAnchor>
         </React.Fragment>

@@ -81,7 +81,7 @@ class Contact extends React.Component {
                             </p>
                             <p className="hours-entry">
                                 <span>Thursday:</span>
-                                <span>9:30am - 8pm</span>
+                                <span>9:30am - 8:00pm</span>
                             </p>
                             <p className="hours-entry">
                                 <span>Friday:</span>
@@ -101,8 +101,8 @@ class Contact extends React.Component {
                         <form
                             id="contact-form"
                             onSubmit={e => {
-                                e.preventDefault();
                                 this.sendEmail();
+                                e.preventDefault();
                             }}
                         >
                             <input

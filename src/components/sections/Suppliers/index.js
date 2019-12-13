@@ -8,23 +8,40 @@ class Suppliers extends React.Component {
         suppliers: []
     };
 
+    constructor(props) {
+        super(props);
+
+        this.state = {supplierExpanded: null};
+    }
+
     componentDidMount() {
         const grid = document.querySelector("#suppliers-container");
         wrapGrid(grid, {
-            stagger: 10,
             duration: 400,
             onEnd: list => console.log(list)
         });
     }
+
+    toggleSupplierExpansion = id => {
+        if (this.state.supplierExpanded === null || this.state.supplierExpanded !== id)
+            this.setState({supplierExpanded: id});
+        else this.setState({supplierExpanded: null});
+    };
+
     render() {
         return (
             <ScrollableAnchor id="suppliers">
                 <section id="suppliers-section">
-                    <h3 className="section-title">Our Suppliers</h3>
-                    <p className="section-description">Description goes here</p>
+                    <h1 className="section-title">Our Suppliers</h1>
+                    <h3 className="section-description">Description goes here</h3>
                     <div id="suppliers-container">
                         {this.props.suppliers.map(supplierInfo => (
-                            <Supplier key={`${supplierInfo.id}_${supplierInfo.name}`} {...supplierInfo} />
+                            <Supplier
+                                key={`${supplierInfo.id}_${supplierInfo.name}`}
+                                {...supplierInfo}
+                                onClick={this.toggleSupplierExpansion}
+                                expanded={this.state.supplierExpanded === supplierInfo.id}
+                            />
                         ))}
                     </div>
                 </section>

@@ -3,16 +3,9 @@
 @import "./about";
 
 section {
-    margin-bottom: 5vh !important;
-}
-
-section:not(#landing-section) {
-    min-height: fit-content;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-}
-
-section:not(#landing-section):not(#about-section) {
-    padding: 5vh;
+    margin-bottom: 5vh !important;
 }
