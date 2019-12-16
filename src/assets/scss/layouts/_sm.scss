@@ -55,30 +55,8 @@
     }
 
     // sections/_contact.scss
-    #contact-header-content,
-    #contact-content {
-        flex-direction: column;
-        padding: 0px !important;
-
-        #info,
-        #hours {
-            text-align: center !important;
-        }
-
-        #osso-map {
-            margin-top: 30px;
-            padding: 0px !important;
-        }
-
-        & > * {
-            width: 100% !important;
-        }
-    }
 
     /* ============================= SHARED ============================= */
 
     // shared/_divider.scss
-    .divider-wrapper {
-        height: 25vh;
-    }
 }

@@ -2,6 +2,7 @@ import React from "react";
 import ScrollableAnchor from "react-scrollable-anchor";
 import Supplier from "./_supplier";
 import {wrapGrid} from "animate-css-grid";
+import {SUPPLIERS} from "../../../routes";
 
 class Suppliers extends React.Component {
     static defaultProps = {
@@ -30,7 +31,7 @@ class Suppliers extends React.Component {
 
     render() {
         return (
-            <ScrollableAnchor id="suppliers">
+            <ScrollableAnchor id={SUPPLIERS}>
                 <section id="suppliers-section">
                     <h1 className="section-title">Our Suppliers</h1>
                     <h3 className="section-description">Description goes here</h3>

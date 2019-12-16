@@ -1,8 +1,8 @@
 import React from "react";
 import ScrollableAnchor from "react-scrollable-anchor";
-import Spinner from "./Spinner";
-import Checkmark from "./Checkmark";
-
+import Spinner from "../shared/Spinner";
+import Checkmark from "../shared/Checkmark";
+import {CONTACT} from "../../routes";
 const EMAIL_SERVER_ENDPOINT = "https://osso-email-service.herokuapp.com/email";
 
 class Contact extends React.Component {
@@ -54,8 +54,9 @@ class Contact extends React.Component {
 
         const submitDisabled = emailStatus.submitting || !this.canSubmit();
         return (
-            <ScrollableAnchor id="contact">
-                <div id="contact-container">
+            <ScrollableAnchor id={CONTACT}>
+                <section id="contact-section">
+                    <h1>Contact.</h1>
                     <div id="contact-header-content">
                         <p id="info">
                             209 Bloor Street East
@@ -163,7 +164,7 @@ class Contact extends React.Component {
                             allowFullScreen=""
                         ></iframe>
                     </div>
-                </div>
+                </section>
             </ScrollableAnchor>
         );
     }

@@ -1,4 +1,4 @@
-#contact-container {
+#contact-section {
     #contact-header-content {
         margin: auto;
         width: 80%;
@@ -10,6 +10,8 @@
         }
 
         #hours {
+            margin-top: 15px;
+            margin-bottom: 15px;
             .hours-entry {
                 margin: 0px;
                 display: flex;
@@ -40,13 +42,24 @@
                 border: 1px solid rgb(115, 115, 115);
                 margin-bottom: 15px;
 
+                font-size: 1rem;
+                padding: 15px;
+
+                &:hover:not([type="submit"]) {
+                    border: 2px solid $osso-logo-colour1 !important;
+                }
+
                 &[type="submit"] {
                     width: 25%;
                     background-color: rgb(255, 255, 255) !important;
 
-                    &:hover:not(.disabled) {
-                        cursor: pointer;
-                        background-color: rgba(115, 115, 155, 0.7) !important;
+                    &:hover {
+                        background-color: $osso-logo-colour3 !important;
+                        color: white;
+                        &:not(.disabled) {
+                            background-color: $osso-logo-colour1 !important;
+                            cursor: pointer;
+                        }
                     }
                 }
 
@@ -63,5 +76,25 @@
             width: 50%;
             padding-left: 15px;
         }
+    }
+}
+
+#contact-header-content,
+#contact-content {
+    flex-direction: column;
+    padding: 0px !important;
+
+    #info,
+    #hours {
+        text-align: center !important;
+    }
+
+    #osso-map {
+        margin-top: 30px;
+        padding: 0px !important;
+    }
+
+    & > * {
+        width: 100% !important;
     }
 }

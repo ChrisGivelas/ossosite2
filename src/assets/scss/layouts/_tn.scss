@@ -82,30 +82,52 @@
     }
 
     // sections/_contact.scss
-    #contact-header-content,
-    #contact-content {
-        flex-direction: column;
-        padding: 0px !important;
-
-        #info,
+    #contact-section {
         #hours {
-            text-align: center !important;
+            .hours-entry {
+                font-size: 0.95rem;
+            }
         }
+    }
 
-        #osso-map {
-            margin-top: 30px;
-            padding: 0px !important;
+    #contact-section {
+        #contact-header-content {
+            margin: auto;
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+
+            & > * {
+                width: auto;
+            }
+
+            #hours {
+                margin-top: 15px;
+                margin-bottom: 15px;
+                .hours-entry {
+                    margin: 0px;
+                    display: flex;
+                    justify-content: space-between;
+                    span {
+                        margin-left: 10px;
+                        margin-right: 10px;
+                    }
+                }
+            }
+
+            margin-bottom: 30px;
         }
-
-        & > * {
-            width: 100% !important;
+        #contact-form {
+            input,
+            textarea {
+                &[type="submit"] {
+                    width: 50% !important;
+                }
+            }
         }
     }
 
     /* ============================= SHARED ============================= */
 
     // shared/_divider.scss
-    .divider-wrapper {
-        height: 25vh;
-    }
 }

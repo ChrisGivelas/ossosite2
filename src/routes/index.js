@@ -1,8 +1,8 @@
 import Suppliers from "../components/sections/Suppliers";
 import About from "../components/sections/About";
-import Contact from "../components/shared/Contact";
+import Contact from "../components/sections/Contact";
 
-export const SUPPLIERS = "suppliers";
+export const SUPPLIERS = "shop";
 export const ABOUT = "about";
 export const CONTACT = "contact";
 

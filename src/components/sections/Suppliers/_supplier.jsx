@@ -12,6 +12,12 @@ function Supplier({id, name, website, description, productTypes, items, onClick,
                     src={getImageURL(`${name}-logo.jpg`, "Supplier_Logos", "http://ossolighting.ca")}
                     alt={name}
                 />
+
+                <ul>
+                    {productTypes.map(type => (
+                        <li>{type}</li>
+                    ))}
+                </ul>
             </div>
         </div>
     );

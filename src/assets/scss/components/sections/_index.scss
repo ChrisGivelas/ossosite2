@@ -1,11 +1,17 @@
 @import "./landing";
 @import "./suppliers";
 @import "./about";
+@import "./contact";
 
 section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 5vh !important;
+}
+
+section:not(#landing-section) {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 10% !important;
 }

@@ -1,7 +1,7 @@
 import React, {useEffect, useRef, useState} from "react";
 import ScrollableAnchor from "react-scrollable-anchor";
 import Carousel from "../shared/Carousel";
-
+import {ABOUT} from "../../routes";
 import MarinoOsso from "../../assets/images/Marino Osso.jpg";
 
 // var aboutText = [
@@ -83,28 +83,25 @@ function About() {
     }, [verticalMode, selfRef, slickRef]);
 
     return (
-        <React.Fragment>
-            <ScrollableAnchor id="about">
-                <section id="about-section">
-                    <h1 className="section-title">Our Story</h1>
-                    <div id="about-content-container" ref={selfRef}>
-                        <Carousel
-                            slickRef={slickRef}
-                            autoplaySpeed={4000}
-                            speed={1000}
-                            variableWidth={!verticalMode}
-                            autoplay={false}
-                            centerMode
-                            arrows
-                            infinite={false}
-                            vertical={verticalMode}
-                        >
-                            {aboutImages}
-                        </Carousel>
-                    </div>
-                </section>
-            </ScrollableAnchor>
-        </React.Fragment>
+        <ScrollableAnchor id={ABOUT}>
+            <section id="about-section">
+                <h1 className="section-title">Our Story</h1>
+                <div id="about-content-container" ref={selfRef}>
+                    <Carousel
+                        slickRef={slickRef}
+                        autoplaySpeed={4000}
+                        speed={1000}
+                        variableWidth={!verticalMode}
+                        autoplay={false}
+                        centerMode
+                        arrows
+                        vertical={verticalMode}
+                    >
+                        {aboutImages}
+                    </Carousel>
+                </div>
+            </section>
+        </ScrollableAnchor>
     );
 }
 
