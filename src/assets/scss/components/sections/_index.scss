@@ -8,10 +8,14 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    .section-title,
+    .section-description {
+        margin-bottom: 5vh !important;
+    }
 }
 
 section:not(#landing-section) {
     width: 80%;
     margin: auto;
-    margin-bottom: 10% !important;
 }

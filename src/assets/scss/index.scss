@@ -15,12 +15,20 @@ body {
     -moz-osx-font-smoothing: grayscale;
     color: $default-colour !important;
     font-weight: 300;
+
+    * {
+        font-family: inherit !important;
+    }
 }
 
 input,
 textarea {
     &:not([type="submit"]) {
         padding: 15px !important;
+    }
+
+    &[type="submit"] {
+        min-width: fit-content;
     }
 }
 
@@ -39,4 +47,8 @@ h6 {
     margin-top: 0px;
     margin-bottom: 15px;
     display: inline-block;
+}
+
+p {
+    margin: 0px;
 }

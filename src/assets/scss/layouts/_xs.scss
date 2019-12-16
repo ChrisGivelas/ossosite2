@@ -18,49 +18,20 @@
     }
 
     // sections/_suppliers.scss
+
     #suppliers-section {
-    }
-
-    #suppliers-container {
-        grid-template-columns: 1fr;
-        .supplier {
-            &:last-child {
-            }
-            .supplier-image {
-                top: 25%;
-            }
-
-            &:hover .supplier-image {
-            }
-
-            .view-supplier-overlay {
-            }
-
-            &:hover .view-supplier-overlay {
-            }
-
-            .view-supplier-button-container {
-                h5 {
-                    font-size: 2rem;
+        #suppliers-container {
+            grid-template-columns: 1fr;
+            .supplier {
+                &.expanded {
+                    grid-column: span 1;
+                    grid-row: span 2;
                 }
-            }
-
-            &:hover .view-supplier-button-container {
-                h5 {
-                    top: 40%;
-                }
-            }
-
-            &.expanded {
-                grid-column: span 1;
-                grid-row: span 2;
             }
         }
     }
 
     // sections/_about.scss
-    #about-content {
-    }
 
     #about-section {
         #about-content-container {

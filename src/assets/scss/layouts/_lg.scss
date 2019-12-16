@@ -6,42 +6,23 @@
     /* ============================= SECTIONS ============================= */
 
     // sections/_landing.scss
-    #logo {
-    }
 
     #nav-items {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     // sections/_suppliers.scss
     #suppliers-section {
-    }
-
-    #suppliers-container {
-        grid-template-columns: 1fr 1fr 1fr;
-        .supplier {
-            .supplier-image {
-            }
-
-            &:hover .supplier-image {
-            }
-
-            .view-supplier-overlay {
-            }
-
-            &:hover .view-supplier-overlay {
-            }
-
-            .view-supplier-button-container {
-            }
-
-            &:hover .view-supplier-button-container {
-            }
+        #suppliers-container {
+            grid-template-columns: 1fr 1fr 1fr;
         }
     }
 
     // sections/_about.scss
-    #about-content {
-    }
 
     // sections/_contact.scss
     #contact-form {
@@ -53,9 +34,6 @@
                 &:hover:not(.disabled) {
                 }
             }
-        }
-
-        textarea {
         }
     }
 

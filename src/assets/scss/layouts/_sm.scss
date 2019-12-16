@@ -6,8 +6,6 @@
     /* ============================= SECTIONS ============================= */
 
     // sections/_landing.scss
-    #logo {
-    }
 
     #nav-items {
         height: 25%;
@@ -15,44 +13,17 @@
         justify-content: space-between;
         align-content: center;
         align-items: center;
-
-        a {
-        }
     }
 
     // sections/_suppliers.scss
+
     #suppliers-section {
-    }
-
-    #suppliers-container {
-        grid-template-columns: 1fr 1fr;
-        .supplier {
-            .supplier-image {
-            }
-
-            &:hover .supplier-image {
-            }
-
-            .view-supplier-overlay {
-            }
-
-            &:hover .view-supplier-overlay {
-            }
-
-            .view-supplier-button-container {
-            }
-
-            &:hover .view-supplier-button-container {
-            }
+        #suppliers-container {
+            grid-template-columns: 1fr 1fr;
         }
     }
 
     // sections/_about.scss
-    #about-content {
-    }
-
-    #about-section {
-    }
 
     // sections/_contact.scss
 

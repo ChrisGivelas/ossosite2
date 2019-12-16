@@ -56,7 +56,7 @@ class Contact extends React.Component {
         return (
             <ScrollableAnchor id={CONTACT}>
                 <section id="contact-section">
-                    <h1>Contact.</h1>
+                    <h1 className="section-title">Contact.</h1>
                     <div id="contact-header-content">
                         <p id="info">
                             209 Bloor Street East
@@ -64,8 +64,6 @@ class Contact extends React.Component {
                             Oshawa, Ontario
                             <br />
                             905-404-6776
-                            <br />
-                            <a href="mailto:info@ossolighting.ca">info@ossolighting.ca</a>
                         </p>
                         <div id="hours">
                             <p className="hours-entry">
@@ -89,7 +87,7 @@ class Contact extends React.Component {
                                 <span>9:30am - 5:30pm</span>
                             </p>
                             <p className="hours-entry">
-                                <span>Sunday:</span>
+                                <span>Saturday:</span>
                                 <span>9:30am - 5:30pm</span>
                             </p>
                             <p className="hours-entry">
@@ -99,6 +97,9 @@ class Contact extends React.Component {
                         </div>
                     </div>
                     <div id="contact-content">
+                        <h3>
+                            Email us at: <a href="mailto:info@ossolighting.ca">info@ossolighting.ca</a>
+                        </h3>
                         <form
                             id="contact-form"
                             onSubmit={e => {
@@ -137,7 +138,7 @@ class Contact extends React.Component {
                                 <input
                                     className={submitDisabled ? "disabled" : null}
                                     type="submit"
-                                    value="submit"
+                                    value="Submit"
                                     disabled={submitDisabled}
                                 />
                                 {emailStatus.submitting ? (

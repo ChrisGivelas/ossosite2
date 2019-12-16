@@ -1,9 +1,16 @@
 .divider-wrapper {
+    position: relative;
     max-height: 80vh;
-
+    margin-top: 10vh;
+    margin-bottom: 10vh;
     overflow: hidden;
+    min-width: 100%;
+
+    .simpleParallax {
+        max-width: 100%;
+    }
 
     .divider {
-        width: 100%;
+        max-width: 100%;
     }
 }

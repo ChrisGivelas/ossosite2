@@ -6,7 +6,8 @@ import {SUPPLIERS} from "../../../routes";
 
 class Suppliers extends React.Component {
     static defaultProps = {
-        suppliers: []
+        suppliers: [],
+        transitioning: false
     };
 
     constructor(props) {
@@ -16,10 +17,13 @@ class Suppliers extends React.Component {
     }
 
     componentDidMount() {
+        const that = this;
         const grid = document.querySelector("#suppliers-container");
         wrapGrid(grid, {
-            duration: 400,
-            onEnd: list => console.log(list)
+            duration: 200,
+            delay: 25,
+            onStart: _ => that.setState({transitioning: true}),
+            onEnd: _ => that.setState({transitioning: false})
         });
     }
 
@@ -42,6 +46,7 @@ class Suppliers extends React.Component {
                                 {...supplierInfo}
                                 onClick={this.toggleSupplierExpansion}
                                 expanded={this.state.supplierExpanded === supplierInfo.id}
+                                transitioning={this.state.transitioning}
                             />
                         ))}
                     </div>
