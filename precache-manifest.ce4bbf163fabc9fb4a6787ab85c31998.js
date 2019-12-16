@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "20d78dace02ef2510d65ceb62efc9e55",
+    "revision": "c74e92bc26472b3129a9e7ae0a9b0dbf",
     "url": "/ossosite2/index.html"
   },
   {
@@ -8,16 +8,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ossosite2/static/css/2.67d9ffe4.chunk.css"
   },
   {
-    "revision": "2864d5ce716f2b531034",
-    "url": "/ossosite2/static/css/main.c7f628e2.chunk.css"
+    "revision": "a5b78ce1ed4972140f86",
+    "url": "/ossosite2/static/css/main.0d13c0ed.chunk.css"
   },
   {
     "revision": "f4ae8c27b94137e7036b",
     "url": "/ossosite2/static/js/2.5d509ebb.chunk.js"
   },
   {
-    "revision": "2864d5ce716f2b531034",
-    "url": "/ossosite2/static/js/main.165a7248.chunk.js"
+    "revision": "a5b78ce1ed4972140f86",
+    "url": "/ossosite2/static/js/main.086231df.chunk.js"
   },
   {
     "revision": "97c5c1498de5a977e246",
