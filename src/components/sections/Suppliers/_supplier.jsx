@@ -28,7 +28,7 @@ function Supplier({id, name, website, description, productTypes, items, onClick,
         if (!expanded) {
             setScrolledTo(false);
         }
-    }, [expanded, scrolledTo, history, name]);
+    }, [expanded, scrolledTo, history, name, transitioning]);
 
     return (
         <ScrollableAnchor id={`${SUPPLIERS}-${name}`}>
