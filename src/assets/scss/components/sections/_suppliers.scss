@@ -59,7 +59,7 @@
             @media (hover: hover) {
                 &:hover .view-supplier-overlay {
                     opacity: 1;
-                    background: radial-gradient(circle, rgba(200, 200, 200, 0.8) 10%, rgba(200, 200, 200, 0) 100%);
+                    background: radial-gradient(circle, rgba(200, 200, 200, 1) 20%, rgba(200, 200, 200, 0) 100%);
                 }
             }
         }
