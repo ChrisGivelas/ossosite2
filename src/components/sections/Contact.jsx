@@ -58,13 +58,6 @@ class Contact extends React.Component {
                 <section id="contact-section">
                     <h1 className="section-title">Contact.</h1>
                     <div id="contact-header-content">
-                        <p id="info">
-                            209 Bloor Street East
-                            <br />
-                            Oshawa, Ontario
-                            <br />
-                            905-404-6776
-                        </p>
                         <div id="hours">
                             <p className="hours-entry">
                                 <span>Monday:</span>
@@ -96,7 +89,7 @@ class Contact extends React.Component {
                             </p>
                         </div>
                     </div>
-                    <div id="contact-content">
+                    <div id="contact-content" style={{marginTop: 30}}>
                         <h3>
                             Email us at: <a href="mailto:info@ossolighting.ca">info@ossolighting.ca</a>
                         </h3>
@@ -154,6 +147,16 @@ class Contact extends React.Component {
                                 ) : null}
                             </div>
                         </form>
+                        <div style={{marginTop: 30}}>
+                            <h3>Come visit us!</h3>
+                            <p id="info">
+                                209 Bloor Street East
+                                <br />
+                                Oshawa, Ontario
+                                <br />
+                                905-404-6776
+                            </p>
+                        </div>
                         <iframe
                             id="osso-map"
                             title="osso-map"

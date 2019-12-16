@@ -8,7 +8,7 @@ import "slick-carousel/slick/slick-theme.scss";
 
 import {configureAnchors} from "react-scrollable-anchor";
 
-configureAnchors({offset: -40, scrollDuration: 1000});
+configureAnchors({offset: -80, scrollDuration: 1000});
 
 window.isTouchEnabled = (function() {
     try {
