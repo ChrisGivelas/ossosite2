@@ -2,8 +2,7 @@
     border-top: 1px solid $default-colour;
     width: 100%;
     height: fit-content;
-    margin-top: 30px;
-    background-color: rgb(225, 225, 225);
+    margin-top: 10vh !important;
     display: flex;
     justify-content: space-around;
     font-size: 1rem;
@@ -21,13 +20,21 @@
             padding: 15px;
             height: fit-content;
             text-align: center;
+            display: flex;
+            justify-content: space-evenly;
 
-            li {
-                text-decoration-line: none !important;
-                display: inline;
-                line-height: 100%;
+            a {
+                width: 30px;
+                height: 30px;
                 margin-left: 5px;
                 margin-right: 5px;
+
+                li {
+                    text-decoration-line: none !important;
+                    line-height: 100%;
+                    margin-left: 5px;
+                    margin-right: 5px;
+                }
             }
         }
     }

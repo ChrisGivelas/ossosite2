@@ -32,24 +32,6 @@
     align-items: center;
 
     a {
-        text-decoration: none;
-        transition-property: color;
-        transition-duration: 0.5s;
-
-        color: rgb(55, 55, 55);
-
         font-size: 2rem;
-
-        &:visited {
-            color: inherit;
-        }
-
-        &.selected {
-            color: inherit;
-        }
-
-        &:hover {
-            color: $osso-logo-colour2;
-        }
     }
 }

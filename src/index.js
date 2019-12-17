@@ -3,8 +3,6 @@ import ReactDOM from "react-dom";
 import {HashRouter} from "react-router-dom";
 import App from "./App";
 import "./assets/scss/index.scss";
-import "slick-carousel/slick/slick.scss";
-import "slick-carousel/slick/slick-theme.scss";
 
 import {configureAnchors} from "react-scrollable-anchor";
 
