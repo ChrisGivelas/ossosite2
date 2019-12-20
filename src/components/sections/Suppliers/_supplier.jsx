@@ -4,17 +4,18 @@ import ScrollableAnchor from "react-scrollable-anchor";
 import {SUPPLIERS} from "../../../routes";
 import {withRouter} from "react-router-dom";
 
-function SupplierContent({productTypes}) {
+function SupplierContent({description, website}) {
     return (
-        <ul>
-            {productTypes.map(type => (
-                <li>{type}</li>
-            ))}
-        </ul>
+        <div className="supplier-content">
+            <a href={website} target="_blank" rel="noopener noreferrer">
+                View Website
+            </a>
+            <p className="supplier-description">{description}</p>
+        </div>
     );
 }
 
-function Supplier({id, name, website, description, productTypes, items, onClick, expanded, transitioning, history}) {
+function Supplier({id, name, productTypes, onClick, expanded, transitioning, history, description, website}) {
     const [scrolledTo, setScrolledTo] = useState(false);
     const toggleExpanded = () => onClick(id);
 
@@ -49,7 +50,7 @@ function Supplier({id, name, website, description, productTypes, items, onClick,
                         </div>
                     )}
 
-                    {expanded && !transitioning && <SupplierContent productTypes={productTypes} />}
+                    {expanded && !transitioning && <SupplierContent website={website} description={description} />}
                 </div>
             </div>
         </ScrollableAnchor>

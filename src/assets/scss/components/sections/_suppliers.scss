@@ -9,9 +9,10 @@
 
     .supplier {
         border: rgb(115, 115, 115) 1px solid;
-        @include box-shadow;
         padding: 15px;
         position: relative;
+
+        @include box-shadow;
 
         & > div {
             height: 100%;
@@ -22,7 +23,8 @@
             .supplier-image {
                 max-width: 100%;
                 max-height: 100%;
-                margin: 0px !important;
+                display: block;
+                margin: auto;
             }
 
             .view-supplier-overlay {
@@ -78,7 +80,20 @@
         grid-row: span 2;
 
         & > div {
-            display: block;
+            display: grid;
+            grid-template-rows: 1fr 3fr;
+            .supplier-content {
+                text-align: center;
+                height: 100%;
+                display: grid;
+                grid-template-rows: 1fr 2fr;
+                justify-content: center;
+                align-items: center;
+
+                .supplier-description {
+                    font-style: italic;
+                }
+            }
         }
     }
 }
