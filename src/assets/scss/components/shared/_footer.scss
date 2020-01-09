@@ -2,10 +2,10 @@
     border-top: 1px solid $default-colour;
     width: 100%;
     height: fit-content;
-    margin-top: 10vh !important;
     display: flex;
     justify-content: space-around;
     font-size: 1rem;
+    background-color: $osso-logo-colour2;
 
     #footer-content {
         text-align: center;

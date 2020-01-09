@@ -1,10 +1,11 @@
 import React from "react";
-import DefaultDividerImage from "../../assets/images/dividers/1.jpg";
 
-export default function Divider({src = DefaultDividerImage, isParallax = true}) {
+export default function Divider({dividerName = "parallax-bg2", isParallax = false}) {
+    let baseClassName = isParallax ? "parallax divider" : "divider";
+
     return (
-        <div className="divider-wrapper">
-            <img className={`divider${isParallax ? " parallax" : ""}`} src={src} alt="parallax" />
+        <div className={`${baseClassName}-wrapper`}>
+            <div className={`${baseClassName} ${dividerName}`} alt="divider" />
         </div>
     );
 }

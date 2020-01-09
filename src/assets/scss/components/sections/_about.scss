@@ -17,6 +17,19 @@
             width: auto;
         }
 
+        .slick-arrow {
+            &:hover:focus::before {
+                opacity: 1;
+            }
+
+            &:focus::before {
+                opacity: 0.75;
+            }
+            &:before {
+                color: white !important;
+            }
+        }
+
         .slick-slider.beginning {
             .slick-arrow.slick-prev {
                 display: none !important;

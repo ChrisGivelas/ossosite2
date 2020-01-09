@@ -13,8 +13,8 @@ function Main() {
         <div id="main">
             <Landing />
             <div id="main-content">
-                <Suppliers />
                 <About />
+                <Suppliers />
                 <Divider />
                 <Contact />
             </div>
