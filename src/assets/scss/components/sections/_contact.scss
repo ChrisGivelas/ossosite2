@@ -1,5 +1,5 @@
 #contact-section {
-    margin-bottom: 5vh !important;
+    margin-top: 10vh !important;
 
     border-left: 1px solid rgb(200, 200, 200);
     border-right: 1px solid rgb(200, 200, 200);
@@ -46,7 +46,7 @@
                 font-size: 1rem;
                 padding: 15px;
 
-                &:hover:not([type="submit"]) {
+                &:focus:not([type="submit"]) {
                     border: 2px solid $osso-logo-colour1 !important;
                 }
 
@@ -55,8 +55,6 @@
                     background-color: rgb(255, 255, 255) !important;
 
                     &:hover {
-                        background-color: $osso-logo-colour3 !important;
-                        color: white;
                         &:not(.disabled) {
                             background-color: $osso-logo-colour1 !important;
                             cursor: pointer;

@@ -96,6 +96,7 @@ function About() {
                         centerMode
                         arrows
                         vertical={verticalMode}
+                        blockInfinite
                     >
                         {aboutImages}
                     </Carousel>

@@ -13,7 +13,9 @@ class Suppliers extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = {supplierExpanded: null};
+        this.state = {transitioning: false};
+
+        this.supplierCurrentlyExpanded = React.createRef();
     }
 
     componentDidMount() {
@@ -27,12 +29,6 @@ class Suppliers extends React.Component {
         });
     }
 
-    toggleSupplierExpansion = id => {
-        if (this.state.supplierExpanded === null || this.state.supplierExpanded !== id)
-            this.setState({supplierExpanded: id});
-        else this.setState({supplierExpanded: null});
-    };
-
     render() {
         return (
             <ScrollableAnchor id={SUPPLIERS}>
@@ -42,11 +38,10 @@ class Suppliers extends React.Component {
                     <div id="suppliers-container">
                         {this.props.suppliers.map(supplierInfo => (
                             <Supplier
-                                key={`${supplierInfo.id}_${supplierInfo.name}`}
                                 {...supplierInfo}
-                                onClick={this.toggleSupplierExpansion}
-                                expanded={this.state.supplierExpanded === supplierInfo.id}
+                                key={`${supplierInfo.id}_${supplierInfo.name}`}
                                 transitioning={this.state.transitioning}
+                                supplierCurrentlyExpanded={this.supplierCurrentlyExpanded}
                             />
                         ))}
                     </div>

@@ -14,7 +14,12 @@ function Landing() {
                         <img id="logo" src={Logo} alt="Osso City Lighting" />
                         <div id="nav-items">
                             {Object.keys(routes).map(route => (
-                                <NavLink key={route} activeClassName="selected" to={route}>{`${route}.`}</NavLink>
+                                <NavLink
+                                    key={route}
+                                    activeClassName="selected"
+                                    to={route}
+                                    className="scaleUp"
+                                >{`${route}.`}</NavLink>
                             ))}
                         </div>
                     </div>

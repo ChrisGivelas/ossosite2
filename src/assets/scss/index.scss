@@ -59,10 +59,12 @@ p {
 
 a {
     text-decoration: none;
-    transition-property: color;
-    transition-duration: 0.5s;
+    transition-property: all !important;
+    transition-duration: 0.5s !important;
 
     color: rgb(55, 55, 55);
+
+    border-radius: 2px;
 
     &:visited {
         color: inherit;
@@ -73,7 +75,15 @@ a {
     }
 
     &:hover {
-        color: $osso-logo-colour2;
+        color: $osso-logo-colour1;
+    }
+
+    &.scaleUp:hover {
+        transform: scale(1.1);
+    }
+
+    &.backgroundChange:hover {
+        background: rgba(200, 200, 200, 0.9);
     }
 }
 

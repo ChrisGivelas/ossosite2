@@ -1,99 +1,92 @@
 #suppliers-section {
-    #suppliers-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-auto-rows: 200px;
-        grid-gap: 15px;
+    margin-top: 5vh !important;
+    padding-bottom: 5vh !important;
+
+    .section-description {
+        margin-bottom: 5vh !important;
+    }
+}
+
+#suppliers-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 200px;
+    grid-gap: 15px;
+    width: 100%;
+}
+
+.supplier {
+    border: rgb(115, 115, 115) 1px solid;
+    padding: 15px;
+    position: relative;
+    overflow: hidden;
+
+    @include box-shadow;
+
+    & > div {
+        height: 100%;
         width: 100%;
     }
+}
 
-    .supplier {
-        border: rgb(115, 115, 115) 1px solid;
-        padding: 15px;
-        position: relative;
+.supplier.collapsed {
+    cursor: pointer;
+}
 
-        @include box-shadow;
+.supplier.expanded {
+    grid-column: span 2;
+    grid-row: span 2;
+}
 
-        & > div {
-            height: 100%;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            .supplier-image {
-                max-width: 100%;
-                max-height: 100%;
-                display: block;
-                margin: auto;
-            }
-
-            .view-supplier-overlay {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-        }
+.view-supplier {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .supplier-image {
+        max-width: 100%;
+        max-height: 100%;
+        display: block;
+        margin: auto;
     }
 
-    .supplier:not(.expanded):not(.transitioning) {
-        cursor: pointer;
+    .view-supplier-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bolder;
+        opacity: 0;
+        transition-property: opacity;
+        transition-duration: 0.5s;
+        background: radial-gradient(circle, rgba(200, 200, 200, 1) 20%, rgba(200, 200, 200, 0) 100%);
+    }
+}
 
-        & > div {
-            .view-supplier-overlay {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                opacity: 0;
-                transition-property: opacity;
-                transition-duration: 0.5s;
-                background: radial-gradient(circle, rgba(200, 200, 200, 1) 20%, rgba(200, 200, 200, 0) 100%);
-            }
+.supplier-content {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
 
-            @media (hover: hover) {
-                &:hover .view-supplier-overlay {
-                    opacity: 1;
-                }
-            }
-        }
+    * {
+        text-align: center;
+        width: fit-content;
     }
 
-    .supplier.transitioning {
-        & > div {
-            .supplier-image {
-                opacity: 0;
-            }
-        }
+    .supplier-website {
+        padding: 10px;
     }
 
-    .supplier.expanded {
-        grid-column: span 2;
-        grid-row: span 2;
-
-        & > div {
-            display: grid;
-            grid-template-rows: 1fr 3fr;
-            .supplier-content {
-                text-align: center;
-                height: 100%;
-                display: grid;
-                grid-template-rows: 1fr 2fr;
-                justify-content: center;
-                align-items: center;
-
-                .supplier-description {
-                    font-style: italic;
-                }
-            }
-        }
+    .supplier-description {
+        font-style: italic;
     }
 }

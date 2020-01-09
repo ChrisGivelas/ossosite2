@@ -14,7 +14,6 @@ function Main() {
             <Landing />
             <div id="main-content">
                 <Suppliers />
-                <Divider />
                 <About />
                 <Divider />
                 <Contact />
