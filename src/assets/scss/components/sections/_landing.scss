@@ -1,13 +1,16 @@
 #landing-section {
+    position: relative;
     background: url("../../../images/landing1.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    z-index: 950 !important;
 }
 
 #landing-content-background {
     background: rgba(200, 200, 200, 0.5);
     width: 100%;
+    height: 100vh;
 }
 
 #landing-content-container {
@@ -15,22 +18,10 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    position: relative;
-    height: 100vh;
+    height: 50vh;
     width: 100%;
 }
 
 #logo {
     width: 20rem;
-}
-
-#nav-items {
-    width: 80%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-
-    a {
-        font-size: 2rem;
-    }
 }
