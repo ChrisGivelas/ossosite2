@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/ossosite2/precache-manifest.9cf8b4aa4ad1055e149c4c61dadabfb4.js"
+  "/ossosite2/precache-manifest.a561b28afc5ac3a34d4e943920efbacd.js"
 );
 
 self.addEventListener('message', (event) => {
