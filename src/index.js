@@ -1,12 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {HashRouter} from "react-router-dom";
+import {BrowserRouter} from "react-router-dom";
 import App from "./App";
 import "./assets/scss/index.scss";
-
-import {configureAnchors} from "react-scrollable-anchor";
-
-configureAnchors({offset: -80, scrollDuration: 1000});
 
 window.isTouchEnabled = (function() {
     try {
@@ -28,8 +24,8 @@ window.isTouchEnabled = (function() {
 })();
 
 ReactDOM.render(
-    <HashRouter hashType="noslash">
+    <BrowserRouter>
         <App />
-    </HashRouter>,
+    </BrowserRouter>,
     document.getElementById("root")
 );

@@ -6,9 +6,10 @@ $screen-sizes: (
     xl: 1200px
 );
 
-@import "./tn";
-@import "./xs";
-@import "./sm";
-@import "./md";
-@import "./lg";
-@import "./xl";
+$mobile-breakpoint: map-get(
+    $map: $screen-sizes,
+    $key: "md"
+);
+
+@import "./mobile/index";
+@import "./web/index";

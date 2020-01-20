@@ -16,8 +16,15 @@
     justify-content: center;
 }
 
-@mixin box-shadow {
-    -webkit-box-shadow: 10px 10px 28px -17px rgba(0, 0, 0, 1);
-    -moz-box-shadow: 10px 10px 28px -17px rgba(0, 0, 0, 1);
-    box-shadow: 10px 10px 28px -17px rgba(0, 0, 0, 1);
+@mixin box-shadow($elevation-level) {
+    $blur-radius: $elevation-level * 5px;
+    -webkit-box-shadow: 0px 1px $blur-radius 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 1px $blur-radius 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 1px $blur-radius 0px rgba(0, 0, 0, 0.5);
+}
+
+@each $numb in (1, 2, 3, 4, 5, 6) {
+    .elevation-level-#{$numb} {
+        @include box-shadow($numb);
+    }
 }

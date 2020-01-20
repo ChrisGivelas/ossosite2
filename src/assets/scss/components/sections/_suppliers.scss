@@ -1,5 +1,5 @@
-#suppliers-section {
-    margin-top: 5vh !important;
+#shop {
+    padding-top: 5vh !important;
     padding-bottom: 5vh !important;
 
     .section-description {
@@ -9,7 +9,6 @@
 
 #suppliers-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
     grid-auto-rows: 200px;
     grid-gap: 15px;
     width: 100%;
@@ -21,8 +20,6 @@
     position: relative;
     overflow: hidden;
 
-    @include box-shadow;
-
     & > div {
         height: 100%;
         width: 100%;
@@ -31,11 +28,6 @@
 
 .supplier.collapsed {
     cursor: pointer;
-}
-
-.supplier.expanded {
-    grid-column: span 2;
-    grid-row: span 2;
 }
 
 .view-supplier {

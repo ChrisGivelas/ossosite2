@@ -61,7 +61,10 @@ class Supplier extends React.Component {
 
     render() {
         return (
-            <div className={`supplier${this.state.expanded ? " expanded" : " collapsed"}`} onClick={this.toggleExpand}>
+            <div
+                className={`supplier elevation-level-2${this.state.expanded ? " expanded" : " collapsed"}`}
+                onClick={this.toggleExpand}
+            >
                 <div>
                     {this.state.expanded ? <SupplierContent {...this.props} /> : <ViewSupplier {...this.props} />}
                 </div>

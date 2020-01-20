@@ -1,0 +1,72 @@
+@media screen and (min-width: $mobile-breakpoint) {
+    #navbar {
+        position: fixed;
+        z-index: 999;
+        width: calc(100% - 30px);
+        border-radius: 2px;
+        background-color: white;
+        padding: 15px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        border-radius: 2px;
+
+        height: 75px;
+
+        hr {
+            border-top: 1px solid rgb(100, 100, 100);
+            border-bottom: 0px;
+            border-left: 0px;
+            border-right: 0px;
+            width: 50%;
+            margin: 0px;
+        }
+    }
+
+    #navbar-logo-link {
+        width: 50%;
+        height: 50%;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    #navbar-logo {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    #nav-items {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
+        width: 50%;
+
+        .navlink {
+            transition-property: all !important;
+            transition-duration: 0.5s !important;
+
+            &:after {
+                display: block;
+                content: "";
+                border: solid 1px $osso-logo-colour1;
+                border-radius: 50px;
+                transform: scaleX(0);
+                transition: transform 250ms ease-in-out;
+            }
+            &:hover,
+            &.selected {
+                color: $osso-logo-colour1;
+
+                &:after {
+                    transform: scaleX(1);
+                }
+            }
+        }
+    }
+}
+
+@import "./md";
+@import "./lg";
+@import "./xl";

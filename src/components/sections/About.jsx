@@ -1,7 +1,5 @@
-import React, {useEffect, useRef, useState} from "react";
-import ScrollableAnchor from "react-scrollable-anchor";
+import React, {useEffect, useState} from "react";
 import Carousel from "../shared/Carousel";
-import {ABOUT} from "../../routes";
 import MarinoOsso from "../../assets/images/Marino Osso.jpg";
 
 // var aboutText = [
@@ -32,8 +30,6 @@ var aboutImages = [
 
 function About() {
     const [verticalMode, setVerticalMode] = useState(null);
-    const selfRef = useRef();
-    const slickRef = React.createRef();
 
     useEffect(() => {
         const updateMode = _ => {
@@ -48,8 +44,6 @@ function About() {
             }
         };
 
-        var refCurrentCopy = selfRef.current;
-
         if (!window.onresize) {
             updateMode();
             window.onresize = function() {
@@ -57,52 +51,28 @@ function About() {
             };
         }
 
-        if (refCurrentCopy) {
-            if (!refCurrentCopy.onmouseover) {
-                refCurrentCopy.onmouseover = function(e) {
-                    slickRef.current && slickRef.current.slickPause();
-                    e.stopPropagation();
-                };
-            }
-
-            if (!refCurrentCopy.onmouseout) {
-                refCurrentCopy.onmouseout = function(e) {
-                    if (slickRef.current && slickRef.current.props && slickRef.current.props.autoplay) {
-                        slickRef.current && slickRef.current.slickPlay();
-                        e.stopPropagation();
-                    }
-                };
-            }
-        }
-
         return _ => {
             window.onresize = undefined;
-            refCurrentCopy.onmouseover = undefined;
-            refCurrentCopy.onmouseout = undefined;
         };
-    }, [verticalMode, selfRef, slickRef]);
+    }, [verticalMode]);
 
     return (
-        <ScrollableAnchor id={ABOUT}>
-            <section id="about-section">
-                <h1 className="section-title">Our Story</h1>
-                <div id="about-content-container" ref={selfRef}>
-                    <Carousel
-                        slickRef={slickRef}
-                        autoplaySpeed={4000}
-                        speed={1000}
-                        variableWidth={!verticalMode}
-                        autoplay={false}
-                        centerMode
-                        arrows
-                        vertical={verticalMode}
-                        blockInfinite
-                    >
-                        {aboutImages}
-                    </Carousel>
-                </div>
-            </section>
-        </ScrollableAnchor>
+        <section id="about">
+            <h1 className="section-title">Our Story</h1>
+            <div id="about-content-container">
+                <Carousel
+                    speed={1000}
+                    variableWidth={!verticalMode}
+                    autoplay={false}
+                    centerMode
+                    arrows
+                    vertical={verticalMode}
+                    blockInfinite
+                >
+                    {aboutImages}
+                </Carousel>
+            </div>
+        </section>
     );
 }
 

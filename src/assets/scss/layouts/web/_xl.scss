@@ -1,0 +1,23 @@
+@media screen and (min-width: map-get($map: $screen-sizes, $key: "xl")) {
+    html {
+        font-size: 24px;
+    }
+
+    #suppliers-container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        .supplier.expanded {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+    }
+
+    #contact-form {
+        input,
+        textarea {
+            &[type="submit"] {
+                width: 50%;
+            }
+        }
+    }
+}

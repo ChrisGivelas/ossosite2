@@ -1,0 +1,44 @@
+@media screen and (max-width: $mobile-breakpoint - 1px) {
+    #nav-items {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+
+        height: 25%;
+    }
+
+    #about {
+        #about-content-container {
+            .slick-vertical {
+                .slick-arrow {
+                    &.slick-prev {
+                        left: 48%;
+                    }
+
+                    &.slick-next {
+                        left: 48%;
+                    }
+                }
+            }
+        }
+    }
+
+    #contact-form {
+        input,
+        textarea {
+            &[type="submit"] {
+                width: 50% !important;
+            }
+        }
+    }
+
+    #footer {
+        flex-direction: column;
+    }
+}
+
+@import "./tn";
+@import "./xs";
+@import "./sm";
