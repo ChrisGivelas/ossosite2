@@ -25,12 +25,14 @@
         }
     }
 
+    #contact {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
     #contact-form {
-        input,
-        textarea {
-            &[type="submit"] {
-                width: 50% !important;
-            }
+        input[type="submit"] {
+            width: 50% !important;
         }
     }
 

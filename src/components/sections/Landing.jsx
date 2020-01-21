@@ -7,6 +7,9 @@ function Landing() {
             <div id="landing-content-background">
                 <div id="landing-content-container">
                     <img id="logo" src={Logo} alt="Osso City Lighting" />
+                    <h1 style={{color: "white"}}>
+                        Bringing You Fine Lighting and Décor with Over 30+ Years Of Experience.
+                    </h1>
                 </div>
             </div>
         </section>

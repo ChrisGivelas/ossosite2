@@ -13,11 +13,8 @@
     }
 
     #contact-form {
-        input,
-        textarea {
-            &[type="submit"] {
-                width: 50%;
-            }
+        input[type="submit"] {
+            width: 50%;
         }
     }
 }

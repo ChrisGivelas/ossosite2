@@ -12,34 +12,44 @@ function Navbar(props) {
 
     return (
         <div id="navbar" className="elevation-level-3">
-            <Link smooth id="navbar-logo-link" to={`${HOME_PAGE}#${LANDING}`}>
-                <img id="navbar-logo" src={NavbarLogo} alt="Osso City Lighting" />
-            </Link>
-            <hr />
-            <div id="nav-items">
-                {Object.keys(sub_routes).map(route => {
-                    return (
-                        <NavLink
-                            isActive={isActive}
-                            smooth
-                            scroll={() => {
-                                var element = document.getElementById(route);
-                                var headerOffset = 75;
-                                var elementPosition = element.offsetTop;
-                                var offsetPosition = elementPosition - headerOffset;
+            <div id="navbar-main">
+                <Link smooth id="navbar-logo-link" to={`${HOME_PAGE}#${LANDING}`}>
+                    <img id="navbar-logo" src={NavbarLogo} alt="Osso City Lighting" />
+                </Link>
+                <hr />
+                <div id="nav-items">
+                    {Object.keys(sub_routes).map(route => {
+                        return (
+                            <NavLink
+                                isActive={isActive}
+                                smooth
+                                scroll={() => {
+                                    var element = document.getElementById(route);
+                                    var headerOffset = 75;
+                                    var elementPosition = element.offsetTop;
+                                    var offsetPosition = elementPosition - headerOffset;
 
-                                window.scrollTo({
-                                    top: offsetPosition,
-                                    behavior: "smooth"
-                                });
-                            }}
-                            key={route}
-                            className="navlink"
-                            activeClassName="selected"
-                            to={`${parent_route}#${route}`}
-                        >{`${route}.`}</NavLink>
-                    );
-                })}
+                                    window.scrollTo({
+                                        top: offsetPosition,
+                                        behavior: "smooth"
+                                    });
+                                }}
+                                key={route}
+                                className="navlink"
+                                activeClassName="selected"
+                                to={`${parent_route}#${route}`}
+                            >{`${route}.`}</NavLink>
+                        );
+                    })}
+                </div>
+            </div>
+            <div id="navbar-extra-info">
+                <p>
+                    <a href="mailto:info@ossolighting.ca">info@ossolighting.ca</a>
+                </p>
+                <p>
+                    <a href="tel:905-404-6776">905-404-6776</a>
+                </p>
             </div>
         </div>
     );

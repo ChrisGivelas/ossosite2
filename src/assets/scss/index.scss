@@ -22,26 +22,6 @@ body {
     }
 }
 
-input,
-textarea {
-    font-size: 0.75rem !important;
-
-    &:not([type="submit"]) {
-        padding: 15px !important;
-    }
-
-    &[type="submit"] {
-        min-width: fit-content;
-    }
-}
-
-hr {
-    border-top: 1px solid rgb(200, 200, 200);
-    margin-top: 30px;
-    margin-bottom: 30px;
-    width: 100%;
-}
-
 h1,
 h2,
 h3,
@@ -49,9 +29,7 @@ h4,
 h5,
 h6 {
     font-weight: 300;
-    margin-top: 0px;
-    margin-bottom: 15px;
-    display: inline-block;
+    text-align: center;
 }
 
 p {
@@ -60,7 +38,7 @@ p {
 
 a {
     text-decoration: none;
-    color: rgb(55, 55, 55);
+    color: $osso-colour-2;
 
     &:visited {
         color: inherit;

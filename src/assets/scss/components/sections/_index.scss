@@ -2,15 +2,3 @@
 @import "./suppliers";
 @import "./about";
 @import "./contact";
-
-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-section:not(#landing) {
-    width: 80%;
-    margin: auto;
-}

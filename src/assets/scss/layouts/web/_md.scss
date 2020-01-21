@@ -1,6 +1,6 @@
 @media screen and (min-width: map-get($map: $screen-sizes, $key: "md")) and (max-width: (map-get($map: $screen-sizes, $key: "lg") - 1px)) {
     html {
-        font-size: 20px;
+        font-size: 24px;
     }
 
     #suppliers-container {
@@ -13,11 +13,8 @@
     }
 
     #contact-form {
-        input,
-        textarea {
-            &[type="submit"] {
-                width: 50%;
-            }
+        input[type="submit"] {
+            width: 50%;
         }
     }
 }

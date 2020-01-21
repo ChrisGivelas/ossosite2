@@ -1,31 +1,12 @@
 #footer {
-    border-top: 1px solid $default-colour;
     width: 100%;
-    height: fit-content;
-    display: flex;
-    justify-content: space-around;
-    font-size: 1rem;
-    background-color: $osso-logo-colour2;
+    border-top: 1px solid $osso-colour-5;
+    background-color: $osso-colour-1;
 
     #footer-content {
         text-align: center;
         padding: 15px;
         height: fit-content;
-    }
-
-    #social-media {
-        margin: auto;
-        padding: 15px;
-        height: fit-content;
-        text-align: center;
-        display: flex;
-        justify-content: space-evenly;
-
-        & > * {
-            width: 30px;
-            height: 30px;
-            margin-left: 5px;
-            margin-right: 5px;
-        }
+        color: white;
     }
 }

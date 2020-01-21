@@ -21,11 +21,11 @@ import MarinoOsso from "../../assets/images/Marino Osso.jpg";
 // ];
 
 var aboutImages = [
-    <img className="about-image" alt="about" src={MarinoOsso} />,
-    <img className="about-image" alt="about" src={MarinoOsso} />,
-    <img className="about-image" alt="about" src={MarinoOsso} />,
-    <img className="about-image" alt="about" src={MarinoOsso} />,
-    <img className="about-image" alt="about" src={MarinoOsso} />
+    <img key="about-image-1" className="about-image" alt="about" src={MarinoOsso} />,
+    <img key="about-image-2" className="about-image" alt="about" src={MarinoOsso} />,
+    <img key="about-image-3" className="about-image" alt="about" src={MarinoOsso} />,
+    <img key="about-image-4" className="about-image" alt="about" src={MarinoOsso} />,
+    <img key="about-image-5" className="about-image" alt="about" src={MarinoOsso} />
 ];
 
 function About() {
@@ -59,18 +59,24 @@ function About() {
     return (
         <section id="about">
             <h1 className="section-title">Our Story</h1>
-            <div id="about-content-container">
-                <Carousel
-                    speed={1000}
-                    variableWidth={!verticalMode}
-                    autoplay={false}
-                    centerMode
-                    arrows
-                    vertical={verticalMode}
-                    blockInfinite
-                >
-                    {aboutImages}
-                </Carousel>
+            <h3 className="section-description">Description goes here</h3>
+            <div id="about-slider">
+                <div id="background-strip-container">
+                    <hr />
+                </div>
+                <div id="about-content-container">
+                    <Carousel
+                        speed={1000}
+                        variableWidth={!verticalMode}
+                        autoplay={false}
+                        centerMode
+                        arrows
+                        vertical={verticalMode}
+                        blockInfinite
+                    >
+                        {aboutImages}
+                    </Carousel>
+                </div>
             </div>
         </section>
     );
