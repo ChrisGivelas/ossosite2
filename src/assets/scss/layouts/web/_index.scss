@@ -36,6 +36,12 @@
 
     #navbar-extra-info {
         justify-self: center;
+
+        a {
+            &:hover {
+                color: $osso-colour-4;
+            }
+        }
     }
 
     #nav-items {

@@ -59,7 +59,7 @@ function About() {
     return (
         <section id="about">
             <h1 className="section-title">Our Story</h1>
-            <h3 className="section-description">Description goes here</h3>
+            <h4 className="section-description">Description goes here</h4>
             <div id="about-slider">
                 <div id="background-strip-container">
                     <hr />

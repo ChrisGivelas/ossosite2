@@ -8,7 +8,7 @@ class Contact extends React.Component {
     render() {
         return (
             <section id="contact">
-                <h2>Contact Us</h2>
+                <h1 className="section-title">Contact Us</h1>
                 <div id="contact-panels">
                     <div id="contact-left-panel">
                         <Hours />
