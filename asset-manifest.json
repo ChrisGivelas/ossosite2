@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/ossosite2/static/css/main.5fc26820.chunk.css",
-    "main.js": "/ossosite2/static/js/main.ef9c96b2.chunk.js",
-    "main.js.map": "/ossosite2/static/js/main.ef9c96b2.chunk.js.map",
+    "main.css": "/ossosite2/static/css/main.c8446e1a.chunk.css",
+    "main.js": "/ossosite2/static/js/main.847e33f7.chunk.js",
+    "main.js.map": "/ossosite2/static/js/main.847e33f7.chunk.js.map",
     "runtime-main.js": "/ossosite2/static/js/runtime-main.30d815cb.js",
     "runtime-main.js.map": "/ossosite2/static/js/runtime-main.30d815cb.js.map",
     "static/css/2.fddaa3a5.chunk.css": "/ossosite2/static/css/2.fddaa3a5.chunk.css",
     "static/js/2.88e88801.chunk.js": "/ossosite2/static/js/2.88e88801.chunk.js",
     "static/js/2.88e88801.chunk.js.map": "/ossosite2/static/js/2.88e88801.chunk.js.map",
     "index.html": "/ossosite2/index.html",
-    "precache-manifest.5817bd3005aa6c468c8a53758aedaf8d.js": "/ossosite2/precache-manifest.5817bd3005aa6c468c8a53758aedaf8d.js",
+    "precache-manifest.885112a589af3688d5f6cf427ac43a91.js": "/ossosite2/precache-manifest.885112a589af3688d5f6cf427ac43a91.js",
     "service-worker.js": "/ossosite2/service-worker.js",
     "static/css/2.fddaa3a5.chunk.css.map": "/ossosite2/static/css/2.fddaa3a5.chunk.css.map",
-    "static/css/main.5fc26820.chunk.css.map": "/ossosite2/static/css/main.5fc26820.chunk.css.map",
+    "static/css/main.c8446e1a.chunk.css.map": "/ossosite2/static/css/main.c8446e1a.chunk.css.map",
     "static/media/index.scss": "/ossosite2/static/media/slick.f97e3bbf.svg",
     "static/media/2020 LOGO (SIMPLE).png": "/ossosite2/static/media/2020 LOGO (SIMPLE).40a6618e.png",
     "static/media/CheckMark.png": "/ossosite2/static/media/CheckMark.972e46eb.png",
     "static/media/Marino Osso.jpg": "/ossosite2/static/media/Marino Osso.e4532504.jpg",
-    "static/media/[H] Osso Lighting Logo 2018 (blue).png": "/ossosite2/static/media/[H] Osso Lighting Logo 2018 (blue).0bc96bb8.png",
+    "static/media/[H] Osso Lighting 2019 Logo (no stroke).png": "/ossosite2/static/media/[H] Osso Lighting 2019 Logo (no stroke).e0ef08ed.png",
     "static/media/spinner.gif": "/ossosite2/static/media/spinner.5204de31.gif"
   }
 }

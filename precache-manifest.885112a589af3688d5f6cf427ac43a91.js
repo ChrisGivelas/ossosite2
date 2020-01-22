@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f4ccaca6e69485fe47b854f28622ecb6",
+    "revision": "ec2c27f6430949097935da21af94ef56",
     "url": "/ossosite2/index.html"
   },
   {
@@ -8,16 +8,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ossosite2/static/css/2.fddaa3a5.chunk.css"
   },
   {
-    "revision": "8d8d75dd2f47f3ea53e0",
-    "url": "/ossosite2/static/css/main.5fc26820.chunk.css"
+    "revision": "e9203ddfa8d1fd5803e8",
+    "url": "/ossosite2/static/css/main.c8446e1a.chunk.css"
   },
   {
     "revision": "9253b1e0bec38d26913b",
     "url": "/ossosite2/static/js/2.88e88801.chunk.js"
   },
   {
-    "revision": "8d8d75dd2f47f3ea53e0",
-    "url": "/ossosite2/static/js/main.ef9c96b2.chunk.js"
+    "revision": "e9203ddfa8d1fd5803e8",
+    "url": "/ossosite2/static/js/main.847e33f7.chunk.js"
   },
   {
     "revision": "97c5c1498de5a977e246",
@@ -48,8 +48,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ossosite2/static/media/Marino Osso.e4532504.jpg"
   },
   {
-    "revision": "0bc96bb839e70a7134d241322545fa7e",
-    "url": "/ossosite2/static/media/[H] Osso Lighting Logo 2018 (blue).0bc96bb8.png"
+    "revision": "e0ef08ed4d7d1a14b5d1ac30f63c52ce",
+    "url": "/ossosite2/static/media/[H] Osso Lighting 2019 Logo (no stroke).e0ef08ed.png"
   },
   {
     "revision": "4762dbefa002b93dd856e7fa4aab9051",
