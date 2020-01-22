@@ -107,9 +107,7 @@ class EmailUs extends React.Component {
                                 <Checkmark /> Email sent!
                             </span>
                         ) : emailStatus.error ? (
-                            <span style={{color: "red"}}>
-                                Error sending email. Please try again later or email us at info@ossolighting.ca.
-                            </span>
+                            <p style={{color: "pink"}}>Error sending email. Please try again later.</p>
                         ) : null}
                     </div>
                 </form>
