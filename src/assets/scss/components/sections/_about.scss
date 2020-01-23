@@ -5,6 +5,8 @@
     flex-direction: column;
     padding-top: 5vh;
     padding-bottom: 5vh;
+    justify-content: center;
+    height: 100vh;
 
     #about-slider {
         position: relative;
@@ -58,6 +60,10 @@
                 .slick-arrow.slick-next {
                     display: none !important;
                 }
+            }
+
+            .slick-list {
+                border-radius: 10px;
             }
 
             .slick-vertical {

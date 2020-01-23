@@ -4,9 +4,13 @@
     background-color: $osso-colour-1;
 
     #footer-content {
+        width: 80%;
         text-align: center;
         padding: 15px;
         height: fit-content;
         color: white;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: auto;
     }
 }

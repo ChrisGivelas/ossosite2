@@ -3,33 +3,25 @@
     background-color: $osso-colour-1;
     padding: 5vh 5vw 0px 5vw;
 
-    h2 {
+    h1 {
         display: block;
         text-align: center;
-        font-size: 1.5em;
+        font-size: 1.2rem;
         margin-top: 0px;
     }
 
     * {
         color: white;
         background-color: $osso-colour-1;
+        font-size: 0.8rem;
     }
 }
 
 #contact-panels {
-    margin-top: 5vh;
+    margin-top: 15px;
     display: grid;
-    grid-gap: 15px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     font-size: 0.8rem;
-
-    #contact-right-panel,
-    #contact-left-panel {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-    }
 }
 
 #hours {
@@ -37,6 +29,7 @@
     width: fit-content;
     margin: 0px;
     height: fit-content;
+    align-self: center;
 
     display: grid;
     grid-template-columns: 1fr 1fr 20px 1fr;
@@ -64,9 +57,12 @@
 }
 
 #email-us {
-    width: 100%;
     padding: 15px;
     border: 1px solid $osso-colour-1;
+
+    h3 {
+        margin: 0px;
+    }
 
     h3 {
         margin-bottom: 7px;
@@ -78,19 +74,19 @@
 
         ::-webkit-input-placeholder {
             /* Chrome/Opera/Safari */
-            color: white;
+            color: darken(white, 50%);
         }
         ::-moz-placeholder {
             /* Firefox 19+ */
-            color: white;
+            color: darken(white, 50%);
         }
         :-ms-input-placeholder {
             /* IE 10+ */
-            color: white;
+            color: darken(white, 50%);
         }
         :-moz-placeholder {
             /* Firefox 18- */
-            color: white;
+            color: darken(white, 50%);
         }
 
         input,
@@ -110,7 +106,7 @@
                 }
 
                 &.disabled {
-                    color: white;
+                    color: darken(white, 50%);
                 }
             }
 
@@ -124,37 +120,13 @@
 
 #visit-us {
     position: relative;
-    top: -22px;
-    width: 100%;
     padding: 15px;
     #osso-map {
-        height: 50%;
+        height: 75%;
         width: 100%;
-        min-width: 300px;
-        min-height: 300px;
     }
 
     p {
         margin-bottom: 15px;
-    }
-}
-
-#social-media {
-    margin: auto;
-    padding: 15px;
-    height: fit-content;
-    text-align: center;
-
-    h2 {
-        display: block;
-        margin-bottom: 5px;
-    }
-
-    & > a,
-    & > span {
-        width: 30px;
-        height: 30px;
-        margin-left: 5px;
-        margin-right: 5px;
     }
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import {withRouter} from "react-router-dom";
 import {getImageURL} from "../../../utils/resourceUtils";
+import {NavHashLink as NavLink, HashLink as Link} from "react-router-hash-link";
 
 function SupplierContent({name, description, website}) {
     return (
@@ -59,14 +60,35 @@ class Supplier extends React.Component {
 
     handleCollapse = () => this.setState({expanded: false});
 
+    isActive = r => this.props.location.hash.substr(1) === r;
+
     render() {
         return (
             <div
+                id={`shop-${this.props.name}`}
                 className={`supplier elevation-level-2${this.state.expanded ? " expanded" : " collapsed"}`}
                 onClick={this.toggleExpand}
             >
                 <div>
-                    {this.state.expanded ? <SupplierContent {...this.props} /> : <ViewSupplier {...this.props} />}
+                    <NavLink
+                        isActive={this.isActive}
+                        smooth
+                        scroll={element => {
+                            var headerOffset = 175;
+                            var elementPosition = element.offsetTop;
+                            var offsetPosition = elementPosition - headerOffset;
+
+                            window.scrollTo({
+                                top: offsetPosition,
+                                behavior: "smooth"
+                            });
+                        }}
+                        className="navlink"
+                        activeClassName="selected"
+                        to={`#shop-${this.props.name}`}
+                    >
+                        {this.state.expanded ? <SupplierContent {...this.props} /> : <ViewSupplier {...this.props} />}
+                    </NavLink>
                 </div>
             </div>
         );

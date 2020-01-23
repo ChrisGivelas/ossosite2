@@ -4,7 +4,6 @@ import Tippy from "@tippy.js/react";
 function SocialMedia() {
     return (
         <div id="social-media">
-            <h2>Follow us on Social Media!</h2>
             <a
                 target="_blank"
                 rel="noopener noreferrer"

@@ -1,0 +1,19 @@
+#social-media {
+    margin: auto;
+    padding: 15px;
+    height: fit-content;
+    text-align: center;
+
+    h2 {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    & > a,
+    & > span {
+        width: 30px;
+        height: 30px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
