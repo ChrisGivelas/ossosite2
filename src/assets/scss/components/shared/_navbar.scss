@@ -1,1 +1,10 @@
+#navbar {
+    #navbar-logo {
+        transition-property: all;
+        transition-duration: 1s;
+    }
 
+    &.shrink #navbar-logo {
+        max-width: 75%;
+    }
+}

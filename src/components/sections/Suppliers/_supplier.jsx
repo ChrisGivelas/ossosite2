@@ -1,6 +1,6 @@
 import React from "react";
 import {withRouter} from "react-router-dom";
-import {getImageURL} from "../../../utils/resourceUtils";
+import {getImageURL} from "../../../utils";
 import {NavHashLink as NavLink, HashLink as Link} from "react-router-hash-link";
 
 function SupplierContent({name, description, website}) {

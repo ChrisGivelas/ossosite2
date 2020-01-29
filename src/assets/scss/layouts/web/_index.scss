@@ -16,7 +16,7 @@
 
         border-radius: 2px;
 
-        height: $navbar-height;
+        max-height: fit-content;
 
         hr {
             border-top: 1px solid rgb(100, 100, 100);
@@ -53,7 +53,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         justify-items: center;
-        width: 75%;
+        max-width: 75%;
 
         .navlink {
             transition-property: all !important;
