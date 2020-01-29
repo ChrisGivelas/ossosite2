@@ -1,4 +1,7 @@
 @media screen and (max-width: $mobile-breakpoint - 1px) {
+    html {
+        font-size: 16px;
+    }
     #nav-items {
         display: flex;
         flex-direction: column;
@@ -38,6 +41,15 @@
 
     #footer {
         flex-direction: column;
+    }
+
+    #contact-panels {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #osso-map {
+        min-height: 300px;
     }
 }
 

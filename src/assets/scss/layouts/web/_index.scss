@@ -1,14 +1,18 @@
 @media screen and (min-width: $mobile-breakpoint) {
+    html {
+        font-size: 24px;
+    }
     #navbar {
         position: fixed;
         z-index: 999;
         width: calc(100% - 30px);
         border-radius: 2px;
         background-color: white;
-        padding: 15px;
+        padding: $navbar-padding;
 
         display: grid;
         grid-template-columns: 2fr 1fr;
+        grid-gap: 15px;
 
         border-radius: 2px;
 
@@ -26,6 +30,7 @@
 
     #navbar-logo {
         max-height: 45px;
+        max-width: 100%;
         width: auto;
     }
 
@@ -39,7 +44,7 @@
 
         a {
             &:hover {
-                color: $osso-colour-4;
+                color: $osso-colour-1;
             }
         }
     }

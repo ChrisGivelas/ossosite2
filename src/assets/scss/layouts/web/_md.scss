@@ -1,8 +1,4 @@
 @media screen and (min-width: map-get($map: $screen-sizes, $key: "md")) and (max-width: (map-get($map: $screen-sizes, $key: "lg") - 1px)) {
-    html {
-        font-size: 24px;
-    }
-
     #suppliers-container {
         grid-template-columns: 1fr 1fr 1fr;
 
