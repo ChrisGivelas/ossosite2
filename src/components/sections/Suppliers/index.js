@@ -20,8 +20,7 @@ class Suppliers extends React.Component {
         const that = this;
         const grid = document.querySelector("#suppliers-container");
         wrapGrid(grid, {
-            duration: 200,
-            delay: 25,
+            duration: 500,
             onStart: _ => that.setState({transitioning: true}),
             onEnd: _ => that.setState({transitioning: false})
         });
