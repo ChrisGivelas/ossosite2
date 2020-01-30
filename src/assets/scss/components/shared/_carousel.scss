@@ -1,0 +1,37 @@
+.custom-slider-arrow {
+    background: url(../../../images/arrow.png);
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    z-index: 999;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+    &.next {
+        &.vertical {
+            left: calc(50% - 20px);
+            bottom: 20px;
+            transform: rotate(-90deg);
+        }
+
+        &:not(.vertical) {
+            top: calc(50% - 20px);
+            right: 20px;
+            transform: rotate(180deg);
+        }
+    }
+
+    &.prev {
+        &.vertical {
+            left: calc(50% - 20px);
+            top: 20px;
+            transform: rotate(90deg);
+        }
+
+        &:not(.vertical) {
+            top: calc(50% - 20px);
+            left: 20px;
+        }
+    }
+}

@@ -65,23 +65,19 @@ class About extends React.Component {
             <section id="about">
                 <h1 className="section-title">Our Story</h1>
                 <h4 className="section-description">Description goes here</h4>
-                <div id="about-slider">
-                    <div id="background-strip-container">
-                        <hr />
-                    </div>
-                    <div id="about-content-container">
-                        <Carousel
-                            speed={1000}
-                            variableWidth={!this.state.verticalMode}
-                            autoplay={false}
-                            centerMode
-                            arrows
-                            vertical={this.state.verticalMode}
-                            blockInfinite
-                        >
-                            {aboutImages}
-                        </Carousel>
-                    </div>
+                <div id="about-content-container">
+                    <Carousel
+                        speed={1000}
+                        variableWidth={!this.state.verticalMode}
+                        autoplay={false}
+                        centerMode
+                        arrows
+                        vertical={this.state.verticalMode}
+                        blockInfinite
+                        customArrows
+                    >
+                        {aboutImages}
+                    </Carousel>
                 </div>
             </section>
         );

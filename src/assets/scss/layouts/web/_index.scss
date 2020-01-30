@@ -12,6 +12,16 @@
             font-size: 0.8rem;
         }
     }
+
+    #about-content-container {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: $mobile-breakpoint) and (max-width: 782px) {
+    #about-content-container {
+        width: 60%;
+    }
 }
 
 @import "./md";

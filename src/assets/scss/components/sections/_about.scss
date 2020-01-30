@@ -8,33 +8,36 @@
     justify-content: center;
 }
 
-#about-slider {
-    position: relative;
-    height: auto;
-    padding: 0px 5vw 0px 5vw;
-    width: 88.5vw;
-}
-
-#background-strip-container {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-
-    hr {
-        border: 140px solid $osso-colour-3;
-        width: 100%;
-    }
-}
-
 #about-content-container {
-    position: relative;
     width: 100%;
+    position: relative;
     height: auto;
     margin: auto;
+
+    .slick-list {
+        border-radius: $default-border-radius;
+    }
+
+    .slick-slide {
+        transition: all 1s;
+        &:not(.slick-active) {
+            filter: grayscale(1) blur(5px);
+        }
+    }
+
+    .slick-slider {
+        &.beginning {
+            .custom-slider-arrow.prev {
+                display: none;
+            }
+        }
+
+        &.end {
+            .custom-slider-arrow.next {
+                display: none;
+            }
+        }
+    }
 
     .about-image {
         max-height: 100%;

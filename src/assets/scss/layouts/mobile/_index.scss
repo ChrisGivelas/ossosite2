@@ -12,24 +12,6 @@
         height: 25%;
     }
 
-    #about {
-        #about-content-container {
-            width: 80% !important;
-
-            .slick-vertical {
-                .slick-arrow {
-                    &.slick-prev {
-                        left: 48%;
-                    }
-
-                    &.slick-next {
-                        left: 48%;
-                    }
-                }
-            }
-        }
-    }
-
     #contact {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;

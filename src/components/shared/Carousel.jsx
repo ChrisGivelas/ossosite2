@@ -3,6 +3,16 @@ import * as P from "prop-types";
 
 import Slider from "react-slick";
 
+function NextArrow(props) {
+    const {onClick, extraClasses} = props;
+    return <div className={`custom-slider-arrow next ${extraClasses ? extraClasses : ""}`} onClick={onClick} />;
+}
+
+function PrevArrow(props) {
+    const {onClick, extraClasses} = props;
+    return <div className={`custom-slider-arrow prev ${extraClasses ? extraClasses : ""}`} onClick={onClick} />;
+}
+
 export default class Carousel extends React.Component {
     static propTypes = {
         children: P.array.isRequired
@@ -20,7 +30,9 @@ export default class Carousel extends React.Component {
         pauseOnHover: false,
         draggable: false,
         accessibility: true,
-        slickRef: undefined
+        slickRef: undefined,
+        customArrows: false,
+        vertical: false
     };
 
     constructor(props) {
@@ -34,7 +46,12 @@ export default class Carousel extends React.Component {
     setCurrentSlide = index => this.setState({currentSlide: index});
 
     render() {
-        const {slickRef, children, ...settings} = this.props;
+        var {slickRef, children, customArrows, ...settings} = this.props;
+
+        if (customArrows === true) {
+            settings["nextArrow"] = <NextArrow extraClasses={settings.vertical ? "vertical" : null} />;
+            settings["prevArrow"] = <PrevArrow extraClasses={settings.vertical ? "vertical" : null} />;
+        }
 
         let classNames = this.props.blockInfinite
             ? this.state.currentSlide === 0
