@@ -1,12 +1,13 @@
 #contact {
     border-top: 1px solid $osso-colour-2;
     background-color: $osso-colour-1;
-    padding: 5vh 5vw 0px 5vw;
+    padding: 0px 5vw 0px 5vw;
 
     h1 {
         display: block;
         text-align: center;
         margin-top: 0px;
+        font-size: 1.5rem;
     }
 
     * {
@@ -17,45 +18,59 @@
 
 #contact-panels {
     margin-top: 15px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
 }
 
 #hours {
-    padding: 15px;
-    width: fit-content;
-    margin: 0px;
-    height: fit-content;
-    align-self: center;
-
+    grid-area: hours;
     display: grid;
-    grid-template-columns: 1fr 1fr 20px 1fr;
+    grid-template-columns: 5fr 2fr 1fr 2fr;
 
-    & > span:nth-child(4n + 1) {
-        padding: 0px 15px 0px 15px;
-    }
+    padding: 15px;
 
-    & > span:nth-child(4n + 2) {
-        justify-self: end;
-    }
+    width: fit-content;
+    height: fit-content;
 
-    & > span:nth-child(4n + 3) {
-        justify-self: center;
-    }
+    //Day Column
+    & > span {
+        width: 100%;
 
-    & > span:nth-child(4n) {
-        justify-self: start;
-    }
+        &:nth-child(4n + 1) {
+            margin: 0px 15px 0px 0px;
+            padding: 0px 5px 0px 5px;
 
-    .today {
-        background-color: $osso-colour-4;
-        border-radius: $default-border-radius;
+            &.today {
+                border-top-left-radius: $default-border-radius;
+                border-bottom-left-radius: $default-border-radius;
+            }
+        }
+
+        //Open column
+        &:nth-child(4n + 2) {
+            text-align: right;
+        }
+
+        //Dash column
+        &:nth-child(4n + 3) {
+            text-align: center;
+        }
+
+        //Close column
+        &:nth-child(4n) {
+            &.today {
+                border-top-right-radius: $default-border-radius;
+                border-bottom-right-radius: $default-border-radius;
+            }
+        }
+
+        &.today {
+            background-color: white;
+            color: $osso-colour-1;
+        }
     }
 }
 
 #email-us {
-    padding: 15px;
-    border: 1px solid $osso-colour-1;
+    grid-area: email;
 
     h3 {
         margin: 0px;
@@ -71,19 +86,27 @@
 
         ::-webkit-input-placeholder {
             /* Chrome/Opera/Safari */
-            color: darken(white, 50%);
+            color: darken(white, 25%);
+            font-size: 0.8rem;
         }
         ::-moz-placeholder {
             /* Firefox 19+ */
-            color: darken(white, 50%);
+            color: darken(white, 25%);
+            font-size: 0.8rem;
         }
         :-ms-input-placeholder {
             /* IE 10+ */
-            color: darken(white, 50%);
+            color: darken(white, 25%);
+            font-size: 0.8rem;
         }
         :-moz-placeholder {
             /* Firefox 18- */
-            color: darken(white, 50%);
+            color: darken(white, 25%);
+            font-size: 0.8rem;
+        }
+
+        & > input:first-child {
+            margin-top: 0px;
         }
 
         input,
@@ -94,6 +117,7 @@
             font-size: 1em;
 
             &[type="submit"] {
+                font-size: 0.8rem;
                 &:not(.disabled) {
                     &:hover {
                         cursor: pointer;
@@ -103,7 +127,7 @@
                 }
 
                 &.disabled {
-                    color: darken(white, 50%);
+                    color: darken(white, 25%);
                 }
             }
 
@@ -116,8 +140,7 @@
 }
 
 #visit-us {
-    position: relative;
-    padding: 15px;
+    grid-area: visit;
     #osso-map {
         height: 75%;
         width: 100%;
@@ -126,4 +149,26 @@
     p {
         margin-bottom: 15px;
     }
+}
+
+#hours-message {
+    grid-area: hours-message;
+}
+
+#email-message {
+    grid-area: email-message;
+}
+
+#visit-message {
+    grid-area: visit-message;
+}
+
+#hours-message,
+#email-message,
+#visit-message {
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+
+    font-size: 1rem !important;
 }

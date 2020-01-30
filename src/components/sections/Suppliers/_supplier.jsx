@@ -1,11 +1,11 @@
 import React from "react";
 import {withRouter} from "react-router-dom";
 import {getImageURL} from "../../../utils";
-import {NavHashLink as NavLink, HashLink as Link} from "react-router-hash-link";
+import {NavHashLink as NavLink} from "react-router-hash-link";
 
-function SupplierContent({name, description, website}) {
+function SupplierContent({name, description, website, handleClick}) {
     return (
-        <div className="supplier-content">
+        <div className="supplier-content" onClick={handleClick}>
             <img
                 className="supplier-image"
                 src={getImageURL(`${name}-logo.jpg`, "Supplier_Logos", "http://ossolighting.ca")}
@@ -19,19 +19,42 @@ function SupplierContent({name, description, website}) {
     );
 }
 
-function ViewSupplier({name}) {
-    return (
-        <div className="view-supplier">
-            <img
-                className="supplier-image"
-                src={getImageURL(`${name}-logo.jpg`, "Supplier_Logos", "http://ossolighting.ca")}
-                alt={name}
-            />
-            <div className="view-supplier-overlay">
-                <h2>View</h2>
-            </div>
-        </div>
-    );
+class ViewSupplier extends React.Component {
+    isActive = r => this.props.location.hash.substr(1) === r;
+
+    render() {
+        const {name, handleClick} = this.props;
+        return (
+            <NavLink
+                isActive={this.isActive}
+                smooth
+                scroll={element => {
+                    var headerOffset = 175;
+                    var elementPosition = element.offsetTop;
+                    var offsetPosition = elementPosition - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
+                }}
+                className="navlink"
+                activeClassName="selected"
+                to={`#shop-${this.props.name}`}
+            >
+                <div className="view-supplier" onClick={handleClick}>
+                    <img
+                        className="supplier-image"
+                        src={getImageURL(`${name}-logo.jpg`, "Supplier_Logos", "http://ossolighting.ca")}
+                        alt={name}
+                    />
+                    <div className="view-supplier-overlay">
+                        <h2>View</h2>
+                    </div>
+                </div>
+            </NavLink>
+        );
+    }
 }
 
 class Supplier extends React.Component {
@@ -60,35 +83,18 @@ class Supplier extends React.Component {
 
     handleCollapse = () => this.setState({expanded: false});
 
-    isActive = r => this.props.location.hash.substr(1) === r;
-
     render() {
         return (
             <div
                 id={`shop-${this.props.name}`}
                 className={`supplier elevation-level-2${this.state.expanded ? " expanded" : " collapsed"}`}
-                onClick={this.toggleExpand}
             >
                 <div>
-                    <NavLink
-                        isActive={this.isActive}
-                        smooth
-                        scroll={element => {
-                            var headerOffset = 175;
-                            var elementPosition = element.offsetTop;
-                            var offsetPosition = elementPosition - headerOffset;
-
-                            window.scrollTo({
-                                top: offsetPosition,
-                                behavior: "smooth"
-                            });
-                        }}
-                        className="navlink"
-                        activeClassName="selected"
-                        to={`#shop-${this.props.name}`}
-                    >
-                        {this.state.expanded ? <SupplierContent {...this.props} /> : <ViewSupplier {...this.props} />}
-                    </NavLink>
+                    {this.state.expanded ? (
+                        <SupplierContent handleClick={this.toggleExpand} {...this.props} />
+                    ) : (
+                        <ViewSupplier handleClick={this.toggleExpand} {...this.props} />
+                    )}
                 </div>
             </div>
         );

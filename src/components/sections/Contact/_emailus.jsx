@@ -55,10 +55,6 @@ class EmailUs extends React.Component {
 
         return (
             <div id="email-us">
-                <h3>
-                    Send us a message below or email us at{" "}
-                    <a href="mailto:info@ossolighting.ca">info@ossolighting.ca</a>
-                </h3>
                 <form
                     id="contact-form"
                     onSubmit={e => {

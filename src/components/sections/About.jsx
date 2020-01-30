@@ -1,6 +1,8 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import Carousel from "../shared/Carousel";
 import MarinoOsso from "../../assets/images/Marino Osso.jpg";
+
+import {modifiedDebounce} from "../../utils";
 
 // var aboutText = [
 //     `Since its inception in 1984, Osso City Lighting has proudly been one of the Durham Region’s largest
@@ -28,58 +30,62 @@ var aboutImages = [
     <img key="about-image-5" className="about-image" alt="about" src={MarinoOsso} />
 ];
 
-function About() {
-    const [verticalMode, setVerticalMode] = useState(null);
+class About extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            verticalMode: null
+        };
 
-    useEffect(() => {
-        const updateMode = _ => {
-            if (verticalMode === null) {
-                setVerticalMode(window.innerWidth < 650);
+        this.updateMode = modifiedDebounce(_ => {
+            const width = Math.max(document.documentElement.clientWidth, window.width || 0);
+            if (this.state.verticalMode === null) {
+                this.setState({verticalMode: width < 768});
             } else {
-                if (verticalMode && window.innerWidth >= 650) {
-                    setVerticalMode(false);
-                } else if (!verticalMode && window.innerWidth < 650) {
-                    setVerticalMode(true);
+                if (this.state.verticalMode && width >= 768) {
+                    this.setState({verticalMode: false});
+                } else if (!this.state.verticalMode && width < 768) {
+                    this.setState({verticalMode: true});
                 }
             }
-        };
+        }, 200);
+    }
 
-        if (!window.onresize) {
-            updateMode();
-            window.onresize = function() {
-                updateMode();
-            };
-        }
+    componentDidMount() {
+        this.updateMode();
+        window.addEventListener("resize", this.updateMode);
+    }
 
-        return _ => {
-            window.onresize = undefined;
-        };
-    }, [verticalMode]);
+    componentWillUnmount() {
+        window.removeEventListener("resize", this.updateMode);
+    }
 
-    return (
-        <section id="about">
-            <h1 className="section-title">Our Story</h1>
-            <h4 className="section-description">Description goes here</h4>
-            <div id="about-slider">
-                <div id="background-strip-container">
-                    <hr />
+    render() {
+        return (
+            <section id="about">
+                <h1 className="section-title">Our Story</h1>
+                <h4 className="section-description">Description goes here</h4>
+                <div id="about-slider">
+                    <div id="background-strip-container">
+                        <hr />
+                    </div>
+                    <div id="about-content-container">
+                        <Carousel
+                            speed={1000}
+                            variableWidth={!this.state.verticalMode}
+                            autoplay={false}
+                            centerMode
+                            arrows
+                            vertical={this.state.verticalMode}
+                            blockInfinite
+                        >
+                            {aboutImages}
+                        </Carousel>
+                    </div>
                 </div>
-                <div id="about-content-container">
-                    <Carousel
-                        speed={1000}
-                        variableWidth={!verticalMode}
-                        autoplay={false}
-                        centerMode
-                        arrows
-                        vertical={verticalMode}
-                        blockInfinite
-                    >
-                        {aboutImages}
-                    </Carousel>
-                </div>
-            </div>
-        </section>
-    );
+            </section>
+        );
+    }
 }
 
 export default About;

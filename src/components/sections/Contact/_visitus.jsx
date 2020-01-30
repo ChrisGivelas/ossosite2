@@ -3,13 +3,6 @@ import React from "react";
 function VisitUs() {
     return (
         <div id="visit-us">
-            <p>
-                209 Bloor Street East
-                <br />
-                Oshawa, Ontario
-                <br />
-                <a href="tel:905-404-6776">905-404-6776</a>
-            </p>
             <iframe
                 id="osso-map"
                 title="osso-map"

@@ -1,19 +1,17 @@
 #landing {
     position: relative;
     overflow: hidden !important;
+}
+
+#landing:not(.mobile) {
     padding-top: $navbar-height + (2 * $navbar-padding);
-}
 
-#landing,
-#landing-background,
-#landing-background-overlay,
-#landing-content-container,
-#landing-background-content,
-#landing-background-content {
-    height: calc(100vh - #{$navbar-height + (2 * $navbar-padding)});
-}
-
-#landing-background-content {
+    &,
+    #landing-background,
+    #landing-background-overlay,
+    #landing-content-container,
+    #landing-background-content,
+    #landing-background-content,
     .slick-slider,
     .slick-list,
     .slick-track,
@@ -21,6 +19,47 @@
         height: calc(100vh - #{$navbar-height + (2 * $navbar-padding)});
     }
 
+    #landing-content-container,
+    #landing-background-overlay {
+        top: $navbar-height + (2 * $navbar-padding);
+    }
+}
+
+#landing.mobile {
+    padding-top: 0px;
+
+    &,
+    #landing-background,
+    #landing-background-overlay,
+    #landing-content-container,
+    #landing-background-content,
+    #landing-background-content,
+    .slick-slider,
+    .slick-list,
+    .slick-track,
+    .slick-slide {
+        height: 100vh;
+        top: 0px;
+    }
+
+    #mobile-nav {
+        width: 100%;
+        color: white;
+        font-size: 2rem;
+
+        #nav-items {
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+        }
+        .navlink {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+#landing-background-content {
     .slick-slide {
         & > div {
             position: relative;
@@ -44,6 +83,7 @@
         left: 0px;
         width: 100vw;
         height: 100vh;
+
         //$osso-colour-4
         background: rgb(110, 114, 113);
         background: radial-gradient(circle, rgba(110, 114, 113, 0.9) 15%, rgba(110, 114, 113, 0.5) 75%);
@@ -52,17 +92,13 @@
 
 #landing-content-container {
     position: absolute;
-    top: $navbar-height + (2 * $navbar-padding);
+    top: 0px;
     left: 0px;
     width: 100vw;
     height: 100vh;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 #logo {
-    width: 25rem;
+    display: block;
+    margin: 30px auto 30px auto;
 }

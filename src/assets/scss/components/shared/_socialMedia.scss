@@ -1,14 +1,5 @@
 #social-media {
-    margin: auto;
-    padding: 15px;
-    height: fit-content;
-    text-align: center;
-
-    h2 {
-        display: block;
-        margin-bottom: 5px;
-    }
-
+    justify-self: end;
     & > a,
     & > span {
         width: 30px;

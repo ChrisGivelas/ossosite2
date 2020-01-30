@@ -1,6 +1,9 @@
 import React from "react";
+import TouchEnabledContext from "../../touchEnabledContext";
 
 import Carousel from "../shared/Carousel";
+import Navbar from "../shared/WebNavbar";
+import MobileNav from "../shared/MobileNav";
 
 import * as Logo from "../../assets/images/[H] Osso Lighting 2019 Logo (no stroke).png";
 
@@ -40,9 +43,29 @@ const LandingPageImages = [
     <img key="Landing16" src={Landing16} alt="Landing16" />
 ];
 
-function Landing() {
+function LandingWeb() {
     return (
-        <section id="landing">
+        <React.Fragment>
+            <Navbar />
+            <section id="landing">
+                <div id="landing-background">
+                    <div id="landing-background-content">
+                        <Carousel>{LandingPageImages}</Carousel>
+                    </div>
+                    <div id="landing-background-overlay"></div>
+                </div>
+                <div id="landing-content-container">
+                    <img id="logo" src={Logo} alt="Osso City Lighting" />
+                    <h1 style={{color: "white", padding: 30}}>Fine Lighting and Décor since 1984.</h1>
+                </div>
+            </section>
+        </React.Fragment>
+    );
+}
+
+function LandingMobile() {
+    return (
+        <section id="landing" className="mobile">
             <div id="landing-background">
                 <div id="landing-background-content">
                     <Carousel>{LandingPageImages}</Carousel>
@@ -51,10 +74,15 @@ function Landing() {
             </div>
             <div id="landing-content-container">
                 <img id="logo" src={Logo} alt="Osso City Lighting" />
-                <h1 style={{color: "white", padding: 30}}>Bringing You Fine Lighting and Décor for 30+ Years.</h1>
+                <MobileNav />
+                <h1 style={{color: "white", padding: "0px 15px 0px 15px"}}>Fine Lighting and Décor since 1984.</h1>
             </div>
         </section>
     );
 }
 
-export default Landing;
+export default () => (
+    <TouchEnabledContext.Consumer>
+        {value => (value === true ? <LandingMobile /> : <LandingWeb />)}
+    </TouchEnabledContext.Consumer>
+);

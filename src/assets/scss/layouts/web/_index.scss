@@ -2,79 +2,14 @@
     html {
         font-size: 24px;
     }
-    #navbar {
-        position: fixed;
-        z-index: 999;
-        width: calc(100% - 30px);
-        border-radius: 2px;
-        background-color: white;
-        padding: $navbar-padding;
 
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        grid-gap: 15px;
-
-        border-radius: 2px;
-
-        max-height: fit-content;
-
-        hr {
-            border-top: 1px solid rgb(100, 100, 100);
-            border-bottom: 0px;
-            border-left: 0px;
-            border-right: 0px;
-            width: 75%;
-            margin: 0px;
-        }
+    #logo {
+        max-width: 25rem;
     }
 
-    #navbar-logo {
-        max-height: 45px;
-        max-width: 100%;
-        width: auto;
-    }
-
-    #navbar-main {
-        justify-self: center;
-        align-self: center;
-    }
-
-    #navbar-extra-info {
-        justify-self: center;
-
-        a {
-            &:hover {
-                color: $osso-colour-1;
-            }
-        }
-    }
-
-    #nav-items {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        justify-items: center;
-        max-width: 75%;
-
-        .navlink {
-            transition-property: all !important;
-            transition-duration: 0.5s !important;
-
-            &:after {
-                display: block;
-                content: "";
-                border: solid 1px $osso-colour-1;
-                border-radius: 50px;
-                transform: scaleX(0);
-                transition: transform 150ms ease-in-out;
-            }
-            &:hover,
-            &.selected {
-                color: $osso-colour-1;
-
-                &:after {
-                    transform: scaleX(1);
-                }
-            }
+    #contact {
+        * {
+            font-size: 0.8rem;
         }
     }
 }

@@ -26,12 +26,13 @@ function Hours() {
     return (
         <div id="hours">
             {hours.map(item => {
+                const classes = currentDay === item.day ? "today" : null;
                 return (
                     <React.Fragment key={item.day}>
-                        <span className={currentDay === item.day ? "today" : null}>{item.day}</span>
-                        <span>{item.isClosed ? null : item.open}</span>
-                        <span>{item.isClosed ? null : "-"}</span>
-                        <span>{item.isClosed ? "Closed" : item.close}</span>
+                        <span className={classes}>{item.day}</span>
+                        <span className={classes}>{item.isClosed ? null : item.open}</span>
+                        <span className={classes}>{item.isClosed ? null : "-"}</span>
+                        <span className={classes}>{item.isClosed ? "Closed" : item.close}</span>
                     </React.Fragment>
                 );
             })}
