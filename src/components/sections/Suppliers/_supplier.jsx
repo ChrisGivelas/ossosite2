@@ -3,7 +3,7 @@ import {withRouter} from "react-router-dom";
 import {getImageURL} from "../../../utils";
 import {NavHashLink as NavLink} from "react-router-hash-link";
 
-function SupplierContent({name, description, website, handleClick}) {
+function SupplierContent({name, description, website, handleClick, productTypes}) {
     return (
         <div className="supplier-content" onClick={handleClick}>
             <img
@@ -11,7 +11,14 @@ function SupplierContent({name, description, website, handleClick}) {
                 src={getImageURL(`${name}-logo.jpg`, "Supplier_Logos", "http://ossolighting.ca")}
                 alt={name}
             />
-            <a className="supplier-website backgroundChange" href={website} target="_blank" rel="noopener noreferrer">
+            {productTypes instanceof Array && productTypes.length > 0 && (
+                <ul>
+                    {productTypes.map(type => (
+                        <li>{type}</li>
+                    ))}
+                </ul>
+            )}
+            <a className="supplier-website" href={website} target="_blank" rel="noopener noreferrer">
                 View Website
             </a>
             <p className="supplier-description">"{description}"</p>

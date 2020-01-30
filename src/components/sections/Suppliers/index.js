@@ -2,9 +2,10 @@ import React from "react";
 import Supplier from "./_supplier";
 import {wrapGrid} from "animate-css-grid";
 
+const defaultSuppliers = require("../../../suppliers.json");
 class Suppliers extends React.Component {
     static defaultProps = {
-        suppliers: [],
+        suppliers: defaultSuppliers,
         transitioning: false
     };
 
@@ -45,7 +46,4 @@ class Suppliers extends React.Component {
         );
     }
 }
-
-const defaultSuppliers = require("../../../suppliers.json");
-export default ({suppliers}) =>
-    suppliers instanceof Array ? <Suppliers suppliers={suppliers} /> : <Suppliers suppliers={defaultSuppliers} />;
+export default Suppliers;

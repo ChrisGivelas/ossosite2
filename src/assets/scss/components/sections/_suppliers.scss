@@ -58,7 +58,7 @@
     height: 100%;
     width: 100%;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     justify-content: center;
     align-items: center;
     justify-items: center;
@@ -72,9 +72,32 @@
 
     .supplier-website {
         padding: 10px;
+
+        &:hover {
+            color: $osso-colour-1;
+        }
     }
 
     .supplier-description {
         font-style: italic;
+    }
+
+    ul {
+        list-style: none;
+        padding-inline-start: 0px;
+        columns: 2;
+        -webkit-columns: 2;
+        -moz-columns: 2;
+        li {
+            width: 100%;
+            text-align: center;
+            background-color: $osso-colour-1;
+            color: white;
+            border-radius: $default-border-radius;
+            margin: 5px;
+            &:first-child {
+                margin-top: 0px;
+            }
+        }
     }
 }
