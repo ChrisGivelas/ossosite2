@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c3a91434ac1002016515f9db5d116788",
+    "revision": "2e46d237bbb57f85487a39e94918d944",
     "url": "/ossosite2/index.html"
   },
   {
@@ -8,16 +8,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ossosite2/static/css/2.fddaa3a5.chunk.css"
   },
   {
-    "revision": "639ff4ce0db016e89d9d",
-    "url": "/ossosite2/static/css/main.77c12483.chunk.css"
+    "revision": "b9c35aa3c8a84ae59357",
+    "url": "/ossosite2/static/css/main.cf12aac9.chunk.css"
   },
   {
     "revision": "6ee8a0522ccc7d603104",
     "url": "/ossosite2/static/js/2.c8dad3c6.chunk.js"
   },
   {
-    "revision": "639ff4ce0db016e89d9d",
-    "url": "/ossosite2/static/js/main.57b689bc.chunk.js"
+    "revision": "b9c35aa3c8a84ae59357",
+    "url": "/ossosite2/static/js/main.408c40b4.chunk.js"
   },
   {
     "revision": "97c5c1498de5a977e246",
@@ -68,8 +68,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ossosite2/static/media/2.33cb5a8f.jpg"
   },
   {
-    "revision": "40a6618e8806bf4f2868ed947027d2e9",
-    "url": "/ossosite2/static/media/2020 LOGO (SIMPLE).40a6618e.png"
+    "revision": "0a46c89f2703cac2a7a1a20b83b72704",
+    "url": "/ossosite2/static/media/2020 LOGO.v2. (SIMPLE).0a46c89f.png"
   },
   {
     "revision": "455468cdfcaf9187889e3604fe73babd",
