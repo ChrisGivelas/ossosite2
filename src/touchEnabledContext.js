@@ -7,9 +7,9 @@ export function isTouchEnabled() {
             (window.DocumentTouch && document instanceof window.DocumentTouch) ||
             navigator.maxTouchPoints > 0 ||
             navigator.msMaxTouchPoints > 0 ||
-            Math.max(document.documentElement.clientWidth, window.width || 0) < 768
+            Math.max(document.documentElement.clientWidth, window.innerWidth, 0) < 768
         ) {
-            console.log("Touch enabled: ", "true");
+            console.log("Touch enabled: ", true);
             return true;
         } else {
             var prefixes = " -webkit- -moz- -o- -ms- ".split(" ");
