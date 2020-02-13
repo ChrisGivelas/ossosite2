@@ -49,3 +49,25 @@ export const modifiedDebounce = function(callback, wait, immediate = false) {
         }
     };
 };
+
+export const hours = [
+    {day: "Sunday", isClosed: true},
+    {day: "Monday", isClosed: true},
+    {day: "Tuseday", open: "9am", close: "5:30pm"},
+    {day: "Wednesday", open: "9am", close: "5:30pm"},
+    {day: "Thursday", open: "9am", close: "8:00pm"},
+    {day: "Friday", open: "9am", close: "5:30pm"},
+    {day: "Saturday", open: "9am", close: "5:30pm"}
+];
+
+export const getHoursForDay = day => {
+    if (typeof day === "number") {
+        return hours[day];
+    } else if (typeof day === "string") {
+        return hours.find(hourInfo => hourInfo.day === day) || hours[new Date().getDay()];
+    } else {
+        return hours[new Date().getDay()];
+    }
+};
+
+export const today = getHoursForDay();

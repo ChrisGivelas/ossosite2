@@ -12,8 +12,6 @@
 
     border-radius: 2px;
 
-    max-height: $navbar-height;
-
     hr {
         border-top: 1px solid rgb(100, 100, 100);
         border-bottom: 0px;
@@ -37,6 +35,10 @@
     #navbar-extra-info {
         justify-self: center;
         align-self: center;
+
+        & > p {
+            font-size: 20px;
+        }
 
         a {
             &:hover {

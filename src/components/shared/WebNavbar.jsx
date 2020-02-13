@@ -2,7 +2,7 @@ import React from "react";
 import {withRouter} from "react-router-dom";
 import {HashLink as Link} from "react-router-hash-link";
 import routes, {HOME_PAGE, LANDING} from "../../routes";
-import {modifiedDebounce} from "../../utils";
+import {modifiedDebounce, today} from "../../utils";
 import NavItems from "./NavItems";
 
 import NavbarLogo from "../../assets/images/2020 LOGO (SIMPLE).png";
@@ -51,6 +51,7 @@ class Navbar extends React.Component {
                     <NavItems subroutes={routes[HOME_PAGE]} route={HOME_PAGE} />
                 </div>
                 <div id="navbar-extra-info">
+                    <p>{`${today.day}: ${today.isClosed ? "Closed" : `${today.open} - ${today.close}`}`}</p>
                     <p>
                         <a href="mailto:info@ossolighting.ca">info@ossolighting.ca</a>
                     </p>

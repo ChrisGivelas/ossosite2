@@ -55,9 +55,6 @@ class ViewSupplier extends React.Component {
                         src={getImageURL(`${name}-logo.jpg`, "Supplier_Logos", "http://ossolighting.ca")}
                         alt={name}
                     />
-                    <div className="view-supplier-overlay">
-                        <h2>View</h2>
-                    </div>
                 </div>
             </NavLink>
         );
