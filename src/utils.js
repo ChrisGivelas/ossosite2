@@ -53,11 +53,11 @@ export const modifiedDebounce = function(callback, wait, immediate = false) {
 export const hours = [
     {day: "Sunday", isClosed: true},
     {day: "Monday", isClosed: true},
-    {day: "Tuseday", open: "9am", close: "5:30pm"},
-    {day: "Wednesday", open: "9am", close: "5:30pm"},
-    {day: "Thursday", open: "9am", close: "8:00pm"},
-    {day: "Friday", open: "9am", close: "5:30pm"},
-    {day: "Saturday", open: "9am", close: "5:30pm"}
+    {day: "Tuseday", open: "9:30am", close: "5:30pm"},
+    {day: "Wednesday", open: "9:30am", close: "5:30pm"},
+    {day: "Thursday", open: "9:30am", close: "8:00pm"},
+    {day: "Friday", open: "9:30am", close: "5:30pm"},
+    {day: "Saturday", open: "9:30am", close: "5:30pm"}
 ];
 
 export const getHoursForDay = day => {

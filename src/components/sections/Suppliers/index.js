@@ -29,7 +29,7 @@ class Suppliers extends React.Component {
 
     render() {
         return (
-            <section id="shop">
+            <section id="brands">
                 <h1 className="section-title">Our Suppliers</h1>
                 <h4 className="section-description">Description goes here</h4>
                 <div id="suppliers-container">

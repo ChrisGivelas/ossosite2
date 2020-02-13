@@ -4,7 +4,7 @@ import Contact from "../components/sections/Contact";
 
 export const HOME_PAGE = "home";
 export const LANDING = "landing";
-export const SUPPLIERS = "shop";
+export const SUPPLIERS = "brands";
 export const ABOUT = "about";
 export const CONTACT = "contact";
 

@@ -47,7 +47,7 @@ class ViewSupplier extends React.Component {
                 }}
                 className="navlink"
                 activeClassName="selected"
-                to={`#shop-${this.props.name}`}
+                to={`#brands-${this.props.name}`}
             >
                 <div className="view-supplier" onClick={handleClick}>
                     <img
@@ -90,7 +90,7 @@ class Supplier extends React.Component {
     render() {
         return (
             <div
-                id={`shop-${this.props.name}`}
+                id={`brands-${this.props.name}`}
                 className={`supplier elevation-level-2${this.state.expanded ? " expanded" : " collapsed"}`}
             >
                 <div>
