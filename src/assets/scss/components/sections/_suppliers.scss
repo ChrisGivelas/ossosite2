@@ -12,8 +12,8 @@
 .supplier {
     border: rgb(115, 115, 115) 1px solid;
     padding: 15px;
-    position: relative;
     overflow: hidden;
+    background-color: white;
 
     & > div {
         height: 100%;
@@ -21,8 +21,22 @@
     }
 }
 
+.supplier.expanded {
+    &,
+    * {
+        position: relative;
+        z-index: 998;
+    }
+}
+
 .supplier.collapsed {
     cursor: pointer;
+
+    &,
+    * {
+        position: relative;
+        z-index: 0;
+    }
 }
 
 .view-supplier {
