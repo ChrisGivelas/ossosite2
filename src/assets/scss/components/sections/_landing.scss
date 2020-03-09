@@ -4,7 +4,7 @@
 }
 
 #landing:not(.mobile) {
-    padding-top: $navbar-height + (2 * $navbar-padding);
+    padding-top: $navbar-height;
 
     &,
     #landing-background,
@@ -16,12 +16,12 @@
     .slick-list,
     .slick-track,
     .slick-slide {
-        height: calc(100vh - #{$navbar-height + (2 * $navbar-padding)});
+        height: calc(100vh - #{$navbar-height});
     }
 
     #landing-content-container,
     #landing-background-overlay {
-        top: $navbar-height + (2 * $navbar-padding);
+        top: $navbar-height;
     }
 }
 

@@ -2,233 +2,214 @@
     {
         "id": 1,
         "name": "Artcraft",
-        "website": "http://www.artcraftlighting.com/",
-        "description": "Supplier Description here",
-        "productTypes": ["Bathroom", "Chandeliers", "Floor Lamps", "Flush Mounts", "Outdoors", "Pendants", "more..."]
+        "website": "https://www.artcraftlighting.com/en/",
+        "description": "A Canadian/American company providing lighting products that cater to your lifestyle, budget, and individual taste.",
+        "productTypes": ["Chandeliers", "Linears", "Pendants", "Sconces", "Vanities", "Outdoor"]
     },
 
     {
         "id": 2,
         "name": "Avista",
-        "website": "http://www.avistalighting.com/",
-        "description": "Supplier Description here",
-        "productTypes": ["Bathroom", "Chandeliers", "Flush Mounts", "Pendants", "Wall Sconce", "more..."]
+        "website": "https://avistalighting.com/",
+        "description": "A Canadian company specializing in chrome & crystal fixtures, with modern LED looks.",
+        "productTypes": ["Chandeliers", "Pendants", "Vanities", "Ceiling"]
     },
 
     {
         "id": 3,
         "name": "Canarm",
-        "website": "http://www.canarm.com/Residential/Residential_Lighting/Families",
-        "description": "Supplier Description here",
+        "website": "https://www.canarm.com/residential/",
+        "description": "Canarm Lighting supplies quality, on-trend products that are both affordable and obtainable.",
         "productTypes": [
-            "Bathroom",
             "Chandeliers",
-            "Ceiling Fans",
-            "Flush Mounts",
-            "Outdoors",
             "Pendants",
-            "Wall Sconce",
-            "more..."
+            "Ceiling",
+            "Sconces",
+            "Vanities",
+            "Outdoor + Landscape",
+            "Ceiling Fans"
         ]
     },
 
     {
         "id": 4,
-        "name": "Dals",
-        "website": "http://www.dalslighting.com/en",
-        "description": "Supplier Description here",
-        "productTypes": [
-            "LED Tape",
-            "Recessed Lighting",
-            "Drivers",
-            "Ceiling Mounts",
-            "Wall Sconce",
-            "Undercabinet",
-            "more..."
-        ]
+        "name": "CapitalLighting",
+        "website": "https://www.capitallightingfixture.com/",
+        "description": "Capital Lighting prides themselves on delivering stylish, high quality products at affordable prices, from interior to exterior.",
+        "productTypes": ["Chandeliers", "Linears", "Pendants", "Sconces", "Vanities", "Outdoor", "Ceiling"]
     },
 
     {
         "id": 5,
-        "name": "DVI",
-        "website": "http://www.dvcanada.com/",
-        "description": "Supplier Description here",
-        "productTypes": ["Bathroom", "Chandeliers", "Flush Mounts", "Outdoors", "Pendants", "Wall Sconce", "more..."]
+        "name": "Dals",
+        "website": "https://www.dalslighting.com/en",
+        "description": "Offering recessed, cabinet, accent, and architectural LED lighting. Based out of Quebec.",
+        "productTypes": ["Recessed", "Cabinet", "Accessories"]
     },
 
     {
         "id": 6,
-        "name": "Eurofase",
-        "website": "http://www.eurofase.com/",
-        "description": "Supplier Description here",
-        "productTypes": [
-            "Bathroom",
-            "Chandeliers",
-            "Flush Mounts",
-            "Outdoors",
-            "Pendants",
-            "Wall Sconce",
-            "Recessed Lighting",
-            "Track Lighting",
-            "more..."
-        ]
+        "name": "DVI",
+        "website": "https://www.dvcanada.com/",
+        "description": "Design, value, and inventory are the principles DVI has branded itself upon. Keeping a strong commitment to fresh product lines in fashion – offering pricing families can afford.",
+        "productTypes": ["Chandeliers", "Linears", "Pendants", "Sconces", "Vanities", "Outdoor", "Ceiling"]
     },
 
     {
         "id": 7,
-        "name": "Feiss",
-        "website": "http://www.feiss.com/",
-        "description": "Supplier Description here",
+        "name": "Eurofase",
+        "website": "https://www.eurofase.com/",
+        "description": "Eurofase provides a diverse selection of high quality, innovative lighting. Statement chandeliers, alluring pendants, vanity & bath lights, track & recessed lighting, exterior fixtures, cabinet & display lighting, plus LED mirrors.",
         "productTypes": [
-            "Bathroom",
             "Chandeliers",
-            "Flush Mounts",
-            "Outdoors",
             "Pendants",
-            "Wall Sconce",
-            "Mirrors",
-            "more..."
+            "Linears",
+            "Vanities",
+            "Ceiling",
+            "Recessed",
+            "Track",
+            "Landscape",
+            "LED Mirrors"
         ]
     },
 
     {
         "id": 8,
-        "name": "Fourbro",
-        "website": "http://www.fourbroframes.com/",
-        "description": "Supplier Description here",
-        "productTypes": ["Table Lamps", "Prints", "Mirrors", "more..."]
+        "name": "Galaxy",
+        "website": "https://www.galaxy-lighting.com/",
+        "description": "Galaxy Lighting provides some of the most unique lighting fixtures available on the market. You will find a wide selection of interior and exterior lighting, ranging from pendants & chandeliers to recessed lighting, from wall sconces & floor lamps to vanity lights.",
+        "productTypes": [
+            "Chandeliers",
+            "Pendants",
+            "Ceiling",
+            "Sconces",
+            "Vanities",
+            "Track",
+            "Outdoor",
+            "Recessed",
+            "Lamps"
+        ]
     },
 
     {
         "id": 9,
-        "name": "FredrickRamond",
-        "website": "http://www.fredrickramond.com/",
-        "description": "Supplier Description here",
-        "productTypes": ["Chandeliers", "Flush Mounts", "Wall Sconces", "Pendants", "more..."]
+        "name": "GenerationLighting",
+        "website": "https://generationlighting.com/",
+        "description": "Superior quality – delivering a balanced range of price points and styles, maintaining the highest standards with materials and workmanship.",
+        "productTypes": ["Chandeliers", "Linears", "Pendants", "Sconces", "Vanities", "Outdoor", "Ceiling"]
     },
 
     {
         "id": 10,
-        "name": "Galaxy",
-        "website": "http://www.galaxy-lighting.com/",
-        "description": "Supplier Description here",
+        "name": "Hinkley",
+        "website": "https://www.hinkleylighting.com/",
+        "description": "Thoughtful design, impeccable attention to detail, and quality craftmanship are the backbone of every single product released by Hinkley Lighting and Fredrick Ramond.",
         "productTypes": [
-            "Bathroom",
             "Chandeliers",
-            "Flush Mounts",
-            "Outdoors",
+            "Linears",
             "Pendants",
-            "Wall Sconce",
-            "Recessed Lighting",
-            "Ceiling Fans",
-            "more..."
+            "Ceiling",
+            "Sconces",
+            "Vanities",
+            "Outdoor + Landscape",
+            "Ceiling Fans"
         ]
     },
 
     {
         "id": 11,
-        "name": "Hinkley",
-        "website": "http://www.hinkleylighting.com/",
-        "description": "Supplier Description here",
-        "productTypes": ["Bathroom", "Chandeliers", "Flush Mounts", "Pendants", "Wall Sconce", "Outdoors", "more..."]
+        "name": "Kendal",
+        "website": "https://www.kendallighting.com/",
+        "description": "Kendal Lighting quality and design can be found in many areas of Lighting including Fans, Fixtures, Lamps, Track Lighting, and Rail Systems.",
+        "productTypes": ["Lamps", "Torchieres", "Pendants"]
     },
 
     {
         "id": 12,
-        "name": "Kendal",
-        "website": "http://www.kendallighting.com/",
-        "description": "Supplier Description here",
+        "name": "Kichler",
+        "website": "https://www.kichler.com/",
+        "description": "Kichler Lighting offers a variety of lighting solutions and ceiling fans to match your unique style and personality, while focusing on detail & quality.",
         "productTypes": [
-            "Bathroom",
             "Chandeliers",
-            "Floor Lamps",
-            "Flush Mounts",
-            "Ceiling Fans",
+            "Linears",
             "Pendants",
-            "Wall Sconce",
-            "more..."
+            "Ceiling",
+            "Sconces",
+            "Vanities",
+            "Outdoor + Landscape",
+            "Ceiling Fans"
         ]
     },
 
     {
         "id": 13,
-        "name": "Kichler",
-        "website": "http://www.kichler.com/",
-        "description": "Supplier Description here",
-        "productTypes": [
-            "Bathroom",
-            "Chandeliers",
-            "Floor Lamps",
-            "Flush Mounts",
-            "Wall Sconce",
-            "Ceiling Fans",
-            "Pendants",
-            "Outdoors",
-            "more..."
-        ]
+        "name": "Korson",
+        "website": "https://www.korsonfurniture.com/",
+        "description": "Korson Furniture Design designs, customizes, imports, and distributes contract quality home furnishings to top tier and mid-level furniture retailers and interior designers across Canada. Korson’s occasional furniture and accents are inspired by the ultimate in quality furniture fashioned from Milan, Toronto, and other international markets.",
+        "productTypes": ["Ottomans", "Console Tables", "Cabinets", "Drawers", "Stools", "Coffee Tables", "Art"]
     },
 
     {
         "id": 14,
-        "name": "Korson",
-        "website": "http://www.korsonfurniture.com/",
-        "description": "Supplier Description here",
-        "productTypes": ["Chairs", "Accent Furniture", "Dining", "Mirrors", "more..."]
+        "name": "LuceLumen",
+        "website": "https://www.lucelumen.com/",
+        "description": "Luce Lumen’s product line offers unparalleled style that will impress even the most discerning audience and suit an array of sophisticated décor styles.",
+        "productTypes": ["Task Lamps", "Table Lamps", "Floor Lamps"]
     },
 
     {
         "id": 15,
-        "name": "Liteline",
-        "website": "http://liteline.ca/",
-        "description": "Supplier Description here",
-        "productTypes": ["LED", "Track Lighting", "Recessed", "Undercabinet", "more..."]
+        "name": "MonteCarlo",
+        "website": "https://www.montecarlofans.com/",
+        "description": "Monte Carlo is a Fan company that specializes in trend-inspired, fashion-forward ceiling fans in a wide variety of models, sizes, and finishes for any interior space. Rooms come alive with style, all with premium grade motors and features.",
+        "productTypes": ["Ceiling Fans"]
     },
 
     {
         "id": 16,
-        "name": "MonteCarlo",
-        "website": "http://www.montecarlofans.com/",
-        "description": "Supplier Description here",
-        "productTypes": ["Ceiling Fans", "Fan Kits"]
+        "name": "Satco-Nuvo",
+        "website": "https://www.satco.com/",
+        "description": "Satco|Nuvo is a leading manufacturer of lighting solutions including bulbs, decorative lighting, functional and task lighting, as well as lighting components.",
+        "productTypes": ["Chandeliers", "Ceiling", "Pendants", "Sconces", "Vanities", "Outdoor"]
     },
 
     {
         "id": 17,
         "name": "Snoc",
-        "website": "http://www.snocinc.com/?___store=english",
-        "description": "Supplier Description here",
-        "productTypes": ["Outdoors", "Post Lights", "Mail Boxes", "Spot Lighting", "Path Lighting", "more..."]
+        "website": "http://www.snocinc.com/",
+        "description": "Snoc is a true manufacturing company, supplying a myriad of customizable exterior lighting solutions, as well as mailboxes & house numbers. Everything – design, production, and shipping – is done inside the same building. The company therefore enjoys a great deal of autonomy and complete control over the quality of its products.",
+        "productTypes": ["Outdoor", "Mailboxes", "House Numbers"]
     },
 
     {
         "id": 18,
-        "name": "Standard",
-        "website": "http://www.standardpro.com/",
-        "description": "Supplier Description here",
-        "productTypes": ["Light Bulbs", "LED", "Halogen", "more..."]
+        "name": "Starfire",
+        "website": "https://starfirecrystal.com/",
+        "description": "Starfire Crystal is a leading manufacturer and importer of fine crystal chandeliers & other lighting that reflect the latest innovations and trends in the lighting industry.",
+        "productTypes": ["Chandeliers", "Pendants", "Sconces", "Ceiling"]
     },
 
     {
         "id": 19,
-        "name": "Starfire",
-        "website": "http://starfirecrystal.com/",
-        "description": "Supplier Description here",
-        "productTypes": ["Linear", "Slot", "Pendant", "Surface Mounts", "more..."]
+        "name": "Sunpan",
+        "website": "https://www.sunpan.com/can/",
+        "description": "Sunpan is a fast-growing global furniture company specializing in the design and manufacturing of transitional and contemporary furnishings.",
+        "productTypes": ["Console Tables", "Coffee Tables", "Stools", "Ottomans"]
     },
 
     {
         "id": 20,
-        "name": "Sunpan",
-        "website": "http://www.sunpan.com/",
-        "description": "Supplier Description here",
-        "productTypes": ["Bedroom", "Chairs", "Dining", "Home Office", "more..."]
+        "name": "TechLighting",
+        "website": "https://www.techlighting.com/",
+        "description": "For 25 years, Tech Lighting has been an industry leader in low-voltage lighting systems and contemporary decorative fixtures.",
+        "productTypes": ["Chandeliers", "Pendants", "Linears", "Lamps", "Vanities", "Sconces", "Track", "Outdoor"]
     },
 
     {
         "id": 21,
         "name": "Worldwide",
-        "website": "http://www.whionline.com/",
-        "description": "Supplier Description here",
-        "productTypes": ["Bedroom", "Living room", "Dining", "Home Accents", "more..."]
+        "website": "https://worldwidehomefurnishingsinc.com/",
+        "description": "From dining sets, bedrooms, and coffee tables, to decadent ottomans, benches, and chairs, Worldwide Home Furnishings offer striking products without compromising quality or price.",
+        "productTypes": ["Coffee Tables", "Ottomans", "Stools"]
     }
 ]

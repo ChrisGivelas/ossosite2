@@ -6,11 +6,7 @@ import {NavHashLink as NavLink} from "react-router-hash-link";
 function SupplierContent({name, description, website, handleClick, productTypes}) {
     return (
         <div className="supplier-content" onClick={handleClick}>
-            <img
-                className="supplier-image"
-                src={getImageURL(`${name}-logo.jpg`, "Supplier_Logos", "http://ossolighting.ca")}
-                alt={name}
-            />
+            <img className="supplier-image" src={getImageURL(`${name}-logo.png`, "images/supplier_logos")} alt={name} />
             {productTypes instanceof Array && productTypes.length > 0 && (
                 <ul>
                     {productTypes.map(type => (
@@ -52,7 +48,7 @@ class ViewSupplier extends React.Component {
                 <div className="view-supplier" onClick={handleClick}>
                     <img
                         className="supplier-image"
-                        src={getImageURL(`${name}-logo.jpg`, "Supplier_Logos", "http://ossolighting.ca")}
+                        src={getImageURL(`${name}-logo.png`, "images/supplier_logos")}
                         alt={name}
                     />
                 </div>
