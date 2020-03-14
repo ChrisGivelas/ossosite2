@@ -33,7 +33,7 @@
 
     {
         "id": 4,
-        "name": "CapitalLighting",
+        "name": "Capital",
         "website": "https://www.capitallightingfixture.com/",
         "description": "Capital Lighting prides themselves on delivering stylish, high quality products at affordable prices, from interior to exterior.",
         "productTypes": ["Chandeliers", "Linears", "Pendants", "Sconces", "Vanities", "Outdoor", "Ceiling"]
@@ -93,7 +93,7 @@
 
     {
         "id": 9,
-        "name": "GenerationLighting",
+        "name": "Generation",
         "website": "https://generationlighting.com/",
         "description": "Superior quality – delivering a balanced range of price points and styles, maintaining the highest standards with materials and workmanship.",
         "productTypes": ["Chandeliers", "Linears", "Pendants", "Sconces", "Vanities", "Outdoor", "Ceiling"]
@@ -199,7 +199,7 @@
 
     {
         "id": 20,
-        "name": "TechLighting",
+        "name": "TechL",
         "website": "https://www.techlighting.com/",
         "description": "For 25 years, Tech Lighting has been an industry leader in low-voltage lighting systems and contemporary decorative fixtures.",
         "productTypes": ["Chandeliers", "Pendants", "Linears", "Lamps", "Vanities", "Sconces", "Track", "Outdoor"]
