@@ -11,7 +11,6 @@
 
 .supplier {
     border: rgb(115, 115, 115) 1px solid;
-    padding: 15px;
     overflow: hidden;
     background-color: white;
 
@@ -19,21 +18,14 @@
         height: 100%;
         width: 100%;
     }
-}
 
-.supplier.expanded {
-    &,
-    * {
+    &.expanded {
         position: relative;
-        z-index: 998;
+        z-index: 900;
     }
-}
 
-.supplier.collapsed {
-    cursor: pointer;
-
-    &,
-    * {
+    &.collapsed {
+        cursor: pointer;
         position: relative;
         z-index: 0;
     }
@@ -45,62 +37,77 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    .supplier-image {
-        max-width: 100%;
-        max-height: 100px;
-        display: block;
-        margin: auto;
-    }
+    padding: 30px;
 }
 
 .supplier-content {
+    padding: 30px;
     height: 100%;
     width: 100%;
-    display: grid;
-    grid-template-rows: auto auto auto 1fr;
-    justify-content: center;
-    align-items: center;
-    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
     cursor: default;
+}
 
-    .supplier-image {
-        max-width: 100%;
-        max-height: 100px;
-        width: auto;
-        display: block;
-        margin: auto;
-    }
+.supplier-content-header {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 
-    * {
-        text-align: center;
-        width: fit-content;
-        max-width: 100%;
-        margin: 0px;
-    }
+    .supplier-content-header-logo {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-    .supplier-website {
-        padding: 10px;
-
-        &:hover {
-            color: $osso-colour-1;
+        .supplier-image {
+            max-width: 100%;
+            max-height: 100%;
         }
     }
+}
+
+.supplier-image {
+    max-height: 100%;
+    width: auto;
+    display: inline-block;
+}
+
+.supplier-website {
+    width: 50%;
+    text-align: center;
+
+    &:hover {
+        color: $osso-colour-1;
+    }
+}
+
+.supplier-content-main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 75%;
+    padding-top: 30px;
 
     .supplier-description {
         font-style: italic;
+        width: 50%;
+        font-size: initial;
+        font-weight: bold;
+        padding-right: 15px;
+        max-height: 100%;
+        overflow-y: auto;
     }
 
-    ul {
-        list-style: none;
-        padding-inline-start: 0px;
-        columns: auto;
-        -webkit-columns: auto;
-        -moz-columns: auto;
-        li {
-            width: 100%;
-            text-align: center;
-            color: $osso-colour-1;
-            border-radius: $default-border-radius;
-        }
+    .supplier-product-carousel-container {
+        width: 50%;
+        padding-left: 15px;
     }
 }

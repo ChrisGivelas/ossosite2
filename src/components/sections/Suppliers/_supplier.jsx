@@ -1,23 +1,33 @@
 import React from "react";
 import {withRouter} from "react-router-dom";
-import {getImageURL} from "../../../utils";
+import {normalizeProductImageNamesAsUrl, getImageURL} from "../../../utils";
 import {NavHashLink as NavLink} from "react-router-hash-link";
+import Carousel from "../../shared/Carousel";
 
 function SupplierContent({name, description, website, handleClick, productTypes}) {
+    const supplierProductImages = normalizeProductImageNamesAsUrl(productTypes, name).map((url, index) => (
+        <img className="supplier-product-image" src={url} />
+    ));
     return (
         <div className="supplier-content" onClick={handleClick}>
-            <img className="supplier-image" src={getImageURL(`${name}-logo.png`, "images/supplier_logos")} alt={name} />
-            {productTypes instanceof Array && productTypes.length > 0 && (
-                <ul>
-                    {productTypes.map(type => (
-                        <li>{type}</li>
-                    ))}
-                </ul>
-            )}
-            <a className="supplier-website" href={website} target="_blank" rel="noopener noreferrer">
-                View Website
-            </a>
-            <p className="supplier-description">"{description}"</p>
+            <div className="supplier-content-header">
+                <div className="supplier-content-header-logo">
+                    <img
+                        className="supplier-image"
+                        src={getImageURL(`${name}-logo.png`, "images/supplier_logos")}
+                        alt={name}
+                    />
+                </div>
+                <a className="supplier-website" href={website} target="_blank" rel="noopener noreferrer">
+                    View Website
+                </a>
+            </div>
+            <div className="supplier-content-main">
+                <p className="supplier-description">"{description}"</p>
+                <div className="supplier-product-carousel-container">
+                    <Carousel>{supplierProductImages}</Carousel>
+                </div>
+            </div>
         </div>
     );
 }
@@ -66,6 +76,8 @@ class Supplier extends React.Component {
         };
     }
 
+    handleCollapse = () => this.setState({expanded: false});
+
     toggleExpand = () => {
         if (this.state.expanded) {
             this.setState({expanded: false});
@@ -80,8 +92,6 @@ class Supplier extends React.Component {
             this.setState({expanded: true});
         }
     };
-
-    handleCollapse = () => this.setState({expanded: false});
 
     render() {
         return (
