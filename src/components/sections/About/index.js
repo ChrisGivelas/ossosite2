@@ -9,9 +9,6 @@ import Img4 from "../../../assets/images/historical/4.jpg";
 import Img5 from "../../../assets/images/historical/5.jpg";
 import Img6 from "../../../assets/images/historical/6.jpg";
 import Img7 from "../../../assets/images/historical/7.jpg";
-import Img8 from "../../../assets/images/historical/8.jpg";
-import Img9 from "../../../assets/images/historical/9.jpg";
-import Img10 from "../../../assets/images/historical/10.jpg";
 
 var aboutImages = [
     <img key="about-image-1" className="about-image" alt="about" src={Img1} />,
@@ -20,10 +17,7 @@ var aboutImages = [
     <img key="about-image-4" className="about-image" alt="about" src={Img4} />,
     <img key="about-image-5" className="about-image" alt="about" src={Img5} />,
     <img key="about-image-1" className="about-image" alt="about" src={Img6} />,
-    <img key="about-image-2" className="about-image" alt="about" src={Img7} />,
-    <img key="about-image-3" className="about-image" alt="about" src={Img8} />,
-    <img key="about-image-4" className="about-image" alt="about" src={Img9} />,
-    <img key="about-image-5" className="about-image" alt="about" src={Img10} />
+    <img key="about-image-2" className="about-image" alt="about" src={Img7} />
 ];
 
 class About extends React.Component {
@@ -72,20 +66,13 @@ class About extends React.Component {
                 </p>
                 <p className="section-description">
                     Since its inception in 1984, Osso City Lighting has proudly been one of the Durham Region’s largest
-                    purveyors of fine lighting. We work closely with suppliers to provide you with only the highest
-                    quality items to satisfy all of your lighting and décor needs. Our goal is to continuously provide
-                    you the same level of excellence that we have shown for over a quarter century. Whether it's
-                    traditional, contemporary, or anything in between, Osso City Lighting has exactly what you need.
-                    Come visit our family and see the light in what we love.
+                    purveyors of fine lighting. Our goal is to continuously provide you the same level of excellence
+                    that we have shown for over a quarter century. Whether it's traditional, contemporary, or anything
+                    in between, Osso City Lighting has exactly what you need. Come visit our family and see the light in
+                    what we love.
                 </p>
                 <div id="about-content-container">
-                    <Carousel
-                        speed={1000}
-                        variableWidth={!this.state.verticalMode}
-                        autoplay={true}
-                        centerMode
-                        vertical={this.state.verticalMode}
-                    >
+                    <Carousel speed={1000} variableWidth={!this.state.verticalMode} autoplay centerMode>
                         {aboutImages}
                     </Carousel>
                 </div>

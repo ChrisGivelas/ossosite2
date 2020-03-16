@@ -31,23 +31,19 @@
         }
     }
 
-    .slick-slider {
-        &.beginning {
-            .custom-slider-arrow.prev {
-                display: none;
-            }
-        }
-
-        &.end {
-            .custom-slider-arrow.next {
-                display: none;
-            }
+    .slick-slider.slick-vertical {
+        .slick-slide,
+        .slick-slide > div,
+        .about-image {
+            height: 40vh;
         }
     }
 
-    .about-image {
-        height: 100%;
-        max-height: 400px;
-        width: auto !important;
+    .slick-slider:not(.slick-vertical) {
+        .about-image {
+            height: auto;
+            max-height: 400px;
+            width: auto !important;
+        }
     }
 }

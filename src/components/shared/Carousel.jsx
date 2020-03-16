@@ -32,7 +32,8 @@ export default class Carousel extends React.Component {
         accessibility: true,
         slickRef: undefined,
         customArrows: false,
-        vertical: false
+        vertical: false,
+        variableWidth: false
     };
 
     constructor(props) {

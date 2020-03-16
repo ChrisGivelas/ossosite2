@@ -31,7 +31,9 @@ class Suppliers extends React.Component {
         return (
             <section id="brands">
                 <h1 className="section-title">Our Suppliers</h1>
-                <h4 className="section-description">Description goes here</h4>
+                <h4 className="section-description">
+                    We work closely with suppliers to provide you with the best selection at the best prices.
+                </h4>
                 <div id="suppliers-container">
                     {this.props.suppliers.map(supplierInfo => (
                         <Supplier

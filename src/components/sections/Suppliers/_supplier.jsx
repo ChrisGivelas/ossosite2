@@ -6,7 +6,7 @@ import Carousel from "../../shared/Carousel";
 
 function SupplierContent({name, description, website, handleClick, productTypes}) {
     const supplierProductImages = normalizeProductImageNamesAsUrl(productTypes, name).map((url, index) => (
-        <img className="supplier-product-image" src={url} />
+        <img key={`${name}-product-${index}`} className="supplier-product-image" src={url} alt="Supplier Product" />
     ));
     return (
         <div className="supplier-content" onClick={handleClick}>
