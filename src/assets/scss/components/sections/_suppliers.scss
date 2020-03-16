@@ -77,11 +77,13 @@
     max-height: 100%;
     width: auto;
     display: inline-block;
+    padding-right: 10px;
 }
 
 .supplier-website {
     width: 50%;
     text-align: center;
+    padding-left: 10px;
 
     &:hover {
         color: $osso-colour-1;
@@ -100,11 +102,12 @@
     .supplier-description {
         font-style: italic;
         width: 50%;
-        font-size: initial;
+        font-size: 4vw;
         font-weight: bold;
         padding-right: 15px;
         max-height: 100%;
         overflow-y: auto;
+        overflow-x: hidden;
     }
 
     .supplier-product-carousel-container {

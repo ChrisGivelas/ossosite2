@@ -73,7 +73,6 @@ export const getHoursForDay = day => {
 export const today = getHoursForDay();
 
 export const normalizeProductImageNamesAsUrl = (productTypes, supplier) => {
-    console.log(productTypes);
     return productTypes
         .map(type => {
             if (type === "Chandeliers") {

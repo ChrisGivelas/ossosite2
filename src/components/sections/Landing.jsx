@@ -75,7 +75,7 @@ function LandingMobile() {
             <div id="landing-content-container">
                 <img id="logo" src={Logo} alt="Osso City Lighting" />
                 <MobileNav />
-                <h1 style={{color: "white", padding: "0px 15px 0px 15px"}}>Fine Lighting and Décor since 1984.</h1>
+                <h1 style={{color: "white", padding: 30}}>Fine Lighting and Décor since 1984.</h1>
             </div>
         </section>
     );

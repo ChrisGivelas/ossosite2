@@ -5,6 +5,7 @@ import {NavHashLink as NavLink} from "react-router-hash-link";
 import Carousel from "../../shared/Carousel";
 
 function SupplierContent({name, description, website, handleClick, productTypes}) {
+    console.log(name)
     const supplierProductImages = normalizeProductImageNamesAsUrl(productTypes, name).map((url, index) => (
         <img key={`${name}-product-${index}`} className="supplier-product-image" src={url} alt="Supplier Product" />
     ));
