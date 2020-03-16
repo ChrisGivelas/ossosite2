@@ -33,6 +33,7 @@
     #navbar-main {
         justify-self: center;
         align-self: center;
+        height: 100%;
     }
 
     #navbar-extra-info {
@@ -42,6 +43,7 @@
 
         & > p {
             font-size: 20px;
+            line-height: 1rem;
         }
 
         a {
@@ -56,15 +58,18 @@
         grid-template-columns: 1fr 1fr 1fr;
         justify-items: center;
         max-width: 75%;
+        margin-top: 5px;
 
         .navlink {
             transition-property: all !important;
             transition-duration: 0.5s !important;
 
+            line-height: 1rem;
+
             &:after {
                 display: block;
                 content: "";
-                border: solid 1px $osso-colour-1;
+                border-bottom: solid 1px $osso-colour-1;
                 border-radius: 50px;
                 transform: scaleX(0);
                 transition: transform 150ms ease-in-out;

@@ -118,8 +118,8 @@
         .slick-slide,
         .slick-slide > div,
         .supplier-product-image {
-            max-height: 100%;
-            height: initial;
+            height: 100%;
+            
         }
 
         .slick-slide > div {
@@ -127,6 +127,8 @@
         }
 
         .supplier-product-image {
+            max-height: 100%;
+            height: initial !important;
             width: initial !important;
         }
     }
