@@ -1,25 +1,67 @@
 import React from "react";
 import Carousel from "../../shared/Carousel";
+import {modifiedDebounce, elementIsHidden} from "../../../utils";
 
-import Img1 from "../../../assets/images/historical/1.jpg";
-import Img2 from "../../../assets/images/historical/2.jpg";
-import Img3 from "../../../assets/images/historical/3.jpg";
-import Img4 from "../../../assets/images/historical/4.jpg";
-import Img5 from "../../../assets/images/historical/5.jpg";
-import Img6 from "../../../assets/images/historical/6.jpg";
-import Img7 from "../../../assets/images/historical/7.jpg";
-
-var aboutImages = [
-    <img key="about-image-1" className="about-image" alt="about" src={Img1} />,
-    <img key="about-image-2" className="about-image" alt="about" src={Img2} />,
-    <img key="about-image-3" className="about-image" alt="about" src={Img3} />,
-    <img key="about-image-4" className="about-image" alt="about" src={Img4} />,
-    <img key="about-image-5" className="about-image" alt="about" src={Img5} />,
-    <img key="about-image-1" className="about-image" alt="about" src={Img6} />,
-    <img key="about-image-2" className="about-image" alt="about" src={Img7} />
-];
-
+const ABOUT_IMAGES_COUNT = 7;
 class About extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            aboutImgs: []
+        };
+
+        this.slickRef = React.createRef();
+        this.aboutRef = React.createRef();
+        this.isPaused = false;
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener("scroll", this.startStopCarousel);
+    }
+
+    componentDidMount() {
+        new Promise(resolve => {
+            const fetchAboutImagePromises = [...Array(ABOUT_IMAGES_COUNT).keys()].map((_, index) => {
+                return import(`../../../assets/images/historical/${index + 1}.jpg`);
+            });
+
+            Promise.all(fetchAboutImagePromises).then(imgs => {
+                this.setState(
+                    {
+                        aboutImgs: imgs.map((img, index) => {
+                            return (
+                                <img
+                                    key={`about-image-${index}`}
+                                    className="about-image"
+                                    alt="about"
+                                    src={img.default}
+                                />
+                            );
+                        })
+                    },
+                    resolve
+                );
+            });
+        }).then(() => {
+            this.startStopCarousel = modifiedDebounce(_ => {
+                if (elementIsHidden(this.aboutRef.current)) {
+                    if (!this.isPaused) {
+                        this.slickRef.current.slickPause();
+                        this.isPaused = true;
+                    }
+                } else {
+                    if (this.isPaused) {
+                        this.slickRef.current.slickPlay();
+                        this.isPaused = false;
+                    }
+                }
+            }, 200);
+
+            window.addEventListener("scroll", this.startStopCarousel);
+        });
+    }
+
     render() {
         return (
             <section id="about">
@@ -41,9 +83,9 @@ class About extends React.Component {
                     in between, Osso City Lighting has exactly what you need. Come visit our family and see the light in
                     what we love.
                 </p>
-                <div id="about-content-container">
-                    <Carousel speed={1000} centerMode>
-                        {aboutImages}
+                <div id="about-content-container" ref={this.aboutRef}>
+                    <Carousel speed={1000} centerMode slickRef={this.slickRef}>
+                        {this.state.aboutImgs}
                     </Carousel>
                 </div>
             </section>
