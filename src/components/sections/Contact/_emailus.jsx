@@ -89,7 +89,7 @@ class EmailUs extends React.Component {
                         onChange={this.handleChange}
                         value={formValues.message}
                     />
-                    <div>
+                    <div id="submit-section">
                         <input
                             className={submitDisabled ? "disabled" : null}
                             type="submit"
@@ -99,9 +99,10 @@ class EmailUs extends React.Component {
                         {emailStatus.submitting ? (
                             <Spinner />
                         ) : emailStatus.sent ? (
-                            <span>
-                                <Checkmark /> Email sent!
-                            </span>
+                            <React.Fragment>
+                                <Checkmark />
+                                <span style={{marginLeft: 5}}>Email sent!</span>
+                            </React.Fragment>
                         ) : emailStatus.error ? (
                             <p style={{color: "pink"}}>Error sending email. Please try again later.</p>
                         ) : null}
