@@ -1,0 +1,2 @@
+(window.webpackJsonpossosite2=window.webpackJsonpossosite2||[]).push([[47],{210:function(o,s,e){o.exports=e.p+"static/media/Artcraft-logo.e76768ed.png"}}]);
+//# sourceMappingURL=47.141090be.chunk.js.map
