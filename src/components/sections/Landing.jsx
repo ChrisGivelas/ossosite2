@@ -16,7 +16,9 @@ function LandingWeb({landingImgs, slickRef, landingRef}) {
             <section id="landing">
                 <div id="landing-background">
                     <div id="landing-background-content" ref={landingRef}>
-                        <Carousel slickRef={slickRef}>{landingImgs}</Carousel>
+                        <Carousel speed={3000} slickRef={slickRef}>
+                            {landingImgs}
+                        </Carousel>
                     </div>
                     <div id="landing-background-overlay"></div>
                 </div>
@@ -34,7 +36,9 @@ function LandingMobile({landingImgs, slickRef, landingRef}) {
         <section id="landing" className="mobile">
             <div id="landing-background">
                 <div id="landing-background-content" ref={landingRef}>
-                    <Carousel slickRef={slickRef}>{landingImgs}</Carousel>
+                    <Carousel speed={3000} slickRef={slickRef}>
+                        {landingImgs}
+                    </Carousel>
                 </div>
                 <div id="landing-background-overlay"></div>
             </div>

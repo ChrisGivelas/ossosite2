@@ -29,7 +29,6 @@ export default class Carousel extends React.Component {
         autoplaySpeed: 2000,
         pauseOnHover: false,
         draggable: false,
-        accessibility: true,
         slickRef: undefined,
         customArrows: false,
         vertical: false,

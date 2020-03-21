@@ -84,7 +84,7 @@ class About extends React.Component {
                     what we love.
                 </p>
                 <div id="about-content-container" ref={this.aboutRef}>
-                    <Carousel speed={1000} centerMode slickRef={this.slickRef}>
+                    <Carousel speed={3000} centerMode slickRef={this.slickRef}>
                         {this.state.aboutImgs}
                     </Carousel>
                 </div>
