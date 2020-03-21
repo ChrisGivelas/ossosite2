@@ -5,7 +5,7 @@ import routes, {HOME_PAGE, LANDING} from "../../routes";
 import {modifiedDebounce, today} from "../../utils";
 import NavItems from "./NavItems";
 
-import NavbarLogo from "../../assets/images/2020 LOGO.v2. (SIMPLE).png";
+import NavbarLogo from "../../assets/images/logo_simple.png";
 
 const VIEWPORT_HEIGHT = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 

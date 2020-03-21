@@ -24,26 +24,27 @@
         border-radius: $default-border-radius;
     }
 
+    .slick-track {
+        position: relative;
+    }
+
     .slick-slide {
         transition: all 1s;
         &:not(.slick-active) {
             filter: grayscale(1) blur(5px);
         }
-    }
 
-    .slick-slider.slick-vertical {
-        .slick-slide,
-        .slick-slide > div,
-        .about-image {
-            height: 40vh;
+        & > div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     }
 
-    .slick-slider:not(.slick-vertical) {
-        .about-image {
-            height: auto;
-            max-height: 400px;
-            width: auto !important;
-        }
+    .about-image {
+        max-height: 50vh;
+        height: initial !important;
+        width: initial !important;
+        border-radius: $default-border-radius;
     }
 }

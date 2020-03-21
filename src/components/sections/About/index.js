@@ -1,6 +1,5 @@
 import React from "react";
 import Carousel from "../../shared/Carousel";
-import {modifiedDebounce} from "../../../utils";
 
 import Img1 from "../../../assets/images/historical/1.jpg";
 import Img2 from "../../../assets/images/historical/2.jpg";
@@ -21,35 +20,6 @@ var aboutImages = [
 ];
 
 class About extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            verticalMode: null
-        };
-
-        this.updateMode = modifiedDebounce(_ => {
-            const width = Math.max(document.documentElement.clientWidth, window.width || 0);
-            if (this.state.verticalMode === null) {
-                this.setState({verticalMode: width < 768});
-            } else {
-                if (this.state.verticalMode && width >= 768) {
-                    this.setState({verticalMode: false});
-                } else if (!this.state.verticalMode && width < 768) {
-                    this.setState({verticalMode: true});
-                }
-            }
-        }, 200);
-    }
-
-    componentDidMount() {
-        this.updateMode();
-        window.addEventListener("resize", this.updateMode);
-    }
-
-    componentWillUnmount() {
-        window.removeEventListener("resize", this.updateMode);
-    }
-
     render() {
         return (
             <section id="about">
@@ -72,7 +42,7 @@ class About extends React.Component {
                     what we love.
                 </p>
                 <div id="about-content-container">
-                    <Carousel speed={1000} variableWidth={!this.state.verticalMode} autoplay centerMode>
+                    <Carousel speed={1000} centerMode>
                         {aboutImages}
                     </Carousel>
                 </div>

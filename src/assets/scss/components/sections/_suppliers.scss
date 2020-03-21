@@ -122,11 +122,12 @@
         .slick-slide > div,
         .supplier-product-image {
             height: 100%;
-            
         }
 
         .slick-slide > div {
             text-align: center;
+            display: flex;
+            align-items: center;
         }
 
         .supplier-product-image {

@@ -137,3 +137,12 @@ export const normalizeProductImageNamesAsUrl = (productTypes, supplier) => {
         })
         .filter(type => type !== "");
 };
+
+export const elementIsHidden = (el, mode = "visible") => {
+    const positionInfo = el.getBoundingClientRect();
+
+    const above = positionInfo.top + positionInfo.height < 0;
+    const below = positionInfo.top > window.innerHeight;
+
+    return mode === "above" ? above : mode === "below" ? below : mode === "visible" ? above || below : false;
+};
