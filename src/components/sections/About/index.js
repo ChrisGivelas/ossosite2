@@ -77,7 +77,7 @@ class About extends React.Component {
                     Lighting is now celebrating 30+ years of customer satisfaction.
                 </p>
                 <p className="section-description">
-                    Since its inception in 1984, Osso City Lighting has proudly been one of the Durham Region’s largest
+                    Since its inception in 1984, Osso City Lighting has proudly been one of Durham Region’s largest
                     purveyors of fine lighting. Our goal is to continuously provide you the same level of excellence
                     that we have shown for over a quarter century. Whether it's traditional, contemporary, or anything
                     in between, Osso City Lighting has exactly what you need. Come visit our family and see the light in

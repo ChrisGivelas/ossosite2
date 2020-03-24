@@ -23,7 +23,6 @@ function LandingWeb({landingImgs, slickRef, landingRef}) {
                     <div id="landing-background-overlay"></div>
                 </div>
                 <div id="landing-content-container">
-                    <img id="logo" src={Logo} alt="Osso City Lighting" />
                     <h1 style={{color: "white", padding: 30}}>Fine Lighting and Décor since 1984.</h1>
                 </div>
             </section>
