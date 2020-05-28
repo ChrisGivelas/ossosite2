@@ -91,9 +91,6 @@
 }
 
 .supplier-content-main {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     position: relative;
     width: 100%;
     height: 75%;
@@ -128,6 +125,7 @@
             text-align: center;
             display: flex;
             align-items: center;
+            justify-content: center;
         }
 
         .supplier-product-image {
