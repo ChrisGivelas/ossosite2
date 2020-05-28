@@ -42,7 +42,7 @@
     {
         "id": 5,
         "name": "Dals",
-        "website": "https://www.dalslighting.com/en",
+        "website": "https://www.dals.com/",
         "description": "Offering recessed, cabinet, accent, and architectural LED lighting. Based out of Quebec.",
         "productTypes": ["Recessed", "Cabinet", "Accessories"]
     },
@@ -76,7 +76,7 @@
     {
         "id": 8,
         "name": "Galaxy",
-        "website": "https://www.galaxy-lighting.com/",
+        "website": "http://www.galaxy-lighting.com/",
         "description": "Galaxy Lighting provides some of the most unique lighting fixtures available on the market. You will find a wide selection of interior and exterior lighting, ranging from pendants & chandeliers to recessed lighting, from wall sconces & floor lamps to vanity lights.",
         "productTypes": [
             "Chandeliers",
@@ -144,7 +144,7 @@
     {
         "id": 13,
         "name": "Korson",
-        "website": "https://www.korsonfurniture.com/",
+        "website": "http://www.korsonfurniture.com/",
         "description": "Korson Furniture Design designs, customizes, imports, and distributes contract quality home furnishings to top tier and mid-level furniture retailers and interior designers across Canada. Korson’s occasional furniture and accents are inspired by the ultimate in quality furniture fashioned from Milan, Toronto, and other international markets.",
         "productTypes": ["Ottomans", "Console Tables", "Cabinets", "Drawers", "Stools", "Coffee Tables", "Art"]
     },
@@ -152,7 +152,7 @@
     {
         "id": 14,
         "name": "LuceLumen",
-        "website": "https://www.lucelumen.com/",
+        "website": "http://www.lucelumen.com/",
         "description": "Luce Lumen’s product line offers unparalleled style that will impress even the most discerning audience and suit an array of sophisticated décor styles.",
         "productTypes": ["Task Lamps", "Table Lamps", "Floor Lamps"]
     },
