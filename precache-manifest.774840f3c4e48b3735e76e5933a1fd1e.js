@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7ab8b594af92d582d43d486b26c5d3d7",
+    "revision": "bd9573afd77cd5c35e3320c7158fe487",
     "url": "/ossosite2/index.html"
   },
   {
