@@ -1,24 +1,30 @@
 @media screen and (min-width: $mobile-breakpoint) {
-    html {
-        font-size: 24px;
-    }
+  html {
+    font-size: 24px;
+  }
 
-    #contact {
-        * {
-            font-size: 0.8rem;
-        }
+  #landing-content-container {
+    h1 {
+      @include landing-background;
     }
+  }
 
-    #about-content-container {
-        width: 80%;
+  #contact {
+    * {
+      font-size: 0.8rem;
     }
+  }
 
-    #logo {
-        max-width: 15rem;
-        position: absolute;
-        top: 0px;
-        left: 0px;
-    }
+  #about-content-container {
+    width: 80%;
+  }
+
+  #logo {
+    max-width: 15rem;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
 }
 
 @import "./md";

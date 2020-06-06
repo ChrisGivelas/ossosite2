@@ -1,112 +1,113 @@
 #landing {
-    position: relative;
-    overflow: hidden !important;
+  position: relative;
+  overflow: hidden !important;
 }
 
 #landing:not(.mobile) {
-    padding-top: $navbar-height;
+  padding-top: $navbar-height;
 
-    &,
-    #landing-background,
-    #landing-background-overlay,
-    #landing-content-container,
-    #landing-background-content,
-    #landing-background-content,
-    .slick-slider,
-    .slick-list,
-    .slick-track,
-    .slick-slide {
-        height: calc(100vh - #{$navbar-height});
-    }
+  &,
+  #landing-background,
+  #landing-background-overlay,
+  #landing-content-container,
+  #landing-background-content,
+  #landing-background-content,
+  .slick-slider,
+  .slick-list,
+  .slick-track,
+  .slick-slide {
+    height: calc(100vh - #{$navbar-height});
+  }
 
-    #landing-content-container,
-    #landing-background-overlay {
-        top: $navbar-height;
-    }
+  #landing-content-container,
+  #landing-background-overlay {
+    top: $navbar-height;
+  }
 }
 
 #landing.mobile {
-    padding-top: 0px;
+  padding-top: 0px;
 
-    &,
-    #landing-background,
-    #landing-background-overlay,
-    #landing-content-container,
-    #landing-background-content,
-    #landing-background-content,
-    .slick-slider,
-    .slick-list,
-    .slick-track,
-    .slick-slide {
-        height: 100vh;
-        top: 0px;
+  &,
+  #landing-background,
+  #landing-background-overlay,
+  #landing-content-container,
+  #landing-background-content,
+  #landing-background-content,
+  .slick-slider,
+  .slick-list,
+  .slick-track,
+  .slick-slide {
+    height: 100vh;
+    top: 0px;
+  }
+
+  #mobile-nav {
+    width: 100%;
+    font-size: 2rem;
+
+    #nav-items {
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%;
+      height: 100%;
     }
-
-    #mobile-nav {
-        width: 100%;
-        font-size: 2rem;
-
-        #nav-items {
-            display: flex;
-            justify-content: space-evenly;
-            width: 100%;
-            height: 100%;
-        }
-        .navlink {
-            margin-top: 10px;
-            margin-bottom: 10px;
-            color: white !important;
-        }
+    .navlink {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      color: white !important;
     }
+  }
 }
 
 #landing-background-content {
-    .slick-slide {
-        & > div {
-            position: relative;
+  .slick-slide {
+    & > div {
+      position: relative;
 
-            & > img {
-                position: absolute;
-                top: 0px;
-                left: 0px;
-                height: 100vh;
-                width: auto !important;
-                min-width: 100vw;
-            }
-        }
-    }
-}
-
-#landing-background {
-    #landing-background-overlay {
+      & > img {
         position: absolute;
         top: 0px;
         left: 0px;
-        width: 100vw;
         height: 100vh;
-
-        //$osso-colour-4
-        background: rgb(110, 114, 113);
-        background: radial-gradient(circle, rgba(110, 114, 113, 0.9) 15%, rgba(110, 114, 113, 0.5) 75%);
+        width: auto !important;
+        min-width: 100vw;
+      }
     }
+  }
 }
 
-#landing-content-container {
+#landing-background {
+  #landing-background-overlay {
     position: absolute;
     top: 0px;
     left: 0px;
     width: 100vw;
     height: 100vh;
+  }
+}
 
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
+#landing-content-container {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+
+  h1 {
+    width: 100%;
+    padding: 30px;
+    color: white;
+  }
 }
 
 #logo {
-    display: block;
-    background: rgba(50, 50, 50, 0.9);
-    border-radius: $default-border-radius;
-    padding: 15px;
+  display: block;
+  border-radius: $default-border-radius;
+  padding: 15px;
 }

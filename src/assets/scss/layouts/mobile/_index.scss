@@ -1,66 +1,71 @@
 @media screen and (max-width: $mobile-breakpoint - 1px) {
-    html {
-        font-size: 20px;
-    }
-    #nav-items {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-content: center;
-        align-items: center;
+  html {
+    font-size: 20px;
+  }
 
-        height: 25%;
-    }
+  #nav-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
 
-    #contact {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-    }
+    height: 25%;
+  }
 
-    #contact-form {
-        input[type="submit"] {
-            width: 50% !important;
-        }
-    }
+  #landing-content-container {
+    @include landing-background;
+  }
 
-    #footer {
-        flex-direction: column;
-    }
+  #contact {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
 
-    #contact-panels {
-        display: flex;
-        flex-direction: column;
-
-        & > * {
-            margin-bottom: 15px;
-            width: 100%;
-        }
+  #contact-form {
+    input[type="submit"] {
+      width: 50% !important;
     }
+  }
 
-    #osso-map {
-        min-height: 300px;
-    }
+  #footer {
+    flex-direction: column;
+  }
 
-    #logo {
-        max-width: 20rem;
-        width: 100%;
-    }
+  #contact-panels {
+    display: flex;
+    flex-direction: column;
 
-    #email-message,
-    #visit-message {
-        border-top: 1px solid $osso-colour-5;
-        padding-top: 15px;
+    & > * {
+      margin-bottom: 15px;
+      width: 100%;
     }
+  }
 
-    #hours {
-        padding: 15px 0px 15px 0px;
-    }
+  #osso-map {
+    min-height: 300px;
+  }
 
-    #hours-message,
-    #email-message,
-    #visit-message {
-        font-size: 1.25rem !important;
-    }
+  #logo {
+    max-width: 20rem;
+    width: 100%;
+  }
+
+  #email-message,
+  #visit-message {
+    border-top: 1px solid $osso-colour-5;
+    padding-top: 15px;
+  }
+
+  #hours {
+    padding: 15px 0px 15px 0px;
+  }
+
+  #hours-message,
+  #email-message,
+  #visit-message {
+    font-size: 1.25rem !important;
+  }
 }
 
 @import "./tn";
