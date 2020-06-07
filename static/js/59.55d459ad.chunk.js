@@ -1,2 +1,0 @@
-(window.webpackJsonpossosite2=window.webpackJsonpossosite2||[]).push([[59],{222:function(o,s,e){o.exports=e.p+"static/media/Kichler-logo.3e1428a6.png"}}]);
-//# sourceMappingURL=59.55d459ad.chunk.js.map

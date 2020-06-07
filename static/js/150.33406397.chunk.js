@@ -1,2 +1,0 @@
-(window.webpackJsonpossosite2=window.webpackJsonpossosite2||[]).push([[150],{173:function(s,o,p){s.exports=p.p+"static/media/CONSOLE TABLE.e6890f8a.jpg"}}]);
-//# sourceMappingURL=150.33406397.chunk.js.map
