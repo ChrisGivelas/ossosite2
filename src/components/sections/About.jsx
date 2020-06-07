@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Carousel from "../../shared/Carousel";
-import { modifiedDebounce, elementIsHidden } from "../../../utils";
-import TouchEnabledContext from "../../../touchEnabledContext";
-import Marino from "../../../assets/images/historical/1.jpg";
+import Carousel from "../shared/Carousel";
+import { modifiedDebounce, elementIsHidden } from "../../utils";
+import TouchEnabledContext from "../../touchEnabledContext";
+import Marino from "../../assets/images/historical/1.jpg";
 
 const ABOUT_IMAGES_COUNT = 7;
 class AboutWeb extends React.Component {
@@ -26,7 +26,7 @@ class AboutWeb extends React.Component {
     new Promise((resolve) => {
       const fetchAboutImagePromises = [...Array(ABOUT_IMAGES_COUNT).keys()].map(
         (_, index) => {
-          return import(`../../../assets/images/historical/${index + 1}.jpg`);
+          return import(`../../assets/images/historical/${index + 1}.jpg`);
         }
       );
 
