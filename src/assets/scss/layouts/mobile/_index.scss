@@ -17,6 +17,58 @@
     @include landing-background;
   }
 
+  .supplier-content {
+    * {
+      font-size: 14px !important;
+      line-height: initial !important;
+      font-weight: normal !important;
+    }
+  }
+
+  .supplier-content-header-logo {
+    width: auto !important;
+    max-width: 100% !important;
+    margin: auto;
+
+    .supplier-image {
+      max-height: 75px !important;
+    }
+  }
+
+  .supplier-website {
+    margin: auto;
+    font-size: 18px !important;
+    width: 100% !important;
+    padding: 15px;
+  }
+
+  .supplier-content-header {
+    width: 100%;
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+  }
+
+  .supplier-content-main {
+    width: 100%;
+    display: block;
+    height: auto;
+    padding-top: 0px;
+
+    .supplier-description {
+      width: 100%;
+    }
+  }
+
+  .supplier-content-main .supplier-product-carousel-container {
+    margin: auto;
+    max-height: 150px !important;
+    padding-top: 15px;
+    & .slick-slide > div {
+      display: block;
+    }
+  }
+
   #contact {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
