@@ -1,88 +1,87 @@
 #navbar {
-    position: fixed;
-    z-index: 999;
-    width: 100%;
-    border-radius: 2px;
-    background-color: white;
-    padding: $navbar-padding;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  border-radius: 2px;
+  background-color: white;
+  padding: $navbar-padding;
 
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 15px;
+
+  border-radius: 2px;
+
+  max-height: $navbar-height;
+
+  hr {
+    border-top: 1px solid rgb(100, 100, 100);
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    width: 75%;
+    margin: 0px;
+  }
+
+  #navbar-logo {
+    max-height: 45px;
+    max-width: 100%;
+    width: auto;
+    margin-bottom: 10px;
+  }
+
+  #navbar-main {
+    justify-self: center;
+    align-self: center;
+    height: 100%;
+  }
+
+  #navbar-extra-info {
+    padding-left: 10px;
+    justify-self: center;
+    align-self: center;
+    min-width: 275px;
+
+    & > p {
+      font-size: 20px;
+      line-height: 1rem;
+    }
+
+    a {
+      &:hover {
+        color: $osso-colour-1;
+      }
+    }
+  }
+
+  #nav-items {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-gap: 15px;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    max-width: 75%;
+    margin-top: 5px;
 
-    border-radius: 2px;
+    .navlink {
+      transition: all 0.5s !important;
 
-    max-height: $navbar-height;
+      line-height: 1rem;
 
-    hr {
-        border-top: 1px solid rgb(100, 100, 100);
-        border-bottom: 0px;
-        border-left: 0px;
-        border-right: 0px;
-        width: 75%;
-        margin: 0px;
-    }
+      &:after {
+        display: block;
+        content: "";
+        border-bottom: solid 1px $osso-colour-1;
+        border-radius: 50px;
+        transform: scaleX(0);
+        transition: transform 150ms ease-in-out;
+      }
+      &:hover,
+      &.selected {
+        color: $osso-colour-1;
 
-    #navbar-logo {
-        max-height: 45px;
-        max-width: 100%;
-        width: auto;
-        margin-bottom: 10px;
-    }
-
-    #navbar-main {
-        justify-self: center;
-        align-self: center;
-        height: 100%;
-    }
-
-    #navbar-extra-info {
-        padding-left: 10px;
-        justify-self: center;
-        align-self: center;
-        min-width: 275px;
-
-        & > p {
-            font-size: 20px;
-            line-height: 1rem;
+        &:after {
+          transform: scaleX(1);
         }
-
-        a {
-            &:hover {
-                color: $osso-colour-1;
-            }
-        }
+      }
     }
-
-    #nav-items {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        justify-items: center;
-        max-width: 75%;
-        margin-top: 5px;
-
-        .navlink {
-            transition-property: all !important;
-            transition-duration: 0.5s !important;
-
-            line-height: 1rem;
-
-            &:after {
-                display: block;
-                content: "";
-                border-bottom: solid 1px $osso-colour-1;
-                border-radius: 50px;
-                transform: scaleX(0);
-                transition: transform 150ms ease-in-out;
-            }
-            &:hover,
-            &.selected {
-                color: $osso-colour-1;
-
-                &:after {
-                    transform: scaleX(1);
-                }
-            }
-        }
-    }
+  }
 }

@@ -1,14 +1,10 @@
 @media screen and (min-width: map-get($map: $screen-sizes, $key: "sm")) and (max-width: (map-get($map: $screen-sizes, $key: "md") - 1px)) {
-    #suppliers-container {
-        grid-template-columns: 1fr 1fr;
+  #suppliers-container {
+    grid-template-columns: 1fr 1fr;
 
-        .supplier.expanded {
-            grid-column: span 2;
-            grid-row: span 2;
-        }
+    .supplier.expanded {
+      grid-column: span 2;
+      grid-row: span 2;
     }
-
-    #about-content-container {
-        width: 60%;
-    }
+  }
 }

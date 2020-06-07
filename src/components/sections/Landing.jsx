@@ -113,8 +113,8 @@ class LandingWrapper extends React.Component {
   render() {
     return (
       <TouchEnabledContext.Consumer>
-        {(value) =>
-          value === true ? (
+        {(isTouchEnabled) =>
+          isTouchEnabled === true ? (
             <LandingMobile
               landingImgs={this.state.landingImgs}
               landingRef={this.landingRef}
