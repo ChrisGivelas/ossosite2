@@ -6,6 +6,12 @@
 #landing:not(.mobile) {
   padding-top: $navbar-height;
 
+  #landing-content-container {
+    h1 {
+      @include landing-background;
+    }
+  }
+
   &,
   #landing-background,
   #landing-background-overlay,
@@ -27,6 +33,20 @@
 
 #landing.mobile {
   padding-top: 0px;
+
+  #nav-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+
+    height: 25%;
+  }
+
+  #landing-content-container {
+    @include landing-background;
+  }
 
   &,
   #landing-background,
@@ -102,7 +122,6 @@
 
   h1 {
     width: 100%;
-    padding: 30px;
     color: white;
   }
 }
@@ -111,4 +130,6 @@
   display: block;
   border-radius: $default-border-radius;
   padding: 15px;
+  max-width: 20rem;
+  width: 100%;
 }

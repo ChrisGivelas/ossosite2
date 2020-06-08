@@ -5,7 +5,7 @@
 
   #landing-content-container {
     h1 {
-      @include landing-background;
+      padding: 30px;
     }
   }
 
@@ -17,13 +17,6 @@
 
   #about-content-container {
     width: 80%;
-  }
-
-  #logo {
-    max-width: 15rem;
-    position: absolute;
-    top: 0px;
-    left: 0px;
   }
 }
 

@@ -3,18 +3,19 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 5vh 5vw 10vh 5vw;
+  padding: 5vw 5vw 5vw 5vw;
   justify-content: center;
 
-  .section-description {
-    font-size: 20px;
-    width: 80%;
-    margin: 15px auto 30px auto;
-    text-align: justify;
+  .section-title {
+    margin-bottom: 15px;
   }
 
-  .section-title {
-    padding-bottom: 5vh;
+  .section-description {
+    font-size: 0.75rem;
+    width: 80%;
+    margin: 0px auto 30px auto;
+    text-align: justify;
+    line-height: initial;
   }
 }
 
@@ -23,12 +24,6 @@
   position: relative;
   height: auto;
   margin: auto;
-  border-top: 1px solid rgb(200, 200, 200);
-  border-bottom: 1px solid rgb(200, 200, 200);
-
-  .slick-list {
-    border-radius: $default-border-radius;
-  }
 
   .slick-track {
     position: relative;
@@ -51,6 +46,5 @@
     max-height: 50vh;
     height: initial !important;
     width: initial !important;
-    border-radius: $default-border-radius;
   }
 }

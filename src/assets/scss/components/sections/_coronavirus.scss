@@ -1,9 +1,13 @@
 #coronavirus {
-  padding: 5vh 5vw 0px 5vw;
+  padding: 5vw 5vw 0px 5vw;
 
   .section-title {
+    margin-bottom: 15px;
   }
 
   .section-description {
+    text-align: left;
+    font-size: 0.75rem;
+    margin-bottom: 0px;
   }
 }

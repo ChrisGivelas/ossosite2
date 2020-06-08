@@ -3,20 +3,6 @@
     font-size: 20px;
   }
 
-  #nav-items {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-content: center;
-    align-items: center;
-
-    height: 25%;
-  }
-
-  #landing-content-container {
-    @include landing-background;
-  }
-
   .supplier-content {
     * {
       font-size: 14px !important;
@@ -98,11 +84,6 @@
     min-height: 300px;
   }
 
-  #logo {
-    max-width: 20rem;
-    width: 100%;
-  }
-
   #email-message,
   #visit-message {
     border-top: 1px solid $osso-colour-5;
@@ -136,7 +117,7 @@
 
       #about-content-container {
         position: relative;
-        width: 100%;
+        width: 80%;
         max-height: 50vh;
         overflow: hidden;
         display: flex;
