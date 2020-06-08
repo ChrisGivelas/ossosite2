@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "042c1b6c8b664a6dd878876a4f141693",
+    "revision": "a99517ad86b102fb3b9cea00ac7499f5",
     "url": "/ossosite2/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ossosite2/static/css/23.fddaa3a5.chunk.css"
   },
   {
-    "revision": "2e08c50ddfb196ae8177",
-    "url": "/ossosite2/static/css/main.29157be7.chunk.css"
+    "revision": "431c4903f3a6885bfb40",
+    "url": "/ossosite2/static/css/main.a8938e2d.chunk.css"
   },
   {
     "revision": "6d505f91bb6fe96241f6",
@@ -748,8 +748,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ossosite2/static/js/99.98fdb24f.chunk.js"
   },
   {
-    "revision": "2e08c50ddfb196ae8177",
-    "url": "/ossosite2/static/js/main.fc9cf14f.chunk.js"
+    "revision": "431c4903f3a6885bfb40",
+    "url": "/ossosite2/static/js/main.965ac7b6.chunk.js"
   },
   {
     "revision": "16fee8169175d10cb279",
@@ -994,6 +994,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "f148b64a912f11d6ba57597909f222e8",
     "url": "/ossosite2/static/media/Canarm-logo.f148b64a.png"
+  },
+  {
+    "revision": "972e46ebba2ac76370b1bf0471dc6c69",
+    "url": "/ossosite2/static/media/CheckMark.972e46eb.png"
   },
   {
     "revision": "38398841b3b0d1d6ddd37d1f39bd2fb6",
@@ -1398,10 +1402,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "f176c13d291a5b3594da75ee2fb142bc",
     "url": "/ossosite2/static/media/arrow.f176c13d.png"
-  },
-  {
-    "revision": "972e46ebba2ac76370b1bf0471dc6c69",
-    "url": "/ossosite2/static/media/checkmark.972e46eb.png"
   },
   {
     "revision": "0bc96bb839e70a7134d241322545fa7e",
