@@ -2,7 +2,7 @@
   "name": "ossosite2",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://ossolighting.ca",
+  "homepage": "https://chrisgivelas.github.io/ossosite2",
   "dependencies": {
     "@tippy.js/react": "^3.1.1",
     "animate-css-grid": "^1.4.1",
