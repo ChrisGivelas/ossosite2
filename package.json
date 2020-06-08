@@ -22,9 +22,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deployDev": "gh-pages -d build -m 'Deploy to Github Pages'",
-    "deployProd": "gh-pages -d build -b prod -m 'Deploy to Prod'"
+    "deployDev": "npm run build && gh-pages -d build -m 'Deploy to Github Pages'",
+    "deployProd": "npm run build && gh-pages -d build -b prod -m 'Deploy to Prod'"
   },
   "eslintConfig": {
     "extends": "react-app"
