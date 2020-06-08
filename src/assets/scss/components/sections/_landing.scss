@@ -22,7 +22,7 @@
   .slick-list,
   .slick-track,
   .slick-slide {
-    height: calc(100vh - #{$navbar-height});
+    height: 100vh;
   }
 
   #landing-content-container,
