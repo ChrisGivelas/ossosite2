@@ -1,0 +1,2 @@
+(window.webpackJsonpossosite2=window.webpackJsonpossosite2||[]).push([[62],{227:function(o,s,p){o.exports=p.p+"static/media/Satco-Nuvo-logo.2be51176.png"}}]);
+//# sourceMappingURL=62.48c347f6.chunk.js.map
