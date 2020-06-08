@@ -1,46 +1,46 @@
 {
-    "name": "ossosite2",
-    "version": "0.1.0",
-    "private": true,
-    "homepage": "http://ChrisGivelas.github.io/ossosite2",
-    "dependencies": {
-        "@tippy.js/react": "^3.1.1",
-        "animate-css-grid": "^1.4.1",
-        "node-sass": "^4.13.0",
-        "prop-types": "^15.7.2",
-        "react": "^16.9.0",
-        "react-dom": "^16.9.0",
-        "react-router-dom": "^5.1.2",
-        "react-router-hash-link": "^1.2.2",
-        "react-scripts": "3.1.2",
-        "react-slick": "^0.25.2",
-        "simple-parallax-js": "^5.2.0",
-        "slick-carousel": "^1.8.1"
-    },
-    "scripts": {
-        "start": "PORT=3005 react-scripts start",
-        "build": "react-scripts build",
-        "test": "react-scripts test",
-        "eject": "react-scripts eject",
-        "predeploy": "npm run build",
-        "deploy": "gh-pages -d build -m 'Deploy to Github Pages'"
-    },
-    "eslintConfig": {
-        "extends": "react-app"
-    },
-    "browserslist": {
-        "production": [
-            ">0.2%",
-            "not dead",
-            "not op_mini all"
-        ],
-        "development": [
-            "last 1 chrome version",
-            "last 1 firefox version",
-            "last 1 safari version"
-        ]
-    },
-    "devDependencies": {
-        "gh-pages": "^2.1.1"
-    }
+  "name": "ossosite2",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "http://ChrisGivelas.github.io/ossosite2",
+  "dependencies": {
+    "@tippy.js/react": "^3.1.1",
+    "animate-css-grid": "^1.4.1",
+    "node-sass": "^4.13.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-router-dom": "^5.1.2",
+    "react-router-hash-link": "^1.2.2",
+    "react-scripts": "3.1.2",
+    "react-slick": "^0.25.2",
+    "simple-parallax-js": "^5.2.0",
+    "slick-carousel": "^1.8.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build -m 'Deploy to Github Pages'"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "gh-pages": "^2.1.1"
+  }
 }
