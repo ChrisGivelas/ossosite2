@@ -12,7 +12,6 @@ function Coronavirus() {
       </p>
       <hr />
       <p className="section-description">
-        {" "}
         - If you are experiencing symptoms of illness, such as fever, cough, and
         heavy breathing, or are in self-isolation, we ask that you please
         refrain from visiting our store at this time.
@@ -72,11 +71,14 @@ function Coronavirus() {
         - For order pickups, please proceed to our shipping doors located at the
         back of building and a staff member will be there to assist you. Please
         have your invoice present at this time. If your order was placed through
-        email, your invoice will be attached to your order. We kindly ask that
-        you be considerate of your fellow customers and our staff members as we
-        navigate through these uncertain times. We are all in this together.
-        Stay safe and stay healthy. We look forward to seeing you soon! Thank
-        you for supporting your local business!
+        email, your invoice will be attached to your order.
+      </p>
+      <hr />
+      <p className="section-description">
+        We kindly ask that you be considerate of your fellow customers and our
+        staff members as we navigate through these uncertain times. We are all
+        in this together. Stay safe and stay healthy. We look forward to seeing
+        you soon! Thank you for supporting your local business!
       </p>
     </section>
   );
