@@ -2,7 +2,7 @@
   "name": "ossosite2",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://ChrisGivelas.github.io/ossosite2",
+  "homepage": ".",
   "dependencies": {
     "@tippy.js/react": "^3.1.1",
     "animate-css-grid": "^1.4.1",
@@ -22,8 +22,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build -m 'Deploy to Github Pages'"
+    "deployDev": "npm run build && gh-pages -d build -m 'Deploy to Github Pages'",
+    "deployProd": "npm run build && gh-pages -d build -b prod -m 'Deploy to Prod'"
   },
   "eslintConfig": {
     "extends": "react-app"
