@@ -5,7 +5,7 @@ import Carousel from "../shared/Carousel";
 import Navbar from "../shared/WebNavbar";
 import MobileNav from "../shared/MobileNav";
 
-import * as Logo from "../../assets/images/logo_main.png";
+import * as Logo from "../../assets/images/logo_main_light.png";
 
 import { modifiedDebounce, elementIsHidden } from "../../utils";
 
