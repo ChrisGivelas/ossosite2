@@ -55,7 +55,7 @@ export const hours = [
     {day: "Monday", isClosed: true},
     {day: "Tuseday", open: "9:30am", close: "5:30pm"},
     {day: "Wednesday", open: "9:30am", close: "5:30pm"},
-    {day: "Thursday", open: "9:30am", close: "8:00pm"},
+    {day: "Thursday", open: "9:30am", close: "5:30pm"},
     {day: "Friday", open: "9:30am", close: "5:30pm"},
     {day: "Saturday", open: "9:30am", close: "5:30pm"}
 ];
