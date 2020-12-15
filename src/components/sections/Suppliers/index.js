@@ -28,6 +28,7 @@ class Suppliers extends React.Component {
     }
 
     render() {
+        const sortedSuppliers = this.props.suppliers.sort((a,b) => a.name.localeCompare(b.name));
         return (
             <section id="brands">
                 <h1 className="section-title">Our Suppliers</h1>
@@ -35,7 +36,7 @@ class Suppliers extends React.Component {
                     We work closely with suppliers to provide you with the best selection at the best prices.
                 </h4>
                 <div id="suppliers-container">
-                    {this.props.suppliers.map(supplierInfo => (
+                    {sortedSuppliers.map(supplierInfo => (
                         <Supplier
                             {...supplierInfo}
                             key={`${supplierInfo.id}_${supplierInfo.name}`}

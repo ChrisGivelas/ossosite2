@@ -211,5 +211,13 @@
         "website": "https://worldwidehomefurnishingsinc.com/",
         "description": "From dining sets, bedrooms, and coffee tables, to decadent ottomans, benches, and chairs, Worldwide Home Furnishings offer striking products without compromising quality or price.",
         "productTypes": ["Coffee Tables", "Ottomans", "Stools"]
+    },
+
+    {
+        "id": 22,
+        "name": "Kandil Canada",
+        "website": "https://kandilcanada.com/",
+        "description": "Kandil is a high-end lighting distributor and a unique custom-made lighting manufacturer, with offices in four different countries.",
+        "productTypes": ["Chandeliers", "Pendants", "Lamps", "Sconces"]
     }
 ]
