@@ -1,0 +1,2 @@
+(window.webpackJsonpossosite2=window.webpackJsonpossosite2||[]).push([[21,164],{186:function(s,n,o){s.exports=o.p+"static/media/FAN.d7296101.jpg"},38:function(s,n,o){"use strict";o.r(n);var t=o(186),i=o.n(t);o.d(n,"FAN",(function(){return i.a}))}}]);
+//# sourceMappingURL=21.b8d055ba.chunk.js.map

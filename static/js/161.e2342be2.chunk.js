@@ -1,0 +1,2 @@
+(window.webpackJsonpossosite2=window.webpackJsonpossosite2||[]).push([[161],{183:function(s,o,p){s.exports=p.p+"static/media/FLOOR LAMP.b9a257e8.jpg"}}]);
+//# sourceMappingURL=161.e2342be2.chunk.js.map
