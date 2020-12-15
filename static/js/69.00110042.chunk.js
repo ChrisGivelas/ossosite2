@@ -1,0 +1,2 @@
+(window.webpackJsonpossosite2=window.webpackJsonpossosite2||[]).push([[69],{241:function(o,s,e){o.exports=e.p+"static/media/Worldwide-logo.515e04ae.png"}}]);
+//# sourceMappingURL=69.00110042.chunk.js.map
