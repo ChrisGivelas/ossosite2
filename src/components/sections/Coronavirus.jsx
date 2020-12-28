@@ -17,8 +17,14 @@ function Coronavirus() {
       </p>
       <p className="section-description">
         For any inquiries, please reach us via: <br />
-        Phone: <a className="highlighted">905.404.6776</a> Email:{" "}
-        <a className="highlighted">info@ossolighting.ca</a>
+        Phone:{" "}
+        <a className="highlighted" href="tel:905-404-6776">
+          905.404.6776
+        </a>{" "}
+        Email:{" "}
+        <a className="highlighted" href="mailto:info@ossolighting.ca">
+          info@ossolighting.ca
+        </a>
       </p>
       <p className="section-description">
         Our limited hours of operation during the lockdown will be:
