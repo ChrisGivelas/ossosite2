@@ -15,8 +15,12 @@ function Main() {
     <div id="main">
       <Landing />
       <div id="main-content">
-        <img className="christmas2020" alt="christmas-hours" src={Christmas2020} />
         <Coronavirus />
+        <img
+          className="christmas2020"
+          alt="christmas-hours"
+          src={Christmas2020}
+        />
         <Suppliers />
         <About />
         <Contact />
