@@ -1,2 +1,0 @@
-(window.webpackJsonpossosite2=window.webpackJsonpossosite2||[]).push([[156],{178:function(s,o,p){s.exports=p.p+"static/media/COFFEE TABLE.53e255c9.jpg"}}]);
-//# sourceMappingURL=156.d0974fe0.chunk.js.map
