@@ -114,14 +114,7 @@ class Supplier extends React.Component {
   toggleExpand = () => {
     if (this.state.expanded) {
       this.setState({ expanded: false });
-      this.props.supplierCurrentlyExpanded.current = undefined;
     } else {
-      if (this.props.supplierCurrentlyExpanded.current) {
-        this.props.supplierCurrentlyExpanded.current.handleCollapse();
-        this.props.supplierCurrentlyExpanded.current = this;
-      } else {
-        this.props.supplierCurrentlyExpanded.current = this;
-      }
       this.setState({ expanded: true });
     }
   };
