@@ -1,0 +1,2 @@
+(window.webpackJsonpossosite2=window.webpackJsonpossosite2||[]).push([[183],{203:function(s,o,e){s.exports=e.p+"static/media/CHANDELIER.ee0de555.jpg"}}]);
+//# sourceMappingURL=183.d4dbd146.chunk.js.map

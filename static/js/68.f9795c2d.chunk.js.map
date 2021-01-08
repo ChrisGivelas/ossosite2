@@ -1,1 +1,0 @@
-{"version":3,"sources":["assets/images/supplier_logos/Tech-logo.png"],"names":["module","exports"],"mappings":"gGAAAA,EAAOC,QAAU,IAA0B","file":"static/js/68.f9795c2d.chunk.js","sourcesContent":["module.exports = __webpack_public_path__ + \"static/media/Tech-logo.372e19e6.png\";"],"sourceRoot":""}
