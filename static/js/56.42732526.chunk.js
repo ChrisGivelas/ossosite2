@@ -1,2 +1,0 @@
-(window.webpackJsonpossosite2=window.webpackJsonpossosite2||[]).push([[56],{226:function(o,s,n){o.exports=n.p+"static/media/Generation-logo.a5d488bf.png"}}]);
-//# sourceMappingURL=56.42732526.chunk.js.map

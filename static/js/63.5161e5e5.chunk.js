@@ -1,2 +1,0 @@
-(window.webpackJsonpossosite2=window.webpackJsonpossosite2||[]).push([[63],{233:function(o,s,n){o.exports=n.p+"static/media/MonteCarlo-logo.080800c4.png"}}]);
-//# sourceMappingURL=63.5161e5e5.chunk.js.map

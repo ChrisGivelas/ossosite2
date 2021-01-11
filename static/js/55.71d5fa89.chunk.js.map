@@ -1,1 +1,0 @@
-{"version":3,"sources":["assets/images/supplier_logos/Galaxy-logo.png"],"names":["module","exports"],"mappings":"gGAAAA,EAAOC,QAAU,IAA0B","file":"static/js/55.71d5fa89.chunk.js","sourcesContent":["module.exports = __webpack_public_path__ + \"static/media/Galaxy-logo.919aabf2.png\";"],"sourceRoot":""}

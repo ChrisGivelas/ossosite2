@@ -1,0 +1,2 @@
+(window.webpackJsonpossosite2=window.webpackJsonpossosite2||[]).push([[47],{184:function(o,s,p){o.exports=p.p+"static/media/Eurofase-logo.6c3bd51d.png"}}]);
+//# sourceMappingURL=47.c0896e3b.chunk.js.map

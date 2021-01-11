@@ -1,0 +1,2 @@
+(window.webpackJsonpossosite2=window.webpackJsonpossosite2||[]).push([[13,130,131,132],{150:function(n,t,i){n.exports=i.p+"static/media/LAMP.8f07fd50.jpg"},151:function(n,t,i){n.exports=i.p+"static/media/PENDANT.5e390e16.jpg"},152:function(n,t,i){n.exports=i.p+"static/media/TORCHIER.ef650474.jpg"},32:function(n,t,i){"use strict";i.r(t);var o=i(150),e=i.n(o);i.d(t,"LAMP",(function(){return e.a}));var s=i(151),a=i.n(s);i.d(t,"PENDANT",(function(){return a.a}));var p=i(152),r=i.n(p);i.d(t,"TORCHIER",(function(){return r.a}))}}]);
+//# sourceMappingURL=13.877c6c9f.chunk.js.map
