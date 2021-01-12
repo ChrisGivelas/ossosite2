@@ -1,40 +1,49 @@
 import React from "react";
-import {Switch, Route} from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import Main from "./pages/main";
-import TouchEnabledContext, {isTouchEnabled, initialValue} from "./touchEnabledContext";
-import {modifiedDebounce} from "./utils";
+import { modifiedDebounce, fetchAssetsConfig, isTouchEnabled } from "./utils";
+
+export const TouchEnabled = React.createContext();
+export const Assets = React.createContext();
 
 class App extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            isTouchEnabled: initialValue
-        };
+  constructor(props) {
+    super(props);
+    this.state = {
+      isTouchEnabled: isTouchEnabled(),
+      assetsConfig: {},
+    };
 
-        this.updateIsTouchEnabled = modifiedDebounce(e => {
-            this.setState({isTouchEnabled: isTouchEnabled()});
-        }, 200);
-    }
+    this.updateIsTouchEnabled = modifiedDebounce((e) => {
+      this.setState({ isTouchEnabled: isTouchEnabled() });
+    }, 200);
+  }
 
-    componentDidMount() {
-        window.addEventListener("resize", this.updateIsTouchEnabled);
-    }
+  componentDidMount() {
+    window.addEventListener("resize", this.updateIsTouchEnabled);
 
-    componentWillUnmount() {
-        window.removeEventListener("resize", this.updateIsTouchEnabled);
-    }
+    fetchAssetsConfig().then((config) => {
+      this.setState({ assetsConfig: config });
+    });
+  }
 
-    render() {
-        return (
-            <TouchEnabledContext.Provider value={this.state.isTouchEnabled}>
-                <div id="app">
-                    <Switch>
-                        <Route path="/" component={Main}></Route>
-                    </Switch>
-                </div>
-            </TouchEnabledContext.Provider>
-        );
-    }
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.updateIsTouchEnabled);
+  }
+
+  render() {
+    return (
+      <Assets.Provider value={this.state.assetsConfig}>
+        <TouchEnabled.Provider value={this.state.isTouchEnabled}>
+          <div id="app">
+            <Switch>
+              <Route path="/" component={Main}></Route>
+            </Switch>
+          </div>
+        </TouchEnabled.Provider>
+      </Assets.Provider>
+    );
+  }
 }
 
 export default App;

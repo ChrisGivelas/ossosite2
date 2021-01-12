@@ -1,11 +1,11 @@
 import React from "react";
 import Supplier from "./_supplier";
 import { wrapGrid } from "animate-css-grid";
+import { Assets } from "../../../App";
 
-const defaultSuppliers = require("../../../suppliers.json");
 class Suppliers extends React.Component {
   static defaultProps = {
-    suppliers: defaultSuppliers,
+    suppliers: [],
     transitioning: false,
   };
 
@@ -49,4 +49,8 @@ class Suppliers extends React.Component {
     );
   }
 }
-export default Suppliers;
+export default () => (
+  <Assets.Consumer>
+    {(config) => <Suppliers suppliers={config.suppliers} />}
+  </Assets.Consumer>
+);

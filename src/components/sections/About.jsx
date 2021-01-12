@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Carousel from "../shared/Carousel";
 import { modifiedDebounce, elementIsHidden } from "../../utils";
-import TouchEnabledContext from "../../touchEnabledContext";
+import { TouchEnabled } from "../../App";
 import Marino from "../../assets/images/historical/1.jpg";
 
 const ABOUT_IMAGES_COUNT = 7;
@@ -148,9 +148,9 @@ function AboutMobile() {
 
 function AboutWrapper() {
   return (
-    <TouchEnabledContext.Consumer>
+    <TouchEnabled.Consumer>
       {(isTouchEnabled) => (isTouchEnabled ? <AboutMobile /> : <AboutWeb />)}
-    </TouchEnabledContext.Consumer>
+    </TouchEnabled.Consumer>
   );
 }
 

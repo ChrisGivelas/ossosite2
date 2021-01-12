@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Spinner, Error } from "./Icons";
 
-const ImageFetcher = ({ Component, url }) => {
+const ImageFetcher = ({ url, alt, classes }) => {
   const [tried, setTried] = useState(false);
   const [isFetching, setIsFetching] = useState(false);
   const [isError, setIsError] = useState(false);
@@ -13,11 +13,20 @@ const ImageFetcher = ({ Component, url }) => {
       setIsFetching(true);
       fetch(url)
         .then((res) => {
-          console.log(res);
+          return res.blob();
+        })
+        .then((blob) => {
+          var fr = new FileReader();
+
+          fr.addEventListener("load", function () {
+            setImg(fr.result);
+          });
+
+          fr.readAsDataURL(blob);
+
           setIsSuccess(true);
         })
         .catch((err) => {
-          console.log(err);
           setIsError(true);
         })
         .finally(() => {
@@ -25,25 +34,21 @@ const ImageFetcher = ({ Component, url }) => {
           setIsFetching(false);
         });
     }
-  });
+  }, [setIsFetching, img, url]);
 
   const showSpinner = isFetching;
   const showComponent = !showSpinner && tried && isSuccess;
   const showError = !showComponent && isError;
 
-  var imgToShow = null;
-
   if (showSpinner) {
-    imgToShow = <Spinner />;
+    return <Spinner />;
   } else if (showComponent) {
-    imgToShow = <img src={img} />;
+    return <img className={classes} src={img} alt={alt} />;
   } else if (showError) {
-    imgToShow = <Error />;
+    return <Error />;
   } else {
-    imgToShow = <React.Fragment />;
+    return <React.Fragment />;
   }
-
-  return <Component img={imgToShow} />;
 };
 
 export default ImageFetcher;

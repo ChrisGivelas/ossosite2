@@ -1,5 +1,5 @@
 import React from "react";
-import TouchEnabledContext from "../../touchEnabledContext";
+import { TouchEnabled } from "../../App";
 
 import Carousel from "../shared/Carousel";
 import Navbar from "../shared/WebNavbar";
@@ -110,7 +110,7 @@ class LandingWrapper extends React.Component {
 
   render() {
     return (
-      <TouchEnabledContext.Consumer>
+      <TouchEnabled.Consumer>
         {(isTouchEnabled) =>
           isTouchEnabled === true ? (
             <LandingMobile
@@ -126,7 +126,7 @@ class LandingWrapper extends React.Component {
             />
           )
         }
-      </TouchEnabledContext.Consumer>
+      </TouchEnabled.Consumer>
     );
   }
 }
