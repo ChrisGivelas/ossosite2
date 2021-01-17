@@ -283,3 +283,78 @@ export const getIntArray = (n, start = 0) =>
   Array(n)
     .fill()
     .map((_, i) => i + 1 + start);
+
+export const fetchImage = (url) => {
+  return fetch(url)
+    .then((res) => {
+      return res.blob();
+    })
+    .then(
+      (blob) =>
+        new Promise((resolve, reject) => {
+          if (
+            blob.type.toLowerCase() !== "image/jpeg" &&
+            blob.type.toLowerCase() !== "image/png"
+          ) {
+            reject("Image Not Found!");
+          } else {
+            var fr = new FileReader();
+
+            fr.addEventListener("load", function () {
+              resolve(fr.result);
+            });
+
+            fr.readAsDataURL(blob);
+          }
+        })
+    );
+};
+
+export const batchFetchImages = (batchSize, start, dir) => {
+  return getIntArray(batchSize, start).map((numb) => {
+    return fetchImage(`${dir}${numb}.jpg`);
+  });
+};
+
+export const seperateBatchResults = (results) =>
+  results.reduce(
+    (agg, curr) => {
+      if (curr.status === "fulfilled") {
+        return [[...agg[0], curr], agg[1]];
+      } else {
+        return [agg[0], [...agg[1], curr]];
+      }
+    },
+    [[], []]
+  );
+
+export const fetchAllImagesInDir = async ({
+  dir,
+  batchSize = 3,
+  errorLimit = 3,
+}) => {
+  var done = false;
+  var count = 0;
+  var imgs = [];
+
+  while (!done) {
+    const batch = batchFetchImages(batchSize, count, dir);
+    const [isDone, newImgs] = await Promise.allSettled(batch).then(
+      (results) => {
+        const [successes, errors] = seperateBatchResults(results);
+
+        if (errors.length >= errorLimit) {
+          return [true, successes.map((result) => result.value)];
+        } else {
+          return [false, successes.map((result) => result.value)];
+        }
+      }
+    );
+
+    done = isDone;
+    count += batchSize;
+    imgs = imgs.concat(newImgs);
+  }
+
+  return imgs;
+};

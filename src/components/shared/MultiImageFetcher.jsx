@@ -1,81 +1,42 @@
-import React, { useState, useEffect } from "react";
-import { getIntArray } from "../../utils";
+import React from "react";
+import { fetchAllImagesInDir } from "../../utils";
 import Carousel from "./Carousel";
 
-const MultiImageFetcher = ({
-  dir,
-  classes,
-  batchSize = 3,
-  errorLimit = 3,
-  alt,
-  withCarousel = false,
-}) => {
-  const [fetchingBatch, setFetchingBatch] = useState(false);
-  const [attemptCount, setAttemptCount] = useState(0);
-  const [done, setDone] = useState(false);
-  const [imgSrcs, setImgSrcs] = useState([]);
+class MultiImageFetcher extends React.Component {
+  static defaultProps = {
+    batchSize: 3,
+    errorLimit: 3,
+    withCarousel: false,
+  };
 
-  useEffect(() => {
-    if (!done && !fetchingBatch) {
-      setFetchingBatch(true);
-      var batch = getIntArray(batchSize, attemptCount).map((numb) =>
-        fetch(`${dir}${numb}.jpg`)
-          .then((res) => {
-            return res.blob();
-          })
-          .then(
-            async (blob) =>
-              await new Promise((resolve, reject) => {
-                if (blob.type.toLowerCase() !== "image/jpeg") {
-                  reject("Image Not Found!");
-                } else {
-                  var fr = new FileReader();
+  constructor(props) {
+    super(props);
 
-                  fr.addEventListener("load", function () {
-                    resolve(fr.result);
-                  });
+    this.state = {
+      imgs: [],
+    };
+  }
 
-                  fr.readAsDataURL(blob);
-                }
-              })
-          )
-      );
+  async componentDidMount() {
+    const imgs = await fetchAllImagesInDir(this.props);
 
-      Promise.allSettled(batch).then((results) => {
-        const [successes, errors] = results.reduce(
-          (agg, curr) => {
-            if (curr.status === "fulfilled") {
-              return [[...agg[0], curr], agg[1]];
-            } else {
-              return [agg[0], [...agg[1], curr]];
-            }
-          },
-          [[], []]
-        );
+    this.setState({ imgs });
+  }
 
-        setImgSrcs([...imgSrcs, ...successes.map((result) => result.value)]);
+  render() {
+    const { alt, classes, withCarousel } = this.props;
+    var { imgs } = this.state;
+    const imgTags = imgs.map((src, i) => (
+      <img
+        key={`${alt}_${i}`}
+        src={src}
+        className={classes}
+        alt={`${alt}_${i}`}
+      />
+    ));
 
-        if (errors.length >= errorLimit) {
-          setDone(true);
-        }
-
-        setAttemptCount(attemptCount + batchSize);
-
-        setFetchingBatch(false);
-      });
-    }
-  }, [imgSrcs, errorLimit, fetchingBatch, attemptCount, batchSize, dir, done]);
-
-  const imgs = imgSrcs.map((src, i) => (
-    <img
-      key={`${alt}_${i}`}
-      src={src}
-      className={classes}
-      alt={`${alt}_${i}`}
-    />
-  ));
-
-  return withCarousel ? <Carousel>{imgs}</Carousel> : imgs;
-};
+    return withCarousel ? <Carousel>{imgTags}</Carousel> : imgTags;
+  }
+}
 
 export default MultiImageFetcher;

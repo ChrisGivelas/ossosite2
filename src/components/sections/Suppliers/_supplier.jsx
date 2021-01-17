@@ -1,22 +1,25 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 import { NavHashLink as NavLink } from "react-router-hash-link";
-import ImageFetcher from "../../shared/ImageFetcher";
-import MultiImageFetcher from "../../shared/MultiImageFetcher";
+import { fetchAllImagesInDir, fetchImage } from "../../../utils";
+import Carousel from "../../shared/Carousel";
 
 class SupplierContent extends React.Component {
   render() {
-    const { name, description, website, handleClick } = this.props;
+    const {
+      name,
+      description,
+      website,
+      handleClick,
+      productImgs,
+      logoImg,
+    } = this.props;
 
     return (
       <div className="supplier-content" onClick={handleClick}>
         <div className="supplier-content-header">
           <div className="supplier-content-header-logo">
-            <ImageFetcher
-              classes="supplier-image"
-              url={`${origin}/images/supplier_logos/${name}-logo.png`}
-              alt={name}
-            />
+            <img className="supplier-image" src={logoImg} alt={name} />
           </div>
           <a
             className="supplier-website"
@@ -30,12 +33,16 @@ class SupplierContent extends React.Component {
         <div className="supplier-content-main">
           <p className="supplier-description">"{description}"</p>
           <div className="supplier-product-carousel-container">
-            <MultiImageFetcher
-              classes="supplier-product-image"
-              dir={`${origin}/images/supplier_products/${name.toLowerCase()}/`}
-              alt={name}
-              withCarousel
-            />
+            <Carousel>
+              {productImgs.map((src, i) => (
+                <img
+                  key={`${name}_${i}`}
+                  src={src}
+                  className="supplier-product-image"
+                  alt={`${name}_${i}`}
+                />
+              ))}
+            </Carousel>
           </div>
         </div>
       </div>
@@ -47,7 +54,7 @@ class ViewSupplier extends React.Component {
   isActive = (r) => this.props.location.hash.substr(1) === r;
 
   render() {
-    const { name, handleClick } = this.props;
+    const { name, handleClick, logoImg } = this.props;
     return (
       <NavLink
         isActive={this.isActive}
@@ -67,11 +74,7 @@ class ViewSupplier extends React.Component {
         to={`#brands-${name}`}
       >
         <div className="view-supplier" onClick={handleClick}>
-          <ImageFetcher
-            classes="supplier-image"
-            url={`${origin}/images/supplier_logos/${name}-logo.png`}
-            alt={name}
-          />
+          <img className="supplier-image" src={logoImg} alt={name} />
         </div>
       </NavLink>
     );
@@ -84,6 +87,8 @@ class Supplier extends React.Component {
 
     this.state = {
       expanded: false,
+      productImgs: [],
+      logoImg: null,
     };
   }
 
@@ -97,6 +102,18 @@ class Supplier extends React.Component {
     }
   };
 
+  async componentDidMount() {
+    const productImgs = await fetchAllImagesInDir({
+      dir: `${origin}/images/supplier_products/${this.props.name.toLowerCase()}/`,
+    });
+
+    const logoImg = await fetchImage(
+      `${origin}/images/supplier_logos/${this.props.name}-logo.png`
+    );
+
+    this.setState({ productImgs, logoImg });
+  }
+
   render() {
     return (
       <div
@@ -107,9 +124,18 @@ class Supplier extends React.Component {
       >
         <div>
           {this.state.expanded ? (
-            <SupplierContent handleClick={this.toggleExpand} {...this.props} />
+            <SupplierContent
+              productImgs={this.state.productImgs}
+              logoImg={this.state.logoImg}
+              handleClick={this.toggleExpand}
+              {...this.props}
+            />
           ) : (
-            <ViewSupplier handleClick={this.toggleExpand} {...this.props} />
+            <ViewSupplier
+              logoImg={this.state.logoImg}
+              handleClick={this.toggleExpand}
+              {...this.props}
+            />
           )}
         </div>
       </div>

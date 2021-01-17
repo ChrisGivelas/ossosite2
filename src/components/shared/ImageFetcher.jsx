@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { fetchImage } from "../../utils";
 import { Spinner, Error } from "./Icons";
 
 const ImageFetcher = ({ url, alt, classes }) => {
@@ -11,20 +12,10 @@ const ImageFetcher = ({ url, alt, classes }) => {
   useEffect(() => {
     if (img === null) {
       setIsFetching(true);
-      fetch(url)
-        .then((res) => {
-          return res.blob();
-        })
-        .then((blob) => {
-          var fr = new FileReader();
-
-          fr.addEventListener("load", function () {
-            setImg(fr.result);
-          });
-
-          fr.readAsDataURL(blob);
-
+      fetchImage(url)
+        .then((img) => {
           setIsSuccess(true);
+          setImg(img);
         })
         .catch((err) => {
           setIsError(true);
