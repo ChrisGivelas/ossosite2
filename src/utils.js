@@ -55,7 +55,8 @@ export const modifiedDebounce = function (callback, wait, immediate = false) {
   };
 };
 
-export const hours = [
+// Start with default hours as fallback because why the heck not?
+var hours = [
   { day: "Sunday", isClosed: true },
   { day: "Monday", isClosed: true },
   { day: "Tuseday", open: "9:30am", close: "2:00pm" },
@@ -64,6 +65,10 @@ export const hours = [
   { day: "Friday", open: "9:30am", close: "2:00pm" },
   { day: "Saturday", open: "9:30am", close: "2:00pm" },
 ];
+
+export const updateHours = (newHours) => {
+  hours = newHours;
+};
 
 export const getHoursForDay = (day) => {
   if (typeof day === "number") {

@@ -1,7 +1,12 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 import Main from "./pages/main";
-import { modifiedDebounce, fetchAssetsConfig, isTouchEnabled } from "./utils";
+import {
+  modifiedDebounce,
+  fetchAssetsConfig,
+  isTouchEnabled,
+  updateHours,
+} from "./utils";
 
 export const TouchEnabled = React.createContext();
 export const Assets = React.createContext();
@@ -24,6 +29,7 @@ class App extends React.Component {
 
     fetchAssetsConfig().then((config) => {
       this.setState({ assetsConfig: config });
+      updateHours(config.hours);
     });
   }
 

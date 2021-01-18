@@ -1,4 +1,33 @@
 {
+  "aboutSection": {
+    "heading": "Our Story",
+    "ps": [
+      "In 1966, owner Marino Osso arrived in Canada at the age of nineteen from Calabria, Italy. Being raised by two hardworking farmers, he knew the value of making an honest living and was inspired to pursue a trade. Determined to succeed, he obtained his license in Electrical Construction Maintenance from George Brown College in 1972. Marino then opened a contracting operation called Osso Electric Limited, where he dedicated twelve years to perfecting his craft. In 1984, he sold Osso Electric and began a new venture through the knowledge he developed as an expert businessman in the lighting field. Thanks to the support that we have received from the community, Osso City Lighting is now celebrating 30+ years of customer satisfaction.",
+      "Since its inception in 1984, Osso City Lighting has proudly been one of Durham Region’s largest purveyors of fine lighting. Our goal is to continuously provide you the same level of excellence that we have shown for over a quarter century. Whether it's traditional, contemporary, or anything in between, Osso City Lighting has exactly what you need. Come visit our family and see the light in what we love."
+    ]
+  },
+  "coronavirusSection": {
+    "heading": "Coronavirus Update: Ontario Wide Lockdown",
+    "ps": [
+      "To help keep our community safe during this time, our showroom and all in-store shopping will be temporarily suspended as per the province-wide lockdown.",
+      "We will be available for email and phone orders as well as curb side pickup.",
+      "For any inquiries, please reach us via:",
+      "Phone: 905.404.6776 Email: info@ossolighting.ca",
+      "Our limited hours of operation during the lockdown will be:",
+      "Tuesday – Saturday (9:30AM – 2:00PM)",
+      "We are closed Sundays and Mondays.",
+      "Please stay safe, we are all in this together. Thank you for your continued support and we look forward to seeing you soon!"
+    ]
+  },
+  "hours": [
+    { "day": "Sunday", "isClosed": true },
+    { "day": "Monday", "isClosed": true },
+    { "day": "Tuseday", "open": "9:30am", "close": "2:00pm" },
+    { "day": "Wednesday", "open": "9:30am", "close": "2:00pm" },
+    { "day": "Thursday", "open": "9:30am", "close": "2:00pm" },
+    { "day": "Friday", "open": "9:30am", "close": "2:00pm" },
+    { "day": "Saturday", "open": "9:30am", "close": "2:00pm" }
+  ],
   "suppliers": [
     {
       "name": "Artcraft",
