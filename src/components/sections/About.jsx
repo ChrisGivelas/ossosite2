@@ -1,6 +1,6 @@
 import React from "react";
 import { Assets } from "../../App";
-import Marino from "../../assets/images/historical/1.jpg";
+import Marino from "../../assets/images/marino.jpg";
 
 function About({ content }) {
   const { heading, ps = [] } = content || {};

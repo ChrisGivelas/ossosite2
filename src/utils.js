@@ -1,29 +1,22 @@
-// const defaultConfig = require("./defaultConfig.json");
-
-export const getImageURL = (
-  resourceFileName,
-  resourceFolderName = "images",
-  resourceCDN = "/resources"
-) => `${resourceCDN}/${resourceFolderName}/${resourceFileName}`;
-
 /**
  * Standard es6 debounce
  */
-export const debounce = function (callback, wait, immediate = false) {
-  let timeout = null;
 
-  return function () {
-    const callNow = immediate && !timeout;
-    const next = () => callback.apply(this, arguments);
+// export const debounce = function (callback, wait, immediate = false) {
+//   let timeout = null;
 
-    clearTimeout(timeout);
-    timeout = setTimeout(next, wait);
+//   return function () {
+//     const callNow = immediate && !timeout;
+//     const next = () => callback.apply(this, arguments);
 
-    if (callNow) {
-      next();
-    }
-  };
-};
+//     clearTimeout(timeout);
+//     timeout = setTimeout(next, wait);
+
+//     if (callNow) {
+//       next();
+//     }
+//   };
+// };
 
 /**
  * Execute callback every *wait* seconds while event is being fired
