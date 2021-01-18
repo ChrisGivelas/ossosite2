@@ -53,7 +53,12 @@
   justify-content: space-around;
   position: relative;
 
-  cursor: default;
+  .fa-window-close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+  }
 }
 
 .supplier-content-header {
@@ -88,9 +93,12 @@
 .supplier-website {
   width: 50%;
   text-align: center;
+  border-radius: 3px;
+  transition: all 0.5s;
 
   &:hover {
-    color: $osso-colour-1;
+    background-color: $osso-colour-1;
+    color: white;
   }
 }
 

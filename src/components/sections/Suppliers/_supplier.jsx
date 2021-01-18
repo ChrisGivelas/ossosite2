@@ -16,7 +16,7 @@ class SupplierContent extends React.Component {
     } = this.props;
 
     return (
-      <div className="supplier-content" onClick={handleClick}>
+      <div className="supplier-content">
         <div className="supplier-content-header">
           <div className="supplier-content-header-logo">
             <img className="supplier-image" src={logoImg} alt={name} />
@@ -45,6 +45,7 @@ class SupplierContent extends React.Component {
             </Carousel>
           </div>
         </div>
+        <i className="fas fa-window-close" onClick={handleClick}></i>
       </div>
     );
   }
