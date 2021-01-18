@@ -7,7 +7,11 @@ import MobileNav from "../shared/MobileNav";
 
 import * as Logo from "../../assets/images/logo_main_light.png";
 
-import { modifiedDebounce, elementIsHidden } from "../../utils";
+import {
+  modifiedDebounce,
+  elementIsHidden,
+  fetchAllImagesInDir,
+} from "../../utils";
 
 function LandingWeb({ landingImgs, slickRef, landingRef }) {
   return (
@@ -17,7 +21,9 @@ function LandingWeb({ landingImgs, slickRef, landingRef }) {
         <div id="landing-background">
           <div id="landing-background-content" ref={landingRef}>
             <Carousel speed={3000} slickRef={slickRef}>
-              {landingImgs}
+              {landingImgs.map((src, i) => (
+                <img key={`landing_${i}`} src={src} alt={`landing_${i}`} />
+              ))}
             </Carousel>
           </div>
           <div id="landing-background-overlay"></div>
@@ -36,7 +42,9 @@ function LandingMobile({ landingImgs, slickRef, landingRef }) {
       <div id="landing-background">
         <div id="landing-background-content" ref={landingRef}>
           <Carousel speed={3000} slickRef={slickRef}>
-            {landingImgs}
+            {landingImgs.map((src, i) => (
+              <img key={`landing_${i}`} src={src} alt={`landing_${i}`} />
+            ))}
           </Carousel>
         </div>
         <div id="landing-background-overlay"></div>
@@ -49,8 +57,6 @@ function LandingMobile({ landingImgs, slickRef, landingRef }) {
     </section>
   );
 }
-
-const LANDING_IMAGES_COUNT = 16;
 
 class LandingWrapper extends React.Component {
   constructor(props) {
@@ -69,43 +75,30 @@ class LandingWrapper extends React.Component {
     window.removeEventListener("scroll", this.startStopCarousel);
   }
 
-  componentDidMount() {
-    new Promise((resolve) => {
-      const fetchLandingImagePromises = [
-        ...Array(LANDING_IMAGES_COUNT).keys(),
-      ].map((_, index) => {
-        return import(`../../assets/images/landing/${index + 1}.jpg`);
-      });
-
-      Promise.all(fetchLandingImagePromises).then((imgs) => {
-        this.setState(
-          {
-            landingImgs: imgs.map((img, index) => {
-              return (
-                <img key={`Landing${index}`} src={img.default} alt="Landing" />
-              );
-            }),
-          },
-          resolve
-        );
-      });
-    }).then(() => {
-      this.startStopCarousel = modifiedDebounce((_) => {
-        if (elementIsHidden(this.landingRef.current)) {
-          if (!this.isPaused) {
-            this.slickRef.current.slickPause();
-            this.isPaused = true;
-          }
-        } else {
-          if (this.isPaused) {
-            this.slickRef.current.slickPlay();
-            this.isPaused = false;
-          }
-        }
-      }, 200);
-
-      window.addEventListener("scroll", this.startStopCarousel);
+  async componentDidMount() {
+    var imgs = await fetchAllImagesInDir({
+      dir: `${origin}/images/landing/`,
+      batchSize: 20,
+      errorLimit: 5,
     });
+
+    this.setState({ landingImgs: imgs });
+
+    this.startStopCarousel = modifiedDebounce((_) => {
+      if (elementIsHidden(this.landingRef.current)) {
+        if (!this.isPaused) {
+          this.slickRef.current.slickPause();
+          this.isPaused = true;
+        }
+      } else {
+        if (this.isPaused) {
+          this.slickRef.current.slickPlay();
+          this.isPaused = false;
+        }
+      }
+    }, 200);
+
+    window.addEventListener("scroll", this.startStopCarousel);
   }
 
   render() {
