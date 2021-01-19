@@ -1,2 +1,0 @@
-(window.webpackJsonpossosite2=window.webpackJsonpossosite2||[]).push([[60],{197:function(o,s,i){o.exports=i.p+"static/media/Starfire-logo.01357936.png"}}]);
-//# sourceMappingURL=60.bdce6679.chunk.js.map

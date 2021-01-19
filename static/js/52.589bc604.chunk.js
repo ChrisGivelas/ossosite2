@@ -1,2 +1,0 @@
-(window.webpackJsonpossosite2=window.webpackJsonpossosite2||[]).push([[52],{189:function(o,s,a){o.exports=a.p+"static/media/Kandil Canada-logo.7789329a.png"}}]);
-//# sourceMappingURL=52.589bc604.chunk.js.map
