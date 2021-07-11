@@ -19,17 +19,9 @@
         grid-template-columns: 1fr 1fr 1fr;
         grid-auto-rows: auto;
         grid-template-areas:
-            "hours-message visit-message email-message"
-            "hours visit email";
-
-        & > * {
-            justify-self: center;
-            margin-bottom: 15px;
-            width: 90%;
-        }
-
-        #osso-map {
-            height: 400px;
-        }
+            "email-message visit visit"
+            "hours visit visit";
+        justify-items: stretch;
+        justify-content: stretch;
     }
 }

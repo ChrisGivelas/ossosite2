@@ -1,7 +1,7 @@
 #contact {
     border-top: 1px solid $osso-colour-2;
     background-color: $osso-colour-1;
-    padding: 0px 5vw 0px 5vw;
+    padding: 15px 5vw 15px 5vw;
 
     h1 {
         display: block;
@@ -14,10 +14,6 @@
         color: white;
         background-color: $osso-colour-1;
     }
-}
-
-#contact-panels {
-    margin-top: 15px;
 }
 
 #hours {
@@ -141,14 +137,10 @@
 
 #visit-us {
     grid-area: visit;
-    #osso-map {
-        height: 75%;
-        width: 100%;
-    }
-
-    p {
-        margin-bottom: 15px;
-    }
+    height: 100%;
+    width: 100%;
+    border-radius: $default-border-radius;
+    padding-left: 15px;
 }
 
 #hours-message {
@@ -165,7 +157,10 @@
 
 #hours-message,
 #email-message,
-#visit-message {
+#visit-message,
+#hours,
+#email,
+#visit {
     justify-self: center;
     align-self: center;
     text-align: center;

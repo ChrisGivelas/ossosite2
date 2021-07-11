@@ -1,6 +1,5 @@
 import React from "react";
 import Hours from "./_hours";
-import EmailUs from "./_emailus";
 import VisitUs from "./_visitus";
 
 class Contact extends React.Component {
@@ -8,20 +7,25 @@ class Contact extends React.Component {
         return (
             <section id="contact">
                 <div id="contact-panels">
-                    <p id="hours-message">Our hours</p>
-                    <Hours />
                     <p id="email-message">
-                        Send us a message below or email us at{" "}
-                        <a href="mailto:info@ossolighting.ca">info@ossolighting.ca</a>
+                        Pricing inquiries or other Questions? Feel free to send
+                        us an email at{" "}
+                        <a
+                            style={{ fontSize: "inherit", fontWeight: "bold" }}
+                            href="mailto:info@ossolighting.ca"
+                        >
+                            info@ossolighting.ca
+                        </a>
+                        , or give us a call at{" "}
+                        <a
+                            style={{ fontSize: "inherit", fontWeight: "bold" }}
+                            href="tel:905-404-6776"
+                        >
+                            905-404-6776
+                        </a>
+                        .
                     </p>
-                    <EmailUs />
-                    <p id="visit-message">
-                        209 Bloor Street East
-                        <br />
-                        Oshawa, Ontario
-                        <br />
-                        <a href="tel:905-404-6776">905-404-6776</a>
-                    </p>
+                    <Hours />
                     <VisitUs />
                 </div>
             </section>
