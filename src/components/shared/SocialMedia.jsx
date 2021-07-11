@@ -1,5 +1,4 @@
 import React from "react";
-import Tippy from "@tippy.js/react";
 
 function SocialMedia() {
     return (
@@ -12,9 +11,6 @@ function SocialMedia() {
             >
                 <React.Fragment />
             </a>
-            <Tippy content="Coming soon!">
-                <span className="fab fa-instagram"></span>
-            </Tippy>
             <a
                 target="_blank"
                 rel="noopener noreferrer"
