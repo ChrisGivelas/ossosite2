@@ -5,7 +5,7 @@ export default function Footer() {
     return (
         <div id="footer">
             <div id="footer-content">
-                <p>&copy;2019 by Osso City Lighting. All Rights Reserved.</p>
+                <p>&copy;2021 by Osso City Lighting. All Rights Reserved.</p>
                 <SocialMedia />
             </div>
         </div>
