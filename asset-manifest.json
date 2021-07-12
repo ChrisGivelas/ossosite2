@@ -1,23 +1,19 @@
 {
   "files": {
-    "main.css": "./static/css/main.899119df.chunk.css",
-    "main.js": "./static/js/main.fc10bb6c.chunk.js",
-    "main.js.map": "./static/js/main.fc10bb6c.chunk.js.map",
-    "runtime-main.js": "./static/js/runtime-main.06ea507f.js",
-    "runtime-main.js.map": "./static/js/runtime-main.06ea507f.js.map",
-    "static/css/2.fddaa3a5.chunk.css": "./static/css/2.fddaa3a5.chunk.css",
-    "static/js/2.b259708e.chunk.js": "./static/js/2.b259708e.chunk.js",
-    "static/js/2.b259708e.chunk.js.map": "./static/js/2.b259708e.chunk.js.map",
+    "main.css": "./static/css/main.3b25fb51.chunk.css",
+    "main.js": "./static/js/main.5b3976b0.chunk.js",
+    "main.js.map": "./static/js/main.5b3976b0.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.f2d3ef04.js",
+    "runtime-main.js.map": "./static/js/runtime-main.f2d3ef04.js.map",
+    "static/js/2.b9736a53.chunk.js": "./static/js/2.b9736a53.chunk.js",
+    "static/js/2.b9736a53.chunk.js.map": "./static/js/2.b9736a53.chunk.js.map",
     "index.html": "./index.html",
-    "precache-manifest.00752cb79e2c371d26b06ebb3fc6b9d9.js": "./precache-manifest.00752cb79e2c371d26b06ebb3fc6b9d9.js",
+    "precache-manifest.f8fb2cf225393abb06245c42b1f8e47f.js": "./precache-manifest.f8fb2cf225393abb06245c42b1f8e47f.js",
     "service-worker.js": "./service-worker.js",
-    "static/css/2.fddaa3a5.chunk.css.map": "./static/css/2.fddaa3a5.chunk.css.map",
-    "static/css/main.899119df.chunk.css.map": "./static/css/main.899119df.chunk.css.map",
-    "static/media/1.jpg": "./static/media/1.8733e0a2.jpg",
-    "static/media/CheckMark.png": "./static/media/CheckMark.972e46eb.png",
-    "static/media/index.scss": "./static/media/slick.f97e3bbf.svg",
+    "static/css/main.3b25fb51.chunk.css.map": "./static/css/main.3b25fb51.chunk.css.map",
     "static/media/logo_main_light.png": "./static/media/logo_main_light.a4c7df13.png",
     "static/media/logo_simple.png": "./static/media/logo_simple.0a46c89f.png",
-    "static/media/spinner.gif": "./static/media/spinner.5204de31.gif"
+    "static/media/marino.jpg": "./static/media/marino.8733e0a2.jpg",
+    "static/media/index.scss": "./static/media/slick.f97e3bbf.svg"
   }
 }
