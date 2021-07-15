@@ -7,10 +7,15 @@ import NavItems from "./NavItems";
 
 import NavbarLogo from "../../assets/images/logo_simple.png";
 
+//src\assets\scss\_variables.scss
+const NAVBAR_HEIGHT = 105;
+
 const VIEWPORT_HEIGHT = Math.max(
   document.documentElement.clientHeight,
   window.innerHeight || 0
 );
+
+const ADJUSTED_VIEWPORT_HEIGHT = VIEWPORT_HEIGHT - NAVBAR_HEIGHT;
 
 class Navbar extends React.Component {
   constructor(props) {
@@ -25,11 +30,11 @@ class Navbar extends React.Component {
         document.documentElement.scrollTop || document.body.scrollTop;
 
       if (!this.state.shrink) {
-        if (scrollPos > VIEWPORT_HEIGHT) {
+        if (scrollPos > ADJUSTED_VIEWPORT_HEIGHT) {
           this.setState({ shrink: true });
         }
       } else {
-        if (scrollPos < VIEWPORT_HEIGHT) {
+        if (scrollPos < ADJUSTED_VIEWPORT_HEIGHT) {
           this.setState({ shrink: false });
         }
       }
