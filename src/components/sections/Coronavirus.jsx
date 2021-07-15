@@ -4,8 +4,6 @@ import { Assets } from "../../App";
 function Coronavirus({ content }) {
   const { heading, ps = [] } = content || {};
 
-  console.log(heading, ps);
-
   return (
     <section id="coronavirus">
       <h1 className="section-title">{heading}</h1>
