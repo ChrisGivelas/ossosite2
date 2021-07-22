@@ -96,7 +96,7 @@ export const elementIsHidden = (el, mode = "visible") => {
 };
 
 export const fetchAssetsConfig = async () => {
-  return fetch(origin + "/config.json")
+  return fetch(origin + "/config/main.json")
     .then((res) => res.json())
     .catch(() => defaultConfig);
 };
