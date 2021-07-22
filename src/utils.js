@@ -1,3 +1,5 @@
+const defaultConfig = require("./defaultConfig.json");
+
 /**
  * Standard es6 debounce
  */
@@ -96,7 +98,7 @@ export const elementIsHidden = (el, mode = "visible") => {
 export const fetchAssetsConfig = async () => {
   return fetch(origin + "/config.json")
     .then((res) => res.json())
-    .catch(() => ({}));
+    .catch(() => defaultConfig);
 };
 
 export function isTouchEnabled() {
