@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e3dba836d7397a8c7e0d8b2e3a8e3214",
+    "revision": "cfdec21028ed71482d764870483016a9",
     "url": "./index.html"
   },
   {
-    "revision": "a276cae42a16258dc728",
-    "url": "./static/css/main.ba526d9b.chunk.css"
+    "revision": "0f9c23be19ab63d349e0",
+    "url": "./static/css/main.9ea2c634.chunk.css"
   },
   {
-    "revision": "256fabb43ed02e79e4b6",
-    "url": "./static/js/2.b9736a53.chunk.js"
+    "revision": "9af0583931a7a8a4296b",
+    "url": "./static/js/2.16246a87.chunk.js"
   },
   {
-    "revision": "a276cae42a16258dc728",
-    "url": "./static/js/main.21eced3f.chunk.js"
+    "revision": "0f9c23be19ab63d349e0",
+    "url": "./static/js/main.9b766767.chunk.js"
   },
   {
     "revision": "541d5c0bd9a2820f53b8",
@@ -46,5 +46,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "f97e3bbf73254b0112091d0192f17aec",
     "url": "./static/media/slick.f97e3bbf.svg"
+  },
+  {
+    "revision": "510141df35b51dd72096e8f6d493ccbb",
+    "url": "./static/media/young-marino.510141df.jpeg"
   }
 ]);
