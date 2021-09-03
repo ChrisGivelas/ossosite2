@@ -9,7 +9,7 @@ function Memorial() {
       <p className="section-description">
         It is with heavy hearts that we must announce the passing of Marino
         Osso, the founder of Osso City Lighting. Marino was a father, friend,
-        colleague, and mentor to his family and to many in the oshawa community,
+        colleague, and mentor to his family and to many in the Oshawa community,
         and will be sorely missed.
       </p>
       <p className="section-description">
@@ -21,7 +21,7 @@ function Memorial() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          here to go to the Armstrong's website.
+          here to go to Armstrong's website.
         </a>
       </p>
     </section>
