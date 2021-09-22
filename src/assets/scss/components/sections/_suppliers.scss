@@ -172,8 +172,7 @@
     margin: 5px;
     transition: all 0.5s;
 
-    &.clicked,
-    &:hover {
+    &.clicked {
       background-color: $osso-colour-1;
       color: white;
     }

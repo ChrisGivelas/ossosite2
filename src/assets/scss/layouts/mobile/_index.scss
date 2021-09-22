@@ -105,6 +105,15 @@
     font-weight: 900 !important;
     top: 15px !important;
   }
+
+  #supplier-filter-form {
+    .product-type-filter {
+      &:active {
+        background-color: $osso-colour-1;
+        color: white;
+      }
+    }
+  }
 }
 
 @import "./tn";

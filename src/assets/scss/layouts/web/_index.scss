@@ -18,6 +18,15 @@
   #about-content-container {
     width: 80%;
   }
+
+  #supplier-filter-form {
+    .product-type-filter {
+      &:hover {
+        background-color: $osso-colour-1;
+        color: white;
+      }
+    }
+  }
 }
 
 @import "./md";
