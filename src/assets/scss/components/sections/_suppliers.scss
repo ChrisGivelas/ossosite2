@@ -11,6 +11,7 @@
   grid-auto-rows: 200px;
   grid-gap: 30px;
   width: 100%;
+  margin-top: 15px;
 }
 
 .supplier {
@@ -153,6 +154,28 @@
       max-height: 100%;
       height: initial !important;
       width: initial !important;
+    }
+  }
+}
+
+#supplier-filter-form {
+  width: 100%;
+  border: none;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+  .product-type-filter {
+    border-radius: $default-border-radius;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+    transition: all 0.5s;
+
+    &.clicked,
+    &:hover {
+      background-color: $osso-colour-1;
+      color: white;
     }
   }
 }

@@ -28,7 +28,19 @@ class App extends React.Component {
     window.addEventListener("resize", this.updateIsTouchEnabled);
 
     fetchAssetsConfig().then((config) => {
-      this.setState({ assetsConfig: config });
+      let state = { ...config };
+
+      state["productTypes"] = config.suppliers.reduce(
+        (productTypeSet, supplier) => {
+          for (let el of supplier.productTypes) {
+            productTypeSet.add(el);
+          }
+          return productTypeSet;
+        },
+        new Set()
+      );
+
+      this.setState({ assetsConfig: state });
       updateHours(config.hours);
     });
   }

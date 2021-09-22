@@ -99,13 +99,28 @@ class Supplier extends React.Component {
   };
 
   async componentDidMount() {
-    const productImgs = await fetchAllImagesInDir({
-      dir: `${origin}/images/supplier_products/${this.props.name.toLowerCase()}/`,
-    });
+    var productImgs = undefined;
+    var logoImg = undefined;
 
-    const logoImg = await fetchImage(
-      `${origin}/images/supplier_logos/${this.props.name}-logo.png`
-    );
+    if (window.fetchedImages === undefined) {
+      window.fetchedImages = {};
+    }
+
+    if (window.fetchedImages[this.props.name] !== undefined) {
+      productImgs = window.fetchedImages[this.props.name].productImgs;
+      logoImg = window.fetchedImages[this.props.name].logoImg;
+    } else {
+      window.fetchedImages[this.props.name] = {};
+      productImgs = await fetchAllImagesInDir({
+        dir: `${origin}/images/supplier_products/${this.props.name.toLowerCase()}/`,
+      });
+      window.fetchedImages[this.props.name].productImgs = productImgs;
+
+      logoImg = await fetchImage(
+        `${origin}/images/supplier_logos/${this.props.name}-logo.png`
+      );
+      window.fetchedImages[this.props.name].logoImg = logoImg;
+    }
 
     this.setState({ productImgs, logoImg });
   }
