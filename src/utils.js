@@ -96,7 +96,11 @@ export const elementIsHidden = (el, mode = "visible") => {
 };
 
 export const fetchAssetsConfig = async () => {
-  return fetch(origin + "/config/main.json")
+  return fetch(origin + "/config/main.json", {
+    headers: {
+      "Cache-Control": "no-store no-cache must-revalidate max-age=10",
+    },
+  })
     .then((res) => res.json())
     .catch(() => defaultConfig);
 };
