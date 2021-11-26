@@ -212,3 +212,14 @@ export const fetchAllImagesInDir = async ({
 
   return imgs;
 };
+
+export const getWindowSize = () => {
+  var win = window,
+    doc = document,
+    docElem = doc.documentElement,
+    body = doc.getElementsByTagName("body")[0],
+    x = win.innerWidth || docElem.clientWidth || body.clientWidth,
+    y = win.innerHeight || docElem.clientHeight || body.clientHeight;
+
+  return { x, y };
+};
