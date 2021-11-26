@@ -1,4 +1,4 @@
-@media screen and (max-width: $mobile-breakpoint - 1px) {
+@media screen and (max-width: ($mobile-breakpoint - 1px)) {
   html {
     font-size: 16px;
   }
@@ -98,12 +98,6 @@
   #email-message,
   #visit-message {
     font-size: 1.25rem !important;
-  }
-
-  .fa-times {
-    font-size: 20px !important;
-    font-weight: 900 !important;
-    top: 15px !important;
   }
 }
 

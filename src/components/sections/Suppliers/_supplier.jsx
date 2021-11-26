@@ -3,6 +3,7 @@ import { withRouter } from "react-router-dom";
 import { NavHashLink as NavLink } from "react-router-hash-link";
 import { fetchAllImagesInDir, fetchImage } from "../../../utils";
 import Carousel from "../../shared/Carousel";
+import { Close } from "../../../assets/images/IconSvgs";
 
 class SupplierContent extends React.Component {
   render() {
@@ -21,11 +22,7 @@ class SupplierContent extends React.Component {
             </a>
           </div>
         </div>
-        <i
-          style={{ fontWeight: 900 }}
-          className="fas fa-times"
-          onClick={handleClick}
-        ></i>
+        <Close onClick={handleClick} />
         <div className="supplier-content-main">
           <p className="supplier-description">"{description}"</p>
           <div className="supplier-product-carousel-container">
