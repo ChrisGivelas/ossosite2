@@ -1,11 +1,16 @@
 #social-media {
-    justify-self: end;
-    & > a,
-    & > span {
-        width: 30px;
-        height: 30px;
-        margin-left: 5px;
-        margin-right: 5px;
-        color: white !important;
+  justify-self: end;
+  & > a {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+    & > div {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      color: white !important;
     }
+  }
 }
