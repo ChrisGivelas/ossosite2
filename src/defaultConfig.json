@@ -7,26 +7,24 @@
     ]
   },
   "coronavirusSection": {
-    "heading": "Coronavirus Update: Ontario Wide Lockdown",
+    "heading": "Christmas Hours",
     "ps": [
-      "To help keep our community safe during this time, our showroom and all in-store shopping will be temporarily suspended as per the province-wide lockdown.",
-      "We will be available for email and phone orders as well as curb side pickup.",
-      "For any inquiries, please reach us via:",
-      "Phone: 905.404.6776 Email: info@ossolighting.ca",
-      "Our limited hours of operation during the lockdown will be:",
-      "Tuesday – Saturday (9:30AM – 2:00PM)",
-      "We are closed Sundays and Mondays.",
-      "Please stay safe, we are all in this together. Thank you for your continued support and we look forward to seeing you soon!"
+      "Our hours during the holiday season are as follows:",
+      "December 24th - December 27th: Closed",
+      "December 28th - December 30th: Open with regular hours",
+      "December 31st - January 3rd: Closed",
+      "January 4th: Re-opened with regular hours",
+      "Thank you for your continued support during the holidays. We look forward to seeing you!"
     ]
   },
   "hours": [
     { "day": "Sunday", "isClosed": true },
     { "day": "Monday", "isClosed": true },
-    { "day": "Tuseday", "open": "9:30am", "close": "5:00pm" },
-    { "day": "Wednesday", "open": "9:30am", "close": "5:00pm" },
-    { "day": "Thursday", "open": "9:30am", "close": "5:00pm" },
-    { "day": "Friday", "open": "9:30am", "close": "5:00pm" },
-    { "day": "Saturday", "open": "9:30am", "close": "5:00pm" }
+    { "day": "Tuseday", "open": "9:00am", "close": "5:00pm" },
+    { "day": "Wednesday", "open": "9:00am", "close": "5:00pm" },
+    { "day": "Thursday", "open": "9:00am", "close": "5:00pm" },
+    { "day": "Friday", "open": "9:00am", "close": "5:00pm" },
+    { "day": "Saturday", "open": "9:00am", "close": "5:00pm" }
   ],
   "suppliers": [
     {
