@@ -1,11 +1,11 @@
 import React from "react";
 import { Assets } from "../../App";
 
-function Coronavirus({ content }) {
+function Info({ content }) {
   const { heading, ps = [] } = content || {};
 
   return (
-    <section id="coronavirus">
+    <section id="info">
       <h1 className="section-title">{heading}</h1>
       {ps.map((p, i) => (
         <p key={`corona_${i}`} className="section-description">
@@ -19,7 +19,11 @@ function Coronavirus({ content }) {
 export default () => (
   <Assets.Consumer>
     {(config) => {
-      return <Coronavirus content={config.coronavirusSection} />;
+      return config.info && config.info.visible ? (
+        <Info content={config.info.content} />
+      ) : (
+        <></>
+      );
     }}
   </Assets.Consumer>
 );

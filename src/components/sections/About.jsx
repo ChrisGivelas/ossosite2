@@ -23,7 +23,7 @@ function About({ content }) {
 export default () => (
   <Assets.Consumer>
     {(config) => {
-      return <About content={config.aboutSection} />;
+      return <About content={(config.aboutSection || {}).content} />;
     }}
   </Assets.Consumer>
 );

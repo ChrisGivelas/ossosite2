@@ -4,7 +4,7 @@ import Landing from "../components/sections/Landing";
 import Suppliers from "../components/sections/Suppliers";
 import About from "../components/sections/About";
 import Contact from "../components/sections/Contact";
-import Coronavirus from "../components/sections/Coronavirus";
+import Info from "../components/sections/Info";
 import Memorial from "../components/sections/Memorial";
 
 import Footer from "../components/shared/Footer";
@@ -15,7 +15,7 @@ function Main() {
       <Landing />
       <div id="main-content">
         <Memorial />
-        <Coronavirus />
+        <Info />
         <Suppliers />
         <About />
         <Contact />
