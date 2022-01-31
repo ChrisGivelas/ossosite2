@@ -9,8 +9,8 @@
     }
   },
   "info": {
-    "visible": false,
     "content": {
+      "visible": false,
       "heading": "Coronavirus Update: Ontario Wide Lockdown",
       "ps": [
         "To help keep our community safe during this time, our showroom and all in-store shopping will be temporarily suspended as per the province-wide lockdown.",
@@ -27,11 +27,11 @@
   "hours": [
     { "day": "Sunday", "isClosed": true },
     { "day": "Monday", "isClosed": true },
-    { "day": "Tuseday", "open": "9:30am", "close": "5:00pm" },
-    { "day": "Wednesday", "open": "9:30am", "close": "5:00pm" },
-    { "day": "Thursday", "open": "9:30am", "close": "5:00pm" },
-    { "day": "Friday", "open": "9:30am", "close": "5:00pm" },
-    { "day": "Saturday", "open": "9:30am", "close": "5:00pm" }
+    { "day": "Tuseday", "open": "9:00am", "close": "5:00pm" },
+    { "day": "Wednesday", "open": "9:00am", "close": "5:00pm" },
+    { "day": "Thursday", "open": "9:00am", "close": "5:00pm" },
+    { "day": "Friday", "open": "9:00am", "close": "5:00pm" },
+    { "day": "Saturday", "open": "9:00am", "close": "5:00pm" }
   ],
   "suppliers": [
     {
@@ -110,23 +110,6 @@
     },
 
     {
-      "name": "Galaxy",
-      "website": "http://www.galaxy-lighting.com/",
-      "description": "Galaxy Lighting provides some of the most unique lighting fixtures available on the market. You will find a wide selection of interior and exterior lighting, ranging from pendants & chandeliers to recessed lighting, from wall sconces & floor lamps to vanity lights.",
-      "productTypes": [
-        "Chandeliers",
-        "Pendants",
-        "Ceiling",
-        "Sconces",
-        "Vanities",
-        "Track",
-        "Outdoor",
-        "Recessed",
-        "Lamps"
-      ]
-    },
-
-    {
       "name": "Generation",
       "website": "https://generationlighting.com/",
       "description": "Superior quality – delivering a balanced range of price points and styles, maintaining the highest standards with materials and workmanship.",
@@ -199,13 +182,6 @@
         "Vanities",
         "Outdoor"
       ]
-    },
-
-    {
-      "name": "Snoc",
-      "website": "http://www.snocinc.com/",
-      "description": "Snoc is a true manufacturing company, supplying a myriad of customizable exterior lighting solutions, mailboxes, and house numbers. ",
-      "productTypes": ["Outdoor", "Mailboxes", "House Numbers"]
     },
 
     {
