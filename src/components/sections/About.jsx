@@ -1,9 +1,10 @@
 import React from "react";
 import { Assets } from "../../App";
 import Marino from "../../assets/images/marino.jpg";
+import defaultConfig from "../../defaultConfig.json";
 
 function About({ content }) {
-  const { heading, ps = [] } = content || {};
+  const { heading, ps = [] } = content;
 
   return (
     <section id="about">
@@ -23,7 +24,11 @@ function About({ content }) {
 export default () => (
   <Assets.Consumer>
     {(config) => {
-      return <About content={(config.aboutSection || {}).content} />;
+      let content =
+        config && config.aboutSection && config.aboutSection.content
+          ? config.aboutSection.content
+          : defaultConfig.aboutSection.content;
+      return <About content={content} />;
     }}
   </Assets.Consumer>
 );

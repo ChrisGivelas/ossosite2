@@ -2,7 +2,7 @@ import React from "react";
 import { Assets } from "../../App";
 
 function Info({ content }) {
-  const { heading, ps = [] } = content || {};
+  const { heading, ps = [] } = content;
 
   return (
     <section id="info">
@@ -19,7 +19,10 @@ function Info({ content }) {
 export default () => (
   <Assets.Consumer>
     {(config) => {
-      return config.info && config.info.visible ? (
+      return config &&
+        config.info &&
+        config.info.content &&
+        config.info.visible ? (
         <Info content={config.info.content} />
       ) : (
         <></>
