@@ -211,6 +211,13 @@
       "website": "https://starfirecrystal.com/",
       "description": "Starfire Crystal is a leading manufacturer and importer of fine crystal chandeliers & other lighting that reflect the latest innovations and trends in the lighting industry.",
       "productTypes": ["Chandeliers", "Pendants", "Sconces", "Ceiling"]
+    },
+
+    {
+      "name": "Vinci Lighting",
+      "website": "https://vinci.realtyterminus.net/",
+      "description": "Vinci Lighting prides themselves on professional work standards and a high-level of craftmanship. They operate under the motto: affordable lighting, with quality design, available to everyone.",
+      "productTypes": []
     }
   ]
 }
