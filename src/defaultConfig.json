@@ -141,6 +141,13 @@
     },
 
     {
+      "name": "Kandil Canada",
+      "website": "https://kandilcanada.com/",
+      "description": "Kandil is a high-end lighting distributor and a unique custom-made lighting manufacturer, with offices in four different countries.",
+      "productTypes": ["Chandeliers", "Pendants", "Lamps", "Sconces"]
+    },
+
+    {
       "name": "Kendal",
       "website": "https://www.kendallighting.com/",
       "description": "Kendal Lighting quality and design can be found in many areas of Lighting including Fans, Fixtures, Lamps, Track Lighting, and Rail Systems.",
@@ -160,6 +167,14 @@
         "Vanities",
         "Outdoor + Landscape",
         "Ceiling Fans"
+      ]
+    },
+
+    {
+      "name": "LitUp Lighting",
+      "website": "https://lituplighting.ca/",
+      "description": "LitUp Lighting is a Mississauga-based company offering a wide range of lighting solutions at affordable prices.",
+      "productTypes": [
       ]
     },
 
@@ -189,13 +204,6 @@
       "website": "https://starfirecrystal.com/",
       "description": "Starfire Crystal is a leading manufacturer and importer of fine crystal chandeliers & other lighting that reflect the latest innovations and trends in the lighting industry.",
       "productTypes": ["Chandeliers", "Pendants", "Sconces", "Ceiling"]
-    },
-
-    {
-      "name": "Kandil Canada",
-      "website": "https://kandilcanada.com/",
-      "description": "Kandil is a high-end lighting distributor and a unique custom-made lighting manufacturer, with offices in four different countries.",
-      "productTypes": ["Chandeliers", "Pendants", "Lamps", "Sconces"]
     }
   ]
 }
