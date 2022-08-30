@@ -35,13 +35,25 @@
   }
 }
 
-.view-supplier {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 30px;
+.navlink {
+  &.visible {
+    animation: fadeIn 1s;
+    display: inline !important;
+  }
+
+  &.invisible {
+    animation: fadeOut 1s;
+    display: none !important;
+  }
+
+  .view-supplier {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+  }
 }
 
 .supplier-content {
@@ -52,6 +64,16 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+
+  &.visible {
+    animation: fadeIn 1s;
+    display: block !important;
+  }
+
+  &.invisible {
+    animation: fadeOut 1s;
+    display: none !important;
+  }
 
   .close-icon-svg {
     position: absolute;

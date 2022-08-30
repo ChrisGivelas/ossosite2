@@ -7,11 +7,11 @@ import { Close } from "../../../assets/images/IconSvgs";
 
 class SupplierContent extends React.Component {
   render() {
-    const { name, description, website, handleClick, productImgs, logoImg } =
+    const { name, description, website, handleClick, productImgs, logoImg, expanded } =
       this.props;
 
     return (
-      <div className="supplier-content">
+      <div className={`supplier-content${expanded ? " visible" : " invisible"}`}>
         <div className="supplier-content-header">
           <div className="supplier-content-header-logo">
             <img className="supplier-image" src={logoImg} alt={name} />
@@ -26,7 +26,7 @@ class SupplierContent extends React.Component {
         <div className="supplier-content-main">
           <p className="supplier-description">"{description}"</p>
           <div className="supplier-product-carousel-container">
-            <Carousel>
+            <Carousel waitForAnimate>
               {productImgs.map((src, i) => (
                 <img
                   key={`${name}_${i}`}
@@ -47,7 +47,7 @@ class ViewSupplier extends React.Component {
   isActive = (r) => this.props.location.hash.substr(1) === r;
 
   render() {
-    const { name, handleClick, logoImg } = this.props;
+    const { name, handleClick, logoImg, expanded } = this.props;
     return (
       <NavLink
         isActive={this.isActive}
@@ -62,11 +62,12 @@ class ViewSupplier extends React.Component {
             behavior: "smooth",
           });
         }}
-        className="navlink"
+        className={`navlink${expanded ? " invisible" : " visible"}`}
         activeClassName="selected"
         to={`#brands-${name}`}
+        
       >
-        <div className="view-supplier" onClick={handleClick}>
+        <div className={`view-supplier`} onClick={handleClick}>
           <img className="supplier-image" src={logoImg} alt={name} />
         </div>
       </NavLink>
@@ -95,16 +96,23 @@ class Supplier extends React.Component {
     }
   };
 
-  async componentDidMount() {
-    const productImgs = await fetchAllImagesInDir({
+  fetchSupplierAssets() {
+    var t = this;
+    const productImgsPromise = fetchAllImagesInDir({
       dir: `${origin}/images/supplier_products/${this.props.name.toLowerCase()}/`,
     });
 
-    const logoImg = await fetchImage(
+    const logoImgPromise = fetchImage(
       `${origin}/images/supplier_logos/${this.props.name}-logo.png`
     );
 
-    this.setState({ productImgs, logoImg });
+    Promise.all([productImgsPromise, logoImgPromise]).then(([productImgs, logoImg]) => {
+      t.setState({ productImgs, logoImg });
+    })
+  }
+
+  componentDidMount() {
+    this.fetchSupplierAssets();
   }
 
   render() {
@@ -116,20 +124,19 @@ class Supplier extends React.Component {
         }`}
       >
         <div>
-          {this.state.expanded ? (
             <SupplierContent
               productImgs={this.state.productImgs}
               logoImg={this.state.logoImg}
               handleClick={this.toggleExpand}
+              expanded={this.state.expanded}
               {...this.props}
             />
-          ) : (
             <ViewSupplier
               logoImg={this.state.logoImg}
               handleClick={this.toggleExpand}
+              expanded={this.state.expanded}
               {...this.props}
             />
-          )}
         </div>
       </div>
     );
