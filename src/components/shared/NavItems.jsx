@@ -40,7 +40,6 @@ function NavItems(props) {
             key={route}
             className="navlink"
             activeClassName="selected"
-            to={`${parentRoute}#${route}`}
             route={route}
             parentRoute={parentRoute}
             text={`${route}.`}
