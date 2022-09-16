@@ -1,9 +1,9 @@
 import React from "react";
-import { withRouter } from "react-router-dom";
 import { HashLink as Link } from "react-router-hash-link";
-import routes, { HOME_PAGE, LANDING } from "../../routes";
-import { modifiedDebounce } from "../../utils";
-import NavItems from "./NavItems";
+import routes, { CONTACT, HOME_PAGE, LANDING } from "../../routes";
+import { defaultHours, modifiedDebounce } from "../../utils";
+import NavItems, { NavItem } from "./NavItems";
+import { Assets } from "../../App";
 
 import NavbarLogo from "../../assets/images/logo_simple.png";
 
@@ -39,6 +39,8 @@ class Navbar extends React.Component {
         }
       }
     }, 200);
+
+    this.today = props.hours[new Date().getDay()];
   }
 
   componentDidMount() {
@@ -50,6 +52,7 @@ class Navbar extends React.Component {
   }
 
   render() {
+    const today = this.today;
     return (
       <div
         id="navbar"
@@ -64,6 +67,15 @@ class Navbar extends React.Component {
         </div>
         <div id="navbar-extra-info">
           <p>
+            <NavItem
+              route={CONTACT}
+              parentRoute={HOME_PAGE}
+              text={`${today.day}: ${
+                today.isClosed ? "Closed" : `${today.open} - ${today.close}`
+              }`}
+            />
+          </p>
+          <p>
             <a href="mailto:info@ossolighting.ca">info@ossolighting.ca</a>
           </p>
           <p>
@@ -75,4 +87,10 @@ class Navbar extends React.Component {
   }
 }
 
-export default withRouter(Navbar);
+export default () => (
+  <Assets.Consumer>
+    {(config) => {
+      return <Navbar hours={config.hours || defaultHours} />;
+    }}
+  </Assets.Consumer>
+);

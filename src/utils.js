@@ -51,34 +51,15 @@ export const modifiedDebounce = function (callback, wait, immediate = false) {
 };
 
 // Start with default hours as fallback because why the heck not?
-var hours = [
+export const defaultHours = [
   { day: "Sunday", isClosed: true },
   { day: "Monday", isClosed: true },
-  { day: "Tuseday", open: "9:30am", close: "2:00pm" },
-  { day: "Wednesday", open: "9:30am", close: "2:00pm" },
-  { day: "Thursday", open: "9:30am", close: "2:00pm" },
-  { day: "Friday", open: "9:30am", close: "2:00pm" },
-  { day: "Saturday", open: "9:30am", close: "2:00pm" },
+  { day: "Tuseday", open: "9:00am", close: "5:00pm" },
+  { day: "Wednesday", open: "9:00am", close: "5:00pm" },
+  { day: "Thursday", open: "9:00am", close: "5:00pm" },
+  { day: "Friday", open: "9:00am", close: "5:00pm" },
+  { day: "Saturday", open: "9:00am", close: "5:00pm" },
 ];
-
-export const updateHours = (newHours) => {
-  hours = newHours;
-};
-
-export const getHoursForDay = (day) => {
-  if (typeof day === "number") {
-    return hours[day];
-  } else if (typeof day === "string") {
-    return (
-      hours.find((hourInfo) => hourInfo.day === day) ||
-      hours[new Date().getDay()]
-    );
-  } else {
-    return hours[new Date().getDay()];
-  }
-};
-
-export const today = getHoursForDay();
 
 export const elementIsHidden = (el, mode = "visible") => {
   const positionInfo = el.getBoundingClientRect();
