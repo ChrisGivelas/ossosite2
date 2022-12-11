@@ -1,23 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a340cf5e4fdbb51f5a625c344cde5338",
+    "revision": "3533497616a0752321b888afdce34a71",
     "url": "./index.html"
   },
   {
-    "revision": "d6121ff02f581b90bae9",
-    "url": "./static/css/main.c996daff.chunk.css"
+    "revision": "a4bd583e0531d5162893",
+    "url": "./static/css/main.038d298f.chunk.css"
   },
   {
-    "revision": "d1e2acf22d7d15114c98",
-    "url": "./static/js/2.eab471ae.chunk.js"
+    "revision": "d9dd4cb71d9aad3b055d",
+    "url": "./static/js/2.3e6bd425.chunk.js"
   },
   {
-    "revision": "d6121ff02f581b90bae9",
-    "url": "./static/js/main.19ac67d3.chunk.js"
+    "revision": "a4bd583e0531d5162893",
+    "url": "./static/js/main.783d493e.chunk.js"
   },
   {
     "revision": "541d5c0bd9a2820f53b8",
     "url": "./static/js/runtime-main.f2d3ef04.js"
+  },
+  {
+    "revision": "2171837bdd05994a01608c1c17017057",
+    "url": "./static/media/HolidayHours.2171837b.jpg"
   },
   {
     "revision": "a4c7df1327133b02ead90053171a30f1",
