@@ -5,7 +5,6 @@
     "homepage": ".",
     "dependencies": {
         "animate-css-grid": "^1.4.1",
-        "node-sass": "^4.14.1",
         "prop-types": "^15.7.2",
         "react": "^16.9.0",
         "react-dom": "^16.9.0",
@@ -13,6 +12,7 @@
         "react-router-hash-link": "^1.2.2",
         "react-scripts": "3.1.2",
         "react-slick": "^0.25.2",
+        "sass": "^1.56.2",
         "slick-carousel": "^1.8.1"
     },
     "scripts": {

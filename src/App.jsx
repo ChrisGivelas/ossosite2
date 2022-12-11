@@ -1,5 +1,4 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
 import Main from "./pages/main";
 import { modifiedDebounce, fetchAssetsConfig, isTouchEnabled } from "./utils";
 
@@ -36,9 +35,7 @@ class App extends React.Component {
       <Assets.Provider value={this.state.assetsConfig}>
         <TouchEnabled.Provider value={this.state.isTouchEnabled}>
           <div id="app">
-            <Switch>
-              <Route path="/" component={Main}></Route>
-            </Switch>
+            <Main />
           </div>
         </TouchEnabled.Provider>
       </Assets.Provider>
