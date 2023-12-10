@@ -19,10 +19,10 @@ function Info({ content }) {
 export default () => (
   <Assets.Consumer>
     {(config) => {
-      return config &&
-        config.info &&
-        config.info.content &&
-        config.info.visible ? (
+      return config !== undefined &&
+        config.info !== undefined &&
+        config.info.content !== undefined &&
+        config.info.content.visible === true ? (
         <Info content={config.info.content} />
       ) : (
         <></>

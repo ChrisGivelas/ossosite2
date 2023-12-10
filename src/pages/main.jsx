@@ -14,8 +14,8 @@ function Main() {
     <div id="main">
       <Landing />
       <div id="main-content">
-        <Memorial />
         <Info />
+        <Memorial />
         <Suppliers />
         <About />
         <Contact />

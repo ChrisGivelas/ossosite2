@@ -16,8 +16,8 @@
         "slick-carousel": "^1.8.1"
     },
     "scripts": {
-        "start": "react-scripts start",
-        "build": "react-scripts build",
+        "start": "SET NODE_OPTIONS=--openssl-legacy-provider&&react-scripts start",
+        "build": "SET NODE_OPTIONS=--openssl-legacy-provider&&react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
         "deployDev": "npm run build && gh-pages -d build -m 'Deploy to Github Pages'",
