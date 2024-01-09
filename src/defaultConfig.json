@@ -27,7 +27,7 @@
   "hours": [
     { "day": "Sunday", "isClosed": true },
     { "day": "Monday", "isClosed": true },
-    { "day": "Tuseday", "open": "9:00am", "close": "5:00pm" },
+    { "day": "Tuesday", "open": "9:00am", "close": "5:00pm" },
     { "day": "Wednesday", "open": "9:00am", "close": "5:00pm" },
     { "day": "Thursday", "open": "9:00am", "close": "5:00pm" },
     { "day": "Friday", "open": "9:00am", "close": "5:00pm" },
@@ -188,7 +188,7 @@
 
     {
       "name": "MonteCarlo",
-      "website": "https://www.montecarlofans.com/",
+      "website": "https://www.visualcomfort.com/our-collections/fan-collection/",
       "description": "Monte Carlo is a Fan company that specializes in trend-inspired, fashion-forward ceiling fans in a wide variety of models, sizes, and finishes for any interior space. Rooms come alive with style, all with premium grade motors and features.",
       "productTypes": ["Ceiling Fans"]
     },
