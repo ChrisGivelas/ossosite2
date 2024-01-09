@@ -35,6 +35,18 @@
   ],
   "suppliers": [
     {
+      "name": "Alora",
+      "website": "https://aloralighting.com/",
+      "description": "Alora is an exploration of timeless elegance and luxury; each collection embodies classical forms, modern designs, refined finishes and superior materials.",
+      "productTypes": [
+        "Chandeliers",
+        "Pendants",
+        "Vanities",
+        "Outdoor"
+      ]
+    },
+
+    {
       "name": "Artcraft",
       "website": "https://www.artcraftlighting.com/en/",
       "description": "A Canadian/American company providing lighting products that cater to your lifestyle, budget, and individual taste.",
@@ -152,6 +164,18 @@
         "Vanities",
         "Outdoor + Landscape",
         "Ceiling Fans"
+      ]
+    },
+
+    {
+      "name": "Kuzco",
+      "website": "https://kuzcolighting.com/",
+      "description": "Since its inception in 2006, Kuzco Group's mission in lighting has been to create cutting edge design using the latest in LED technology. They are a dedicated team committed to providing the best product and customer service possible.",
+      "productTypes": [
+        "Chandeliers",
+        "Pendants",
+        "Vanities",
+        "Outdoor"
       ]
     },
 
