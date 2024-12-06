@@ -11,17 +11,8 @@
   "info": {
     "content": {
       "visible": false,
-      "heading": "Coronavirus Update: Ontario Wide Lockdown",
-      "ps": [
-        "To help keep our community safe during this time, our showroom and all in-store shopping will be temporarily suspended as per the province-wide lockdown.",
-        "We will be available for email and phone orders as well as curb side pickup.",
-        "For any inquiries, please reach us via:",
-        "Phone: 905.404.6776 Email: info@ossolighting.ca",
-        "Our limited hours of operation during the lockdown will be:",
-        "Tuesday – Saturday (9:30AM – 2:00PM)",
-        "We are closed Sundays and Mondays.",
-        "Please stay safe, we are all in this together. Thank you for your continued support and we look forward to seeing you soon!"
-      ]
+      "heading": "",
+      "ps": []
     }
   },
   "hours": [

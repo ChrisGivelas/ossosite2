@@ -14,7 +14,7 @@ function Main() {
     <div id="main">
       <Landing />
       <div id="main-content">
-        <Info />
+        {/* <Info /> */}
         <Memorial />
         <Suppliers />
         <About />
