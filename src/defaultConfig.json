@@ -232,6 +232,22 @@
         "Outdoor",
         "Ceiling"
       ]
+    },
+
+    {
+      "name": "Z-Lite",
+      "website": "https://www.z-lite.com/products/",
+      "description": "Since 1987, Z-Lite has been creating a beautiful array of quality interior and exterior residential lighting to enhance your space. The Z-Lite collection includes a wide selection of crystal chandeliers, chandelier families, billiard lighting, cast aluminium outdoor lighting, and tiffany families -- all beautifully designed to suit a wide range of styles.",
+      "productTypes": [
+        "Chandeliers",
+        "Outdoor",
+        "Pendants",
+        "Sconces",
+        "Vanities",
+        "Outdoor",
+        "Ceiling",
+        "Floor Lamps"
+      ]
     }
   ]
 }
