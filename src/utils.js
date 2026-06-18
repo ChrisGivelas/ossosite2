@@ -58,7 +58,7 @@ export const defaultHours = [
   { day: "Wednesday", open: "9:00am", close: "5:00pm" },
   { day: "Thursday", open: "9:00am", close: "5:00pm" },
   { day: "Friday", open: "9:00am", close: "5:00pm" },
-  { day: "Saturday", open: "9:00am", close: "5:00pm" },
+  { day: "Saturday", open: "9:00am", close: "3:00pm" },
 ];
 
 export const elementIsHidden = (el, mode = "visible") => {
