@@ -1,23 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "332b7a715265e7586760ab6bcf2c3a02",
+    "revision": "87f29932a52d06ea465ac8c221ebdc5f",
     "url": "./index.html"
   },
   {
-    "revision": "1963f7c80c797a79fe27",
-    "url": "./static/css/main.4a9877c9.chunk.css"
+    "revision": "7fd38e0288fcf777e41d",
+    "url": "./static/css/main.038d298f.chunk.css"
   },
   {
-    "revision": "e6ed7a5d9e2924d59e73",
-    "url": "./static/js/2.fe214266.chunk.js"
+    "revision": "d9dd4cb71d9aad3b055d",
+    "url": "./static/js/2.3e6bd425.chunk.js"
   },
   {
-    "revision": "1963f7c80c797a79fe27",
-    "url": "./static/js/main.0b70f9a5.chunk.js"
+    "revision": "7fd38e0288fcf777e41d",
+    "url": "./static/js/main.bca5b213.chunk.js"
   },
   {
     "revision": "541d5c0bd9a2820f53b8",
     "url": "./static/js/runtime-main.f2d3ef04.js"
+  },
+  {
+    "revision": "70b25af2dd3e503d91f0e8800e501dde",
+    "url": "./static/media/Summer_Hours_2026.70b25af2.png"
   },
   {
     "revision": "a4c7df1327133b02ead90053171a30f1",
